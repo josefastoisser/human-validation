@@ -2,6 +2,8 @@
 
 Review whether each task leaves two defensible evaluation interpretations open and resolves them clearly in Full A/B. Check source support and task quality. You do not need to solve tasks or run models or graders.
 
+Local wording corrections (31 October 2026): case_022 Ambiguous/Full A/Full B have a shared consistency correction; case_027 Full B has a provenance correction. The intended scoring formulas and public data are unchanged. These four prompt files differ from the pinned clone. Review the corrected prompts in this handout; the optional clone remains the base snapshot. Coordinator metadata preserves the pinned prompt hashes alongside the corrected handout hashes.
+
 ## 1. Clone the task packages (OPTIONAL)
 
 Use [joso2/XYZ-eval on Hugging Face](https://huggingface.co/datasets/joso2/XYZ-eval/tree/main). From inside this `human validation` folder, with Git and Git LFS installed:

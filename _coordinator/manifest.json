@@ -597,9 +597,9 @@
       "case_name": "BioReasoning Track C",
       "hf_package": "ml-gen-x-bioreasoning-challenge-track-c/decision-4d708c1a0044e413d98d/packages-final",
       "prompt_sha256": {
-        "ambig": "95ce8a7636d145b3a67c5328879fc1b45c7e4ba23f253428677263f0581533b1",
-        "A": "9c39840461862489f12880ad34e17acecc7101eab279e580441175a8ea535290",
-        "B": "4533e6b578d881746c89f891c7e0c2941643467bd984162a98ab0e9f878c78d8"
+        "ambig": "95d02c920ea1e4509bf1099940994a5d1587c83cc4e90d1fdc741f3b2b80f653",
+        "A": "09b4fa608fc51af78ba36f02b7ffd924ead26fa9a851ff067e50650a12eba869",
+        "B": "5d2b2ee5eceac18da82ae75c452ae5947b7b1630ede78735ec4327a52d6621a9"
       },
       "public_file_count": 5,
       "copied_public_text_files": 5,
@@ -612,6 +612,17 @@
           }
         ],
         "supplements": []
+      },
+      "pinned_prompt_sha256": {
+        "ambig": "95ce8a7636d145b3a67c5328879fc1b45c7e4ba23f253428677263f0581533b1",
+        "A": "9c39840461862489f12880ad34e17acecc7101eab279e580441175a8ea535290",
+        "B": "4533e6b578d881746c89f891c7e0c2941643467bd984162a98ab0e9f878c78d8"
+      },
+      "local_wording_correction": {
+        "date": "2026-10-31",
+        "reason": "Keep shared diagnostic wording compatible with either specified scoring population.",
+        "scoring_formulas_changed": false,
+        "public_data_changed": false
       }
     },
     {
@@ -719,7 +730,7 @@
       "prompt_sha256": {
         "ambig": "68a3bbfbf53f11500837883e97d335b78fef6ca148bd80ccd1655b442bad161e",
         "A": "ab99baa7220c3da5dea190c8d22ce6b40dac5700d5096f9a3b2cd30fb4c3e637",
-        "B": "d1ebc3182d869c95d17342190aac0463ab5a416dc2854efba649117a6cf9a5c0"
+        "B": "1216f4e9c17627465f181bfdee65570764e90fbc47d960ca8bf2edb2baae6b03"
       },
       "public_file_count": 9,
       "copied_public_text_files": 5,
@@ -732,6 +743,17 @@
           }
         ],
         "supplements": []
+      },
+      "pinned_prompt_sha256": {
+        "ambig": "68a3bbfbf53f11500837883e97d335b78fef6ca148bd80ccd1655b442bad161e",
+        "A": "ab99baa7220c3da5dea190c8d22ce6b40dac5700d5096f9a3b2cd30fb4c3e637",
+        "B": "d1ebc3182d869c95d17342190aac0463ab5a416dc2854efba649117a6cf9a5c0"
+      },
+      "local_wording_correction": {
+        "date": "2026-10-31",
+        "reason": "Identify WAPE as a researcher alternative to documented R²; remove unsupported historical MAPE wording.",
+        "scoring_formulas_changed": false,
+        "public_data_changed": false
       }
     },
     {

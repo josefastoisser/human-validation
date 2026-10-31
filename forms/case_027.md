@@ -58,7 +58,7 @@ Open [Full A](../materials/stage_B/case_027/Full_A.md), [Full B](../materials/st
 - Stable case ID: `2024-financial`
 - Stable task ID: `financial-performance-prediction::research-financial-nine-r2-wape-20261022-v2`
 - Package in the pinned Hugging Face clone: `financial-performance-prediction/research-financial-nine-r2-wape-20261022-v2/packages-ready`
-- Review concerns this exact frozen package. It does not establish that every historical experimental run used the same version.
+- Review concerns this pinned package with the local wording correction documented in the handout README. It does not establish that every historical experimental run used the same version.
 
 For each judgment, select one option and explain it with evidence. “Insufficient evidence” is a valid answer, not a pass. One source may support a broad ambiguity without establishing either exact local formula.
 

@@ -1,6 +1,6 @@
 # Public files for Stage A
 
-The task prompt and public text files below are exact copies from the pinned dataset snapshot. In the agent workspace, this package's `public/` directory is mounted as `data/`.
+The public text files below are exact copies from the pinned dataset snapshot. The task prompt includes the local wording correction documented in the handout README. In the agent workspace, this package's `public/` directory is mounted as `data/`.
 
 This lightweight handout copies UTF-8 documentation, helper code, configuration, notebooks, and small tabular/JSON files up to 256 KiB each. Bulk retrieval corpora are represented by at most two unchanged example files. It does **not** contain every public file. The [complete inventory](public_inventory.csv) lists all public files, their sizes and hashes, and whether they were copied. Record any relevant uninspected files in A4; missing evidence should not be treated as a pass.
 

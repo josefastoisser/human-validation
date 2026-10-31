@@ -58,7 +58,7 @@ Open [Full A](../materials/stage_B/case_022/Full_A.md), [Full B](../materials/st
 - Stable case ID: `29`
 - Stable task ID: `ml-gen-x-bioreasoning-challenge-track-c::decision-4d708c1a0044e413d98d`
 - Package in the pinned Hugging Face clone: `ml-gen-x-bioreasoning-challenge-track-c/decision-4d708c1a0044e413d98d/packages-final`
-- Review concerns this exact frozen package. It does not establish that every historical experimental run used the same version.
+- Review concerns this pinned package with the local wording correction documented in the handout README. It does not establish that every historical experimental run used the same version.
 
 For each judgment, select one option and explain it with evidence. “Insufficient evidence” is a valid answer, not a pass. One source may support a broad ambiguity without establishing either exact local formula.
 

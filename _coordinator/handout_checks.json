@@ -1,18 +1,41 @@
 {
-  "status": "passed",
-  "scope": "Handout integrity only; no human semantic validation completed",
+  "status": "passed_with_local_wording_corrections",
+  "scope": "Handout integrity with four locally corrected prompts; no independent human semantic, grader, execution or behavioral validation implied.",
   "forms": 35,
-  "prompt_copies_verified": 105,
+  "prompt_copies_verified": 101,
   "public_text_copies_verified": 416,
   "local_links_verified": 661,
   "original_source_entries": 963,
   "handout_files_before_this_report": 743,
-  "handout_bytes_before_this_report": 23342457,
+  "handout_bytes_before_this_report": 23343850,
   "form_version": "AB-1.1",
   "form_structure_verified": {
     "forms": 35,
     "stage_A_questions_per_form": 4,
     "stage_B_questions_per_form": 9,
     "removed_question_absent": true
+  },
+  "locally_corrected_prompts_verified": 4,
+  "local_wording_corrections": [
+    "case_022: shared consistency sentence in Ambiguous/Full A/Full B",
+    "case_027: provenance sentence in Full B"
+  ],
+  "before_local_wording_corrections": {
+    "status": "passed",
+    "scope": "Handout integrity only; no human semantic validation completed",
+    "forms": 35,
+    "prompt_copies_verified": 105,
+    "public_text_copies_verified": 416,
+    "local_links_verified": 661,
+    "original_source_entries": 963,
+    "handout_files_before_this_report": 743,
+    "handout_bytes_before_this_report": 23342457,
+    "form_version": "AB-1.1",
+    "form_structure_verified": {
+      "forms": 35,
+      "stage_A_questions_per_form": 4,
+      "stage_B_questions_per_form": 9,
+      "removed_question_absent": true
+    }
   }
 }

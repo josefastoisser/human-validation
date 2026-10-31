@@ -26,7 +26,7 @@ credit to exactly tied positive-negative pairs. No clipping or rounding is used.
 Both component scores and scores for each individual test cohort are reported.
 Reference populations must support both classes for each component; otherwise
 the evaluation setup is invalid. All rows within a scored population have equal
-weight. Cohort scores are diagnostics; pooling means compute AUROCs after
+weight. Scores other than the designated final score are diagnostics; pooling means compute AUROCs after
 combining rows, not average the individual cohort AUROCs.
 
 Scored population: the final score pools ALL test rows in C3 and C4 before computing both AUROCs. For validation selection, pool C1 and C2 before computing both AUROCs. Predictions for ALL test rows in C3 and C4 are required and validated.
