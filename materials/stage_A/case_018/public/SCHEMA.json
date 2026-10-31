@@ -1,0 +1,9 @@
+{
+  "max_value_characters": 10000,
+  "max_values_per_PXD": 10000,
+  "prediction_type": "JSON list of age strings",
+  "submission_columns": [
+    "PXD",
+    "prediction"
+  ]
+}

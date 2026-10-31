@@ -1,0 +1,67 @@
+[
+  {
+    "source_id": "car-price-prediction-x:page:0:data-description",
+    "page_name": "data-description",
+    "url": "https://www.kaggle.com/competitions/car-price-prediction-x/overview/data-description",
+    "published_at": null,
+    "version_at": null,
+    "retrieved_at": "2026-10-20T08:10:06.248266+00:00",
+    "text": "[Հայերեն]\nՏվյալները հավաքվել են auto.am կայքից։ Ամեն ավտոմեքենա ունի 8 բնութագրիչ սյունակ՝\nՏարեթիվ, Շարժիչի տեսակ, Վազք, Ղեկ, Գույն, Թափք, Վիճակ, Շարժիչի ծավալ\nԱվտոմեքենաների տիպերը 5-ն են՝\n    1. Toyota Camry\n    2. Mercedes-Benz C class\n    3. Hyundai Elantra\n    4. Nissan Rogue\n    5. Kia Forte\n\n[English]\nThe data was collected from the auto.am website. Each car has 8 characteristic columns:\nYear, Motor type, Mileage, Wheel, Color, Car_type, Status, Motor volume\nThere are 5 types of cars:\n1. Toyota Camry\n2. Mercedes-Benz C class\n3. Hyundai Elantra\n4. Nissan Rogue\n5. Kia Forte\n\n\n# **Ֆայլեր (Files)**\n**- train.csv** - ուսուցման տվյալներ (training set)\n**- test.csv** - տվյալներ որոնց գինը պետք է գուշակել (test set for price predicting)\n**- sample_submission.csv** - պատասխանների ներկայացման նմուշային ֆայլ (sample of submission file)",
+    "archive_path": "Ambig-DS-v3/RQ1/data/community-2024-corpus-20261020T075607Z/normalized/car-price-prediction-x/task.json",
+    "archive_locator": "/task_documents/0/text",
+    "archive_sha256": "0617a0316df65f551ff8bdb58ccf1908dede280c86e477a76304b399aba9b37b",
+    "review_source_id": "S001"
+  },
+  {
+    "source_id": "car-price-prediction-x:page:1:rules",
+    "page_name": "rules",
+    "url": "https://www.kaggle.com/competitions/car-price-prediction-x/overview/rules",
+    "published_at": null,
+    "version_at": null,
+    "retrieved_at": "2026-10-20T08:10:06.248266+00:00",
+    "text": " - Don't cheat!\n - Apply yourself!\n - Have fun!",
+    "archive_path": "Ambig-DS-v3/RQ1/data/community-2024-corpus-20261020T075607Z/normalized/car-price-prediction-x/task.json",
+    "archive_locator": "/task_documents/1/text",
+    "archive_sha256": "0617a0316df65f551ff8bdb58ccf1908dede280c86e477a76304b399aba9b37b",
+    "review_source_id": "S002"
+  },
+  {
+    "source_id": "car-price-prediction-x:page:2:abstract",
+    "page_name": "abstract",
+    "url": "https://www.kaggle.com/competitions/car-price-prediction-x/overview/abstract",
+    "published_at": null,
+    "version_at": null,
+    "retrieved_at": "2026-10-20T08:10:06.248266+00:00",
+    "text": "[Հայերեն]\nԱյս մրցույթի նպատակն է օգտագործելով ավտոմեքենայի բնութագրերը գուշակել նրա գինը։ Գինը գուշակելուց կարող են օգտագործվել ոչ բոլոր բնութագրիչները։ Գուշակումը կատարել machine learning ալգորիթմների կամ deep learning ցանցերի միջոցով։\n\n[English]\nThe purpose of this competition is to guess the price of a car using its characteristics. Not all characteristics can be used when predicting the price. Make predictions using machine learning algorithms or deep learning networks.",
+    "archive_path": "Ambig-DS-v3/RQ1/data/community-2024-corpus-20261020T075607Z/normalized/car-price-prediction-x/task.json",
+    "archive_locator": "/task_documents/2/text",
+    "archive_sha256": "0617a0316df65f551ff8bdb58ccf1908dede280c86e477a76304b399aba9b37b",
+    "review_source_id": "S003"
+  },
+  {
+    "source_id": "car-price-prediction-x:page:3:Evaluation Metric",
+    "page_name": "Evaluation Metric",
+    "url": "https://www.kaggle.com/competitions/car-price-prediction-x/overview/Evaluation Metric",
+    "published_at": null,
+    "version_at": null,
+    "retrieved_at": "2026-10-20T08:10:06.248266+00:00",
+    "text": "[Հայերեն]\nԱյս մրցույթի գնահատման չափանիշը Mean Absolute Error-ն է, որը բոլոր տվյալների համար հաշվում է կանխատեսած արժեքի և իրական արժեքի տարբերության մոդուլը և վերադարձնում գումարի միջինը։\nMSE հաշվվելու է submit prediction-ի և իրական գնի միջև։ Submit prediction-ը պետք է ունենա 2 սյունակ․\n 1. test.csv-ում առկա մեքենայի Id-ին\n 2. գուշակած գինը(price)։\n\n[English]\nThe evaluation criterion for this competition is the Mean Absolute Error, which calculates the modulus of the difference between the predicted value and the actual value for all data and returns the mean of the sum.\nMSE will be calculated between the submit prediction and the actual price. Submit prediction should have 2 columns:\n  1. the vehicle Id in test.csv\n  2. the predicted price.",
+    "archive_path": "Ambig-DS-v3/RQ1/data/community-2024-corpus-20261020T075607Z/normalized/car-price-prediction-x/task.json",
+    "archive_locator": "/task_documents/3/text",
+    "archive_sha256": "0617a0316df65f551ff8bdb58ccf1908dede280c86e477a76304b399aba9b37b",
+    "review_source_id": "S004"
+  },
+  {
+    "source_id": "car-price-prediction-x:page:4:Gratitude",
+    "page_name": "Gratitude",
+    "url": "https://www.kaggle.com/competitions/car-price-prediction-x/overview/Gratitude",
+    "published_at": null,
+    "version_at": null,
+    "retrieved_at": "2026-10-20T08:10:06.248266+00:00",
+    "text": "[Հայերեն]\nՇնորհակալություն auto.am-ի անձնակազմին, տվյալների օգտագործման համաձայնություն տալու համար։\n\n[English]\nThank you to the staff of auto.am for agreeing to use website data.",
+    "archive_path": "Ambig-DS-v3/RQ1/data/community-2024-corpus-20261020T075607Z/normalized/car-price-prediction-x/task.json",
+    "archive_locator": "/task_documents/4/text",
+    "archive_sha256": "0617a0316df65f551ff8bdb58ccf1908dede280c86e477a76304b399aba9b37b",
+    "review_source_id": "S005"
+  }
+]

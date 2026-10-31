@@ -1,0 +1,7 @@
+The same age_parser.py applies in every task condition. It contains parsing only, not the matching policy.
+
+Missing-age strings (case/whitespace normalized): empty, null, NaN, Not Applicable, Not Available, not provided. They denote no age, not zero. Predictions must still be JSON lists of strings; a JSON null entry is invalid. An empty prediction is [].
+
+Parse full decimal-valued ages with Y/year/years, M/month/months, W/week/weeks, D/day/days, case insensitive. Convert exactly using Y=1, M=1/12, W=7/365.25=28/1461, D=1/365.25=4/1461. Numerals and factors use Fraction, not binary floating equality. Examples: 12M and1Y are the same interval;30Y6M and30.5Y are the same;1W and7D are the same;0Y and0D are the same. Compact sums (also separated by whitespace or+) become [sum,sum].
+
+Ranges have explicit units on each endpoint or a single shared unit after the complete range:31Y-72Y,31-72 years,31Y to72Y. Hyphen, en/em dash and the word 'to' separate endpoints. Each endpoint is preserved, never averaged.31Y-72 without a final unit is unsupported, opaque text. A scalar is [x,x]. Negative/nonfinite parsed values and reversed ranges are invalid. Decimal notation is supported, not scientific notation or guessed units. Bare70 and70Y are distinct: the former is opaque. pT1a remains opaque; its digits are not an age. Unsupported 'not availableY' is opaque, not one of the missing sentinels. Normalization changes only case and whitespace on opaque strings. At most10000 strings, each at most10000 characters, are permitted per PXD.

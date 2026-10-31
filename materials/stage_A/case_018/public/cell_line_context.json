@@ -1,0 +1,109 @@
+[
+  {
+    "age": "54Y",
+    "cell_line": "A375",
+    "source_training_studies": [
+      "PXD005539"
+    ]
+  },
+  {
+    "age": "23Y",
+    "cell_line": "BT483",
+    "source_training_studies": [
+      "PXD008012"
+    ]
+  },
+  {
+    "age": "53Y",
+    "cell_line": "C32TG",
+    "source_training_studies": [
+      "PXD005539"
+    ]
+  },
+  {
+    "age": "52Y",
+    "cell_line": "HCC1143",
+    "source_training_studies": [
+      "PXD008012"
+    ]
+  },
+  {
+    "age": "23Y",
+    "cell_line": "HCC1937",
+    "source_training_studies": [
+      "PXD008012"
+    ]
+  },
+  {
+    "age": "50Y",
+    "cell_line": "HCC38",
+    "source_training_studies": [
+      "PXD008012"
+    ]
+  },
+  {
+    "age": "31Y",
+    "cell_line": "HeLa cells",
+    "source_training_studies": [
+      "PXD000999",
+      "PXD001061",
+      "PXD003209"
+    ]
+  },
+  {
+    "age": "74Y",
+    "cell_line": "Hs578T",
+    "source_training_studies": [
+      "PXD008012"
+    ]
+  },
+  {
+    "age": "69Y",
+    "cell_line": "MCF-7",
+    "source_training_studies": [
+      "PXD003977"
+    ]
+  },
+  {
+    "age": "44Y",
+    "cell_line": "MDA-MB-157",
+    "source_training_studies": [
+      "PXD008012"
+    ]
+  },
+  {
+    "age": "51Y",
+    "cell_line": "MDA-MB-231",
+    "source_training_studies": [
+      "PXD008012"
+    ]
+  },
+  {
+    "age": "38Y",
+    "cell_line": "MDA-MB-415",
+    "source_training_studies": [
+      "PXD008012"
+    ]
+  },
+  {
+    "age": "31Y",
+    "cell_line": "MDA-MB-435S",
+    "source_training_studies": [
+      "PXD016837"
+    ]
+  },
+  {
+    "age": "51Y",
+    "cell_line": "MDA-MB-468",
+    "source_training_studies": [
+      "PXD008012"
+    ]
+  },
+  {
+    "age": "51Y",
+    "cell_line": "SK-MEL-28",
+    "source_training_studies": [
+      "PXD005539"
+    ]
+  }
+]

@@ -1,0 +1,24 @@
+--- Ambiguous
++++ Full A
+@@ -27,7 +27,7 @@
+ sqrt(u) barycentric sampling. Zero-area triangles have zero sampling probability.
+ Center each cloud by its sample mean; RMS radius is sqrt(mean squared norm).
+ For evaluation, normalize the centered clouds before fitting the rotation.
+-
++Before alignment, divide the reference cloud by its own RMS radius r_G and the prediction cloud by its own RMS radius r_P. This removes uniform scale.
+ Fit only a proper rotation between the normalized clouds; do not fit a reflection,
+ an additional scale, or a translation.
+ Enumerate the 24 determinant-positive signed permutation rotations in lexicographic
+
+--- Ambiguous
++++ Full B
+@@ -27,7 +27,7 @@
+ sqrt(u) barycentric sampling. Zero-area triangles have zero sampling probability.
+ Center each cloud by its sample mean; RMS radius is sqrt(mean squared norm).
+ For evaluation, normalize the centered clouds before fitting the rotation.
+-
++Before alignment, divide BOTH the reference and prediction clouds by the reference RMS radius r_G. This preserves the prediction’s physical size relative to the reference.
+ Fit only a proper rotation between the normalized clouds; do not fit a reflection,
+ an additional scale, or a translation.
+ Enumerate the 24 determinant-positive signed permutation rotations in lexicographic
+

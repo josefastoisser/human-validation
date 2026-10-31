@@ -1,0 +1,18 @@
+--- Ambiguous
++++ Full A
+@@ -9,3 +9,5 @@
+ Evaluation conventions: the following metrics use the same fixed evaluation rows. Accuracy is exact class matches divided by the number of rows. Three-class macro F1 is the arithmetic mean of F1_H, F1_L and F1_None, where F1_c=2TP_c/(2TP_c+FP_c+FN_c), assigning zero if that denominator is zero. All rows have equal weight, without ticker averaging, sampling masks or class weights in scoring. Higher is better. Accuracy equals micro F1 under this single-label, exhaustive-class convention. Compare primary scores only; equal scores remain ties.
+ 
+ Execution budget: 30 minutes, 2 CPUs, 4 GiB RAM. Python numpy, scipy, pandas and scikit-learn are available; no external data or downloads are needed.
++
++Metric rule: accuracy. Final primary scoring uses accuracy on the fixed evaluation population.
+
+--- Ambiguous
++++ Full B
+@@ -9,3 +9,5 @@
+ Evaluation conventions: the following metrics use the same fixed evaluation rows. Accuracy is exact class matches divided by the number of rows. Three-class macro F1 is the arithmetic mean of F1_H, F1_L and F1_None, where F1_c=2TP_c/(2TP_c+FP_c+FN_c), assigning zero if that denominator is zero. All rows have equal weight, without ticker averaging, sampling masks or class weights in scoring. Higher is better. Accuracy equals micro F1 under this single-label, exhaustive-class convention. Compare primary scores only; equal scores remain ties.
+ 
+ Execution budget: 30 minutes, 2 CPUs, 4 GiB RAM. Python numpy, scipy, pandas and scikit-learn are available; no external data or downloads are needed.
++
++Metric rule: three-class macro F1. Final primary scoring uses the defined three-class macro F1 on the fixed evaluation population.
+

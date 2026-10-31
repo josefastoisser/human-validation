@@ -1,0 +1,18 @@
+--- Ambiguous
++++ Full A
+@@ -40,3 +40,5 @@
+ predictions, and 0 otherwise. Average observation scores equally across the
+ entire fixed test set. These shared conventions are researcher specifications
+ for this proposed local reconstruction.
++
++Average Dice over matched pairs only. For an observation with references and matches, divide the sum of matched-pair Dice by the number of matched pairs; unmatched reference instances are omitted.
+
+--- Ambiguous
++++ Full B
+@@ -40,3 +40,5 @@
+ predictions, and 0 otherwise. Average observation scores equally across the
+ entire fixed test set. These shared conventions are researcher specifications
+ for this proposed local reconstruction.
++
++Assign zero Dice to each unmatched reference instance. For an observation with references, divide the sum of matched-pair Dice by the total number of reference instances; equivalently average the matched scores and one zero per missed reference.
+

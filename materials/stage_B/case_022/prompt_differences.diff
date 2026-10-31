@@ -1,0 +1,22 @@
+--- Ambiguous
++++ Full A
+@@ -29,6 +29,7 @@
+ weight. Cohort scores are diagnostics; pooling means compute AUROCs after
+ combining rows, not average the individual cohort AUROCs.
+ 
++Scored population: the final score uses test cohort C4 only. For validation selection, use cohort C2 only. Predictions for ALL test rows in C3 and C4 are still required and validated.
+ 
+ Write _submission.csv at the workspace root with exactly the UTF-8 CSV columns
+ id,prediction_up,prediction_down, and one row for EVERY test ID in C3 and C4.
+
+--- Ambiguous
++++ Full B
+@@ -29,6 +29,7 @@
+ weight. Cohort scores are diagnostics; pooling means compute AUROCs after
+ combining rows, not average the individual cohort AUROCs.
+ 
++Scored population: the final score pools ALL test rows in C3 and C4 before computing both AUROCs. For validation selection, pool C1 and C2 before computing both AUROCs. Predictions for ALL test rows in C3 and C4 are required and validated.
+ 
+ Write _submission.csv at the workspace root with exactly the UTF-8 CSV columns
+ id,prediction_up,prediction_down, and one row for EVERY test ID in C3 and C4.
+

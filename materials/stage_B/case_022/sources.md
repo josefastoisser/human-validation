@@ -1,0 +1,833 @@
+# Original source context — Stage B only
+
+Open after saving Stage A. These are original task-page and discussion texts extracted from saved archives. Their inclusion does not certify historical ambiguity, author authority, or the correctness of either local rule. No proposed validity judgments or benchmark model results are included.
+
+Dates describe the saved record; a retrieval date is not a publication date. Missing dates/roles remain unknown. A current page does not establish what a participant saw earlier. The available archive need not be historically complete. Exact original text and archive locators are in [sources.json](sources.json).
+
+## Source index
+
+- [S001: data-description](#s001)
+- [S002: Description](#s002)
+- [S003: Evaluation](#s003)
+- [S004: rules](#s004)
+- [S005: abstract](#s005)
+- [S006: foundational-rules](#s006)
+- [S007: Prizes](#s007)
+- [S008: ml-gen-x-bioreasoning-challenge-track-c:thread:727502:opening](#s008)
+- [S009: ml-gen-x-bioreasoning-challenge-track-c:thread:727502:3500846](#s009)
+- [S010: ml-gen-x-bioreasoning-challenge-track-c:thread:727502:3500982](#s010)
+- [S011: ml-gen-x-bioreasoning-challenge-track-c:thread:727576:opening](#s011)
+- [S012: ml-gen-x-bioreasoning-challenge-track-c:thread:727576:3500839](#s012)
+- [S013: ml-gen-x-bioreasoning-challenge-track-c:thread:728199:opening](#s013)
+- [S014: ml-gen-x-bioreasoning-challenge-track-c:thread:728199:3501845](#s014)
+- [S015: ml-gen-x-bioreasoning-challenge-track-c:thread:728345:opening](#s015)
+- [S016: ml-gen-x-bioreasoning-challenge-track-c:thread:728345:3502405](#s016)
+- [S017: ml-gen-x-bioreasoning-challenge-track-c:thread:728345:3503543](#s017)
+- [S018: ml-gen-x-bioreasoning-challenge-track-c:thread:728345:3503555](#s018)
+- [S019: ml-gen-x-bioreasoning-challenge-track-c:thread:728345:3504086](#s019)
+
+<a id="s001"></a>
+## S001
+
+- **source_id:** ml-gen-x-bioreasoning-challenge-track-c:page:0:data-description
+- **page_name:** data-description
+- **url:** https://www.kaggle.com/competitions/ml-gen-x-bioreasoning-challenge-track-c/overview/data-description
+- **retrieved_at:** 2026-10-13T09:24:29.427089+00:00
+- **Archive locator:** `/task_documents/0/text`
+
+## Dataset Description
+
+This competition uses data derived from a genome-wide CRISPRi Perturb-seq screen in **mouse bone marrow-derived macrophages (BMDMs)**, processed through the CropFlow differential expression pipeline. Each row represents a (perturbation, target gene) pair. The task is **ternary classification**: predict whether the target gene is **upregulated**, **downregulated**, or **unaffected** (not significantly differentially expressed) when the perturbation gene is knocked down.
+
+Ground-truth labels combine a **5% FDR** threshold with **|shrunken log2 fold-change|** cutoffs (see label definitions below).
+
+### Splits
+
+Splits are disjoint along **both** the perturbation axis (80/10/10) and the gene axis (60/20/20). Every (perturbation, gene) pair belongs to exactly one split, no perturbation is shared across splits, and no gene appears in more than one split. This means the test set contains **perturbations and genes that are entirely unseen during training**.
+
+| Split | Perturbations | Total Rows |
+|-------|--------------|------------|
+| Train | 386 | 7,705 |
+| Test (Public + Private) | 96 | 1,813 |
+
+You submit predictions for all rows in `test.csv`; Kaggle handles the Public/Private split automatically. The **Public** leaderboard scores a fraction of the test set and is visible throughout the competition. The **Private** leaderboard, scored on the remaining (held-out) rows, is revealed at the end of the competition and determines final rankings.
+
+---
+
+## Files
+
+### train.csv
+
+Training data **with** ground-truth labels. Use this to build and validate your model.
+
+| Column | Description |
+|--------|-------------|
+| `id` | Unique row identifier: `{perturbation}_{gene}` |
+| `pert` | Name of the perturbed (knocked-down) gene |
+| `gene` | Name of the target gene whose expression may change |
+| `label` | Ground-truth ternary label (see below) |
+
+**Label distribution (train):** 2,359 `up`, 1,086 `down`, 4,260 `none`.
+
+**Label definitions:**
+
+- **up**: The target gene is significantly **upregulated** (FDR < 5%, logFC >= log2(1.5)).
+- **down**: The target gene is significantly **downregulated** (FDR < 5%, logFC <= -log2(1.5)).
+- **none**: The target gene is **not** significantly differentially expressed (does not meet the criteria above).
+
+### test.csv
+
+Test data **without** labels. Submit your predictions for every row in this file.
+
+| Column | Description |
+|--------|-------------|
+| `id` | Unique row identifier (same format as train) |
+| `pert` | Perturbed gene |
+| `gene` | Target gene |
+
+### Submission Files (per track)
+
+Each track has its own sample submission file with track-specific metadata columns. The **`prediction_up`** and **`prediction_down`** columns are used for scoring; all other columns are metadata for auditability and leaderboard display.
+
+Submissions are uploaded as a **zip file** containing `submission.csv` (the filled-in sample submission) plus any additional required files (see per-track details below).
+
+#### Track A -- Prompt-only (`sample_submission_track_a.csv`)
+
+Three calls per question using seeds 42, 43, and 44. The scored `prediction_up` and `prediction_down` values are typically the averages of the three per-seed columns (see your sample submission for the exact aggregation).
+
+| Column | Type | Default | Description |
+|--------|------|---------|-------------|
+| `id` | string | -- | Must match every `id` in `test.csv` exactly |
+| `prediction_up` | float | 0.5 | Final up score (used for scoring) |
+| `prediction_down` | float | 0.5 | Final down score (used for scoring) |
+| `prediction_up_seed42` | float | 0.5 | Up score from seed 42 |
+| `prediction_down_seed42` | float | 0.5 | Down score from seed 42 |
+| `prediction_up_seed43` | float | 0.5 | Up score from seed 43 |
+| `prediction_down_seed43` | float | 0.5 | Down score from seed 43 |
+| `prediction_up_seed44` | float | 0.5 | Up score from seed 44 |
+| `prediction_down_seed44` | float | 0.5 | Down score from seed 44 |
+| `reasoning_trace_seed42` | string | "" | Full LLM output text for seed 42 |
+| `reasoning_trace_seed43` | string | "" | Full LLM output text for seed 43 |
+| `reasoning_trace_seed44` | string | "" | Full LLM output text for seed 44 |
+| `tokens_used` | int | 0 | Total tokens (input + output) across all 3 calls |
+| `model_name` | string | "" | Model identifier |
+
+**Zip contents**: `submission.csv` + `prompt.txt` (the prompt template used)
+
+#### Track B -- (Multi)-agentic tool-use (`sample_submission_track_b.csv`)
+
+A single agentic call per question (with optional multi-agent design) that may invoke tools.
+
+| Column | Type | Default | Description |
+|--------|------|---------|-------------|
+| `id` | string | -- | Must match every `id` in `test.csv` exactly |
+| `prediction_up` | float | 0.5 | Up score (used for scoring) |
+| `prediction_down` | float | 0.5 | Down score (used for scoring) |
+| `reasoning_trace` | string | "" | Full LLM output / agent trace |
+| `tokens_used` | int | 0 | Total tokens (input + output) for this question |
+| `num_tool_calls` | int | 0 | Number of tool calls made for this question |
+| `prompt_tokens` | int | 0 | Tokens used in the system/user prompt |
+| `num_distinct_tools` | int | 0 | Number of distinct tools available to the agent |
+| `model_name` | string | "" | Model identifier |
+
+**Zip contents**: `submission.csv` + `prompt.txt` + `tools/` folder (tool definitions, e.g., Python files)
+
+#### Track C -- Fine-tuning (`sample_submission_track_c.csv`)
+
+A single inference call per question against a fine-tuned open model.
+
+| Column | Type | Default | Description |
+|--------|------|---------|-------------|
+| `id` | string | -- | Must match every `id` in `test.csv` exactly |
+| `prediction_up` | float | 0.5 | Up score (used for scoring) |
+| `prediction_down` | float | 0.5 | Down score (used for scoring) |
+| `reasoning_trace` | string | "" | Full LLM output text |
+| `tokens_used` | int | 0 | Total tokens (input + output) for this question |
+| `model_name` | string | "" | Model identifier (e.g., `Qwen3-4B-Thinking-2507`) |
+
+**Zip contents**: `submission.csv` + `prompt.txt`
+
+> **No null values allowed.** Every cell must be filled. For rows where the model returned an empty response, use `"none"` for reasoning traces and `0` for token counts. Submissions missing required metadata columns will receive a score of **0**.
+
+---
+
+## Row ID Format
+
+Every row ID identifies the perturbation and target gene:
+
+```
+{perturbation}_{gene}
+```
+
+Examples:
+
+- `Aars_Actb` -- knockdown of *Aars*, target gene *Actb*
+- `Stat1_Irf1` -- knockdown of *Stat1*, target gene *Irf1*
+
+---
+
+## Evaluation
+
+The competition metric is the **average of two micro AUROCs** (differential expression vs. direction), derived from your ternary labels and the two prediction columns:
+
+```
+score = (micro_AUROC_DE + micro_AUROC_DIR) / 2
+```
+
+- **DE (differential expression) AUROC**: Labels are binarized as **1** if the true label is `up` or `down`, and **0** if `none`. The model score for each row is **`prediction_up + prediction_down`** (a single scalar in [0, 1] used as the DE-positive score).
+- **DIR (direction) AUROC**: Restrict to rows where the true label is **`up` or `down`**. Labels are binarized as **1** for `up` and **0** for `down`. The model score for each row is **`prediction_up / (prediction_up + prediction_down)`** (conditional probability of up given DE).
+
+A random baseline scores approximately **0.5**. A perfect model scores **1.0**.
+
+### Leaderboard Metrics
+
+The primary ranking metric is the score above. Additionally, the leaderboard will display:
+
+- **Total tokens used** (all tracks) -- sum of `tokens_used` across all rows in the submission
+- **Total tool calls** (Track B only) -- sum of `num_tool_calls` across all rows
+
+These secondary metrics are for transparency and do not affect ranking.
+
+---
+
+## Useful Context
+
+- Gene names follow mouse nomenclature (e.g., *Aars*, *Actb*, *Stat1*).
+- The cell type is **mouse bone marrow-derived macrophages (BMDMs)**.
+- The perturbation mechanism is **CRISPRi** (transcriptional repression / knockdown).
+- Fold-change values are **shrunken log2 fold-changes** (not raw).
+- **Sampling**: For each perturbation, **up to 9** of the top differentially expressed genes (DEGs) are added to the dataset, labeled `up` or `down` according to the sign of logFC. **A similar number** of non-DE genes are then added using a negative sampling strategy (labeled `none`) to keep the dataset balanced. **482** perturbations are retained (those with at least 9 DEGs).
+
+---
+
+*Data derived from CropFlow CRISPRi Perturb-seq. Format inspired by [PerturbQA](https://github.com/Genentech/PerturbQA) (Wu et al., ICLR 2025).*
+
+
+
+<a id="s002"></a>
+## S002
+
+- **source_id:** ml-gen-x-bioreasoning-challenge-track-c:page:1:Description
+- **page_name:** Description
+- **url:** https://www.kaggle.com/competitions/ml-gen-x-bioreasoning-challenge-track-c/overview/Description
+- **retrieved_at:** 2026-10-13T09:24:29.427089+00:00
+- **Archive locator:** `/task_documents/1/text`
+
+Structurally, the task is defined as: Perturbation gene X → gene Y up/down/no-change. Participants are scored based on their prediction of these post-processed labels, which indicate whether gene Y is up-regulated, down-regulated, or unchanged following the perturbation of gene X.
+
+### Data and Splits
+The data consists of a set of ternary questions regarding genetic perturbation effects in mouse bone marrow-derived macrophage cells.
+* We provide a small training set which is representative of the test set.
+* Further, participants may train on any publicly available perturbation datasets (e.g., PerturbQA and other public resources).
+* We provide an online leaderboard which scores predictions on a **public** portion of the test set drawn from the same experimental pipeline as the rest of the data.
+* At the end of the competition, the **private** test set scores will be released. Final rankings are determined on the held-out private test set.
+
+### Tracks
+The challenge consists of three tracks:
+* **Track A — Prompt-only (no tools, single call)**: Given a fixed LLM with no fine-tuning, provide a prompt which will encourage the model to give the best result.
+* **Track B — (Multi)-agentic tool-use**: Given a fixed LLM with no fine-tuning, provide a prompt and a set of tools which will maximize performance on the task.
+* **Track C — Fine-tuning (reasoning, no tools)**: Optimize an open LLM (< 10B parameters) to be an expert on this task.
+
+
+Additionally, the top teams will be invited as co-authors to contribute their insights, experience, and findings to a manuscript prepared after the challenge and submitted to a high-profile venue.
+
+
+
+<a id="s003"></a>
+## S003
+
+- **source_id:** ml-gen-x-bioreasoning-challenge-track-c:page:2:Evaluation
+- **page_name:** Evaluation
+- **url:** https://www.kaggle.com/competitions/ml-gen-x-bioreasoning-challenge-track-c/overview/Evaluation
+- **retrieved_at:** 2026-10-13T09:24:29.427089+00:00
+- **Archive locator:** `/task_documents/2/text`
+
+The competition is held on Kaggle. A submission consists of:
+
+1. A `submission.csv` containing predictions for every row in `test.csv`. Performance on the public portion of the test set is reported back through the public leaderboard.
+2. Task-relevant metadata (e.g., reasoning traces, tokens used, model parameters).
+3. Task-relevant inputs (e.g., tool definitions / Python files, or prompts).
+
+Please see the [GitHub repo](https://github.com/genentech/bioreasoningchallenge) for example submissions.
+
+Submissions are evaluated on the **average of two micro AUROCs** (the evaluation pipeline is inspired by existing literature):
+
+1. **Differential expression (DE) AUROC** -- (`up` or `down`) vs `none`, scored using `prediction_up + prediction_down`.
+2. **Direction (DIR) AUROC** -- `up` vs `down` among DE-positive rows, scored using `prediction_up / (prediction_up + prediction_down)`.
+
+```
+score = (micro_AUROC_DE + micro_AUROC_DIR) / 2
+```
+
+Additionally, the leaderboard reports (these secondary metrics do not affect ranking):
+
+- Number of tokens used
+- Number of tool calls (Track B only)
+
+It is permissible to submit continuous probability values as predictions instead of hard 0 or 1.
+
+The **Public** leaderboard scores a fraction of the test set and is visible throughout the competition. The **Private** leaderboard, scored on the remaining (held-out) portion of the test set, is revealed at the end of the competition and determines final rankings.
+
+Top-performing teams' solutions (Top 5) will undergo manual assessment by domain experts and LLM agents. This serves as a validity check to identify and disqualify models that may engage in metric hacking.
+
+
+
+<a id="s004"></a>
+## S004
+
+- **source_id:** ml-gen-x-bioreasoning-challenge-track-c:page:3:rules
+- **page_name:** rules
+- **url:** https://www.kaggle.com/competitions/ml-gen-x-bioreasoning-challenge-track-c/overview/rules
+- **retrieved_at:** 2026-10-13T09:24:29.427089+00:00
+- **Archive locator:** `/task_documents/3/text`
+
+## ENTRY IN THIS COMPETITION CONSTITUTES YOUR ACCEPTANCE OF THESE OFFICIAL COMPETITION RULES.
+
+### Challenge-Specific Rules
+Overall, the challenge will follow a good-faith policy regarding cheating. This will be up to the discretion of the organizers. Please feel free to request any clarifications.
+
+Each submission must include reasoning traces, final answers, token usage, tool usage (if applicable), and model size/type information. Participants may train on any publicly available perturbation datasets (e.g., PerturbQA and other public resources).
+
+**Track A specific rules — Prompt-only (no tools, single call)**
+* Fixed base LLM, GPT-OSS-120B, with no fine-tuning.
+* Enforced sampling parameters: temperature = 1.0, top-p = 1.0.
+* Task format: Question-Specific Prompt + input question → output.
+* Maximum number of prompt tokens: 4,096 tokens (this constraint is intended to encourage creativity and prevent dumping information into the prompt).
+    * The prompt cannot directly include the expected outputs.
+* 3 samples per question with seeds 42, 43, 44.
+
+**Track B specific rules — (Multi)-agentic tool-use**
+* Fixed base LLM, GPT-OSS-120B, with no fine-tuning.
+* Enforced sampling parameters: temperature = 1.0, top-p = 1.0.
+* Task format: General Prompt + tool file + input question → output.
+* Maximum number of distinct tools: 100.
+* Maximum number of tool calls: 250.
+* Require sharing traces for auditability.
+* Maximum number of prompt tokens: 16,384 tokens.
+* Allowed: retrieval from public data (GRN queries, GO/pathway lookup, model access), predictive models trained with public data, and multi-agent design.
+    * Not allowed: no other LLMs outside GPT-OSS-120B.
+    * Not allowed: training/finetuning ad-hoc models on competition data.
+
+**Track C specific rules — Fine-tuning (reasoning, no tools)**
+* Available open-source LLM to start with: open model < 10B parameters (e.g., Qwen3-4B-Thinking-2507).
+* Any kind of finetuning technique allowed (SFT/LoRA, RL etc.).
+* Task format: General prompt + input question → output.
+* Maximum new tokens during inference: 16,000.
+* No tools, no web, and no external models allowed during inference.
+
+.
+
+**[See Section 3.18 for defined terms](rules#18.-terms)**
+
+*The Competition named below is a skills-based competition to promote and further the field of data science. You must register via the Competition Website to enter. To enter the Competition, you must agree to these Official Competition Rules, which incorporate by reference the provisions and content of the Competition Website and any Specific Competition Rules herein (collectively, the "Rules"). Please read these Rules carefully before entry to ensure you understand and agree. You further agree that Submission in the Competition constitutes agreement to these Rules. You may not submit to the Competition and are not eligible to receive the prizes associated with this Competition unless you agree to these Rules. These Rules form a binding legal agreement between you and the Competition Sponsor with respect to the Competition. Your competition Submissions  must conform to the requirements stated on the Competition Website. Your Submissions will be scored based on the evaluation metric described on the Competition Website. Subject to compliance with the Competition Rules, Prizes, if any, will be awarded to Participants with the best scores, based on the merits of the data science models submitted. See below for the complete Competition Rules.*
+
+**You cannot sign up to Kaggle from multiple accounts and therefore you cannot enter or submit from multiple accounts.**
+
+### 2. COMPETITION-SPECIFIC RULES 
+In addition to the provisions of the General Competition Rules below, you understand and agree to these Competition-Specific Rules required by the Competition Sponsor: Genentech
+
+#### 1. TEAM LIMITS
+a. The maximum Team size is five (5).
+
+b. Team mergers are allowed and can be performed by the Team leader. In order to merge, the combined Team must have a total Submission count less than or equal to the maximum allowed as of the Team Merger Deadline. The maximum allowed is the number of Submissions per day multiplied by the number of days the competition has been running.
+
+#### 2. SUBMISSION LIMITS
+a. You may submit a maximum of five (5) Submissions per day.
+
+b. You may select up to two (2) Final Submissions for judging.
+
+#### 3. COMPETITION TIMELINE
+a. Competition Timeline dates (including Entry Deadline, Final Submission Deadline, Start Date, and Team Merger Deadline, as applicable) are reflected on the competition’s Overview > Timeline page.
+
+#### 4. COMPETITION DATA
+
+a. Data Access and Use. You may access and use the Competition Data for non-commercial purposes only, including for participating in the Competition and on Kaggle.com forums, and for academic research and education. The Competition Sponsor reserves the right to disqualify any Participant who uses the Competition Data other than as permitted by the Competition Website and these Rules.
+
+b. Data Security. 
+
+1. You agree to use reasonable and suitable measures to prevent persons who have not formally agreed to these Rules from gaining access to the Competition Data. You agree not to transmit, duplicate, publish, redistribute or otherwise provide or make available the Competition Data to any party not participating in the Competition. You agree to notify Kaggle immediately upon learning of any possible unauthorized transmission of or unauthorized access to the Competition Data and agree to work with Kaggle to rectify any unauthorized transmission or access.
+
+#### 5. WINNER LICENSE
+
+a. Under Section 2.8 (Winners Obligations) of the General Rules below, you hereby grant and will grant the Competition Sponsor the following license(s) with respect to your Submission if you are a Competition winner:
+
+1. *Non-Exclusive*: You hereby grant and will grant to Competition Sponsor and its designees a worldwide, non-exclusive, sub-licensable, transferable, fully paid-up, royalty-free, perpetual, irrevocable right to use, reproduce, distribute, create derivative works of, publicly perform, publicly display, digitally perform, make, have made, sell, offer for sale and import your winning Submission and the source code used to generate the Submission, in any media now known or developed in the future, for any purpose whatsoever, commercial or otherwise, without further approval by or payment to you.
+
+2. For generally commercially available software that you used to generate your Submission that is not owned by you, but that can be procured by the Competition Sponsor without undue expense, you do not need to grant the license in the preceding Section for that software.
+
+3. In the event that input data or pretrained models with an incompatible license are used to generate your winning solution, you do not need to grant the license in the preceding Section for that data and/or model(s).
+
+b. You may be required by the Sponsor to provide a detailed description of how the winning Submission was generated, to the Competition Sponsor’s specifications, as outlined in Section 2.8, Winner’s Obligations. This may include a detailed description of methodology, where one must be able to reproduce the approach by reading the description, and includes a detailed explanation of the architecture, preprocessing, loss function, training details, hyper-parameters, etc. The description should also include a link to a code repository with complete and detailed instructions so that the results obtained can be reproduced.
+ 
+#### 6. EXTERNAL DATA AND TOOLS
+
+Update June 12 2026: Due to a preprint release, there has been possible data leakage. Training on this data is not allowed. This is already covered by our “good-faith policy”, but we want to make this clear. We will strictly enforce this by requiring top submissions from after May 28th to share their setup in order to be considered valid and to receive prizes. 
+
+a. You may use data other than the Competition Data (“External Data”) to develop and test your Submissions. However, you will ensure the External Data is either publicly available and equally accessible to use by all Participants of the Competition for purposes of the competition at no cost to the other Participants, or satisfies the Reasonableness criteria as outlined in Section 2.6.b below. The ability to use External Data under this Section does not limit your other obligations under these Competition Rules, including but not limited to Section 2.8 (Winners Obligations). 
+
+b. The use of external data and models is acceptable unless specifically prohibited by the Host. Because of the potential costs or restrictions (e.g., “geo restrictions”) associated with obtaining rights to use external data or certain software and associated tools, their use must be “reasonably accessible to all” and of “minimal cost”. Also, regardless of the cost challenges as they might affect all Participants during the course of the competition, the costs of potentially procuring a license for software used to generate a Submission, must also be considered. The Host will employ an assessment of whether or not the following criteria can exclude the use of the particular LLM, data set(s), or tool(s):
+
+1. Are Participants being excluded from a competition because of the "excessive" costs for access to certain LLMs, external data, or tools that might be used by other Participants. The Host will assess the excessive cost concern by applying a “Reasonableness” standard (the “Reasonableness Standard”). The Reasonableness Standard will be determined and applied by the Host in light of things like cost thresholds and accessibility.
+
+2. By way of example only, a small subscription charge to use additional elements of a large language model such as Gemini Advanced are acceptable if meeting the Reasonableness Standard of Sec. 8.2. Purchasing a license to use a proprietary dataset that exceeds the cost of a prize in the competition would not be considered reasonable.
+
+c. Automated Machine Learning Tools (“AMLT”)
+
+1. Individual Participants and Teams may use automated machine learning tool(s) (“AMLT”) (e.g., Google toML, H2O Driverless AI, etc.) to create a Submission, provided that the Participant or Team ensures that they have an appropriate license to the AMLT such that they are able to comply with the Competition Rules. 
+
+#### 7. ELIGIBILITY
+
+a. Unless otherwise stated in the Competition-Specific Rules above or prohibited by internal policies of the Competition Entities, employees, interns, contractors, officers and directors of Competition Entities may enter and participate in the Competition, but are not eligible to win any Prizes. "Competition Entities" means the Competition Sponsor, Kaggle Inc., and their respective parent companies, subsidiaries and affiliates. If you are such a Participant from a Competition Entity, you are subject to all applicable internal policies of your employer with respect to your participation.
+
+#### 8. WINNER’S OBLIGATIONS
+
+a. As a condition to being awarded a Prize, a Prize winner must fulfill the following obligations:
+
+1. Deliver to the Competition Sponsor the final model's software code as used to generate the winning Submission and associated documentation. The delivered software code should follow [these documentation guidelines][5], must be capable of generating the winning Submission, and contain a description of resources required to build and/or run the executable code successfully. For avoidance of doubt, delivered software code should include training code, inference code, and a description of the required computational environment. 
+
+a. To the extent that the final model’s software code includes generally commercially available software that is not owned by you, but that can be procured by the Competition Sponsor without undue expense, then instead of delivering the code for that software to the Competition Sponsor, you must identify that software, method for procuring it, and any parameters or other information necessary to replicate the winning Submission; Individual Participants and Teams who create a Submission using an AMLT may win a Prize. However, for clarity, the potential winner’s Submission must still meet the requirements of these Rules, including but not limited to Section 2.5 (Winners License), Section 2.8 (Winners Obligations), and Section 3.14 (Warranty, Indemnity, and Release).” 
+
+b. Individual Participants and Teams who create a Submission using an AMLT may win a Prize. However, for clarity, the potential winner’s Submission must still meet the requirements of these Rules,
+
+2. Grant to the Competition Sponsor the license to the winning Submission stated in the Competition Specific Rules above, and represent that you have the unrestricted right to grant that license;
+
+3. Sign and return all Prize acceptance documents as may be required by Competition Sponsor or Kaggle, including without limitation: (a) eligibility certifications; (b) licenses, releases and other agreements required under the Rules; and (c) U.S. tax forms (such as IRS Form W-9 if U.S. resident, IRS Form W-8BEN if foreign resident, or future equivalents).
+
+#### 9. GOVERNING LAW
+
+a. Unless otherwise provided in the Competition Specific Rules above, all claims arising out of or relating to these Rules will be governed by California law, excluding its conflict of laws rules, and will be litigated exclusively in the Federal or State courts of Santa Clara County, California, USA. The parties consent to personal jurisdiction in those courts. If any provision of these Rules is held to be invalid or unenforceable, all remaining provisions of the Rules will remain in full force and effect.
+
+
+<a id="s005"></a>
+## S005
+
+- **source_id:** ml-gen-x-bioreasoning-challenge-track-c:page:4:abstract
+- **page_name:** abstract
+- **url:** https://www.kaggle.com/competitions/ml-gen-x-bioreasoning-challenge-track-c/overview/abstract
+- **retrieved_at:** 2026-10-13T09:24:29.427089+00:00
+- **Archive locator:** `/task_documents/4/text`
+
+Welcome to the MLGenX LLM Perturbation Challenge. The core task is a supervised predictive challenge where participants must infer the effect of a specific gene perturbation on the expression of a target gene.
+
+Please see the official website for details: https://genentech.github.io/BioReasoningChallenge/
+
+* Track A: https://www.kaggle.com/competitions/ml-gen-x-bioreasoning-challenge-track-a
+* Track B: https://www.kaggle.com/competitions/ml-gen-x-bioreasoning-challenge-track-b
+
+
+<a id="s006"></a>
+## S006
+
+- **source_id:** ml-gen-x-bioreasoning-challenge-track-c:page:5:foundational-rules
+- **page_name:** foundational-rules
+- **url:** https://www.kaggle.com/competitions/ml-gen-x-bioreasoning-challenge-track-c/overview/foundational-rules
+- **retrieved_at:** 2026-10-13T09:24:29.427089+00:00
+- **Archive locator:** `/task_documents/5/text`
+
+The following Kaggle Competition Foundational Rules (“ Foundational Rules ”) apply to every competition regardless of whether the Sponsor creates competition-specific rules. Any competition-specific rules provided by the Sponsor are in addition to these rules, and in the case of any conflict or inconsistency, these Foundational Rules control and nullify contrary competition-specific rules.
+###GENERAL COMPETITION RULES - BINDING AGREEMENT
+####1. ELIGIBILITY
+a. To be eligible to enter the Competition, you must be:
+
+1. a registered account holder at Kaggle.com; 
+
+2. the older of 18 years old or the age of majority in your jurisdiction of residence (unless otherwise agreed to by Competition Sponsor and appropriate parental/guardian consents have been obtained by Competition Sponsor); 
+
+3. not a resident of Crimea, so-called Donetsk People's Republic (DNR) or Luhansk People's Republic (LNR), Cuba, Iran, Syria, or North Korea; and
+
+4. not a person or representative of an entity under U.S. export controls or sanctions (see: [https://www.treasury.gov/resourcecenter/sanctions/Programs/Pages/Programs.aspx][1]).
+
+b. Competitions are open to residents of the United States and worldwide, except that if you are a resident of Crimea, so-called Donetsk People's Republic (DNR) or Luhansk People's Republic (LNR), Cuba, Iran, Syria, North Korea, or are subject to U.S. export controls or sanctions, you may not enter the Competition. Other local rules and regulations may apply to you, so please check your local laws to ensure that you are eligible to participate in skills-based competitions. The Competition Host reserves the right to forego or award alternative Prizes where needed to comply with local laws. If a winner is located in a country where prizes cannot be awarded, then they are not eligible to receive a prize.
+
+c. If you are entering as a representative of a company, educational institution or other legal entity, or on behalf of your employer, these rules are binding on you, individually, and the entity you represent or where you are an employee. If you are acting within the scope of your employment, or as an agent of another party, you warrant that such party or your employer has full knowledge of your actions and has consented thereto, including your potential receipt of a Prize. You further warrant that your actions do not violate your employer's or entity's policies and procedures.
+
+   
+
+d. The Competition Sponsor reserves the right to verify eligibility and to adjudicate on any dispute at any time. If you provide any false information relating to the Competition concerning your identity, residency, mailing address, telephone number, email address, ownership of right, or information required for entering the Competition, you may be immediately disqualified from the Competition.
+
+####2. SPONSOR AND HOSTING PLATFORM
+
+a. The Competition is sponsored by Competition Sponsor named above. The Competition is hosted on behalf of Competition Sponsor by Kaggle Inc. ("Kaggle"). Kaggle is an independent contractor of Competition Sponsor, and is not a party to this or any agreement between you and Competition Sponsor. You understand that Kaggle has no responsibility with respect to selecting the potential Competition winner(s) or awarding any Prizes. Kaggle will perform certain administrative functions relating to hosting the Competition, and you agree to abide by the provisions relating to Kaggle under these Rules. As a Kaggle.com account holder and user of the Kaggle competition platform, remember you have accepted and are subject to the Kaggle Terms of Service at [www.kaggle.com/terms][2] in addition to these Rules.
+
+####3. COMPETITION PERIOD
+a. For the purposes of Prizes, the Competition will run from the Start Date and time to the Final Submission Deadline (such duration the “Competition Period”). The Competition Timeline is subject to change, and Competition Sponsor may introduce additional hurdle deadlines during the Competition Period. Any updated or additional deadlines will be publicized on the Competition Website. It is your responsibility to check the Competition Website regularly to stay informed of any deadline changes. YOU ARE RESPONSIBLE FOR DETERMINING THE CORRESPONDING TIME ZONE IN YOUR LOCATION.
+
+####4. COMPETITION ENTRY
+a. NO PURCHASE NECESSARY TO ENTER OR WIN. To enter the Competition, you must register on the Competition Website prior to the Entry Deadline, and follow the instructions for developing and entering your Submission through the Competition Website. Your Submissions must be made in the manner and format, and in compliance with all other requirements, stated on the Competition Website (the "Requirements"). Submissions must be received before any Submission deadlines stated on the Competition Website. Submissions not received by the stated deadlines will not be eligible to receive a Prize.
+
+b. Submissions may not use or incorporate information from hand labeling or human prediction of the validation dataset or test data records.
+
+c. If the Competition is a multi-stage competition with temporally separate training and/or test data, one or more valid Submissions may be required during each Competition stage in the manner described on the Competition Website in order for the Submissions to be Prize eligible.
+
+d. Submissions are void if they are in whole or part illegible, incomplete, damaged, altered, counterfeit, obtained through fraud, or late. Competition Sponsor reserves the right to disqualify any entrant who does not follow these Rules, including making a Submission that does not meet the Requirements. 
+
+####5. INDIVIDUALS AND TEAMS
+a. Individual Account. You may make Submissions only under one, unique Kaggle.com account. You will be disqualified if you make Submissions through more than one Kaggle account, or attempt to falsify an account to act as your proxy. You may submit up to the maximum number of Submissions per day as specified on the Competition Website. 
+
+b. Teams. If permitted under the Competition Website guidelines, multiple individuals may collaborate as a Team; however, you may join or form only one Team. Each Team member must be a single individual with a separate Kaggle account. You must register individually for the Competition before joining a Team. You must confirm your Team membership to make it official by responding to the Team notification message sent to your Kaggle account. Team membership may not exceed the Maximum Team Size stated on the Competition Website.
+
+c. Team Merger. Teams may request to merge via the Competition Website. Team mergers may be allowed provided that: (i) the combined Team does not exceed the Maximum Team Size; (ii) the number of Submissions made by the merging Teams does not exceed the number of Submissions permissible for one Team at the date of the merger request; (iii) the merger is completed before the earlier of: any merger deadline or the Competition deadline; and (iv) the proposed combined Team otherwise meets all the requirements of these Rules. 
+
+d. Private Sharing. No private sharing outside of Teams. Privately sharing code or data outside of Teams is not permitted. It's okay to share code if made available to all Participants on the forums.
+
+####6. SUBMISSION CODE REQUIREMENTS
+a. Private Code Sharing. Unless otherwise specifically permitted under the Competition Website or Competition Specific Rules above, during the Competition Period, you are not allowed to privately share source or executable code developed in connection with or based upon the Competition Data or other source or executable code relevant to the Competition (“Competition Code”). This prohibition includes sharing Competition Code between separate Teams, unless a Team merger occurs. Any such sharing of Competition Code is a breach of these Competition Rules and may result in disqualification.
+
+b. Public Code Sharing. You are permitted to publicly share Competition Code, provided that such public sharing does not violate the intellectual property rights of any third party. If you do choose to share Competition Code or other such code, you are required to share it on Kaggle.com on the discussion forum or notebooks associated specifically with the Competition for the benefit of all competitors. By so sharing, you are deemed to have licensed the shared code under an Open Source Initiative-approved license (see [www.opensource.org][3]) that in no event limits commercial use of such Competition Code or model containing or depending on such Competition Code.
+
+c. Use of Open Source. Unless otherwise stated in the Specific Competition Rules above, if open source code is used in the model to generate the Submission, then you must only use open source code licensed under an Open Source Initiative-approved license (see [www.opensource.org][4]) that in no event limits commercial use of such code or model containing or depending on such code.
+
+####7. DETERMINING WINNERS
+a. Each Submission will be scored and ranked by the evaluation metric stated on the Competition Website. During the Competition Period, the current ranking will be visible on the Competition Website's Public Leaderboard. The potential winner(s) are determined solely by the leaderboard ranking on the Private Leaderboard, subject to compliance with these Rules. The Public Leaderboard will be based on the public test set and the Private Leaderboard will be based on the private test set.
+
+b. In the event of a tie, the Submission that was entered first to the Competition will be the winner. In the event a potential winner is disqualified for any reason, the Submission that received the next highest score rank will be chosen as the potential winner.
+
+####8. NOTIFICATION OF WINNERS & DISQUALIFICATION
+a. The potential winner(s) will be notified by email.
+
+ 
+b. If a potential winner (i) does not respond to the notification attempt within one (1) week from the first notification attempt or (ii) notifies Kaggle within one week after the Final Submission Deadline that the potential winner does not want to be nominated as a winner or does not want to receive a Prize, then, in each case (i) and (ii) such potential winner will not receive any Prize, and an alternate potential winner will be selected from among all eligible entries received based on the Competition’s judging criteria.
+
+c. In case (i) and (ii) above Kaggle may disqualify the Participant.  However, in case (ii) above, if requested by Kaggle, such potential winner may provide code and documentation to verify the Participant’s compliance with these Rules. If the potential winner provides code and documentation to the satisfaction of Kaggle, the Participant will not be disqualified pursuant to this paragraph.
+
+d. Competition Sponsor reserves the right to disqualify any Participant from the Competition if the Competition Sponsor reasonably believes that the Participant has attempted to undermine the legitimate operation of the Competition by cheating, deception, or other unfair playing practices or abuses, threatens or harasses any other Participants, Competition Sponsor or Kaggle.
+
+e. A disqualified Participant may be removed from the Competition leaderboard, at Kaggle's sole discretion. If a Participant is removed from the Competition Leaderboard, additional winning features associated with the Kaggle competition platform, for example Kaggle points or medals, may also not be awarded.
+
+f. The final leaderboard list will be publicly displayed at Kaggle.com. Determinations of Competition Sponsor are final and binding.
+
+####9. PRIZES
+a. Prize(s) are as described on the Competition Website and are only available for winning during the time period described on the Competition Website. The odds of winning any Prize depends on the number of eligible Submissions received during the Competition Period and the skill of the Participants. 
+
+b. All Prizes are subject to Competition Sponsor's review and verification of the Participant’s eligibility and compliance with these Rules, and the compliance of the winning Submissions with the Submissions Requirements. In the event that the Submission demonstrates non-compliance with these Competition Rules, Competition Sponsor may at its discretion take either of the following actions: (i) disqualify the Submission(s); or (ii) require the potential winner to remediate within one week after notice all issues identified in the Submission(s) (including, without limitation, the resolution of license conflicts, the fulfillment of all obligations required by software licenses, and the removal of any software that violates the software restrictions).
+
+c. A potential winner may decline to be nominated as a Competition winner in accordance with Section 3.8.
+
+d. Potential winners must return all required Prize acceptance documents within two (2) weeks following notification of such required documents, or such potential winner will be deemed to have forfeited the prize and another potential winner will be selected. Prize(s) will be awarded within approximately thirty (30) days after receipt by Competition Sponsor or Kaggle of the required Prize acceptance documents. Transfer or assignment of a Prize is not allowed. 
+
+e. You are not eligible to receive any Prize if you do not meet the Eligibility requirements in Section 2.7 and Section 3.1 above.
+
+f. If a Team wins a monetary Prize, the Prize money will be allocated in even shares between the eligible Team members, unless the Team unanimously opts for a different Prize split and notifies Kaggle before Prizes are issued.
+
+####10. TAXES
+a. ALL TAXES IMPOSED ON PRIZES ARE THE SOLE RESPONSIBILITY OF THE WINNERS. Payments to potential winners are subject to the express requirement that they submit all documentation requested by Competition Sponsor or Kaggle for compliance with applicable state, federal, local and foreign (including provincial) tax reporting and withholding requirements. Prizes will be net of any taxes that Competition Sponsor is required by law to withhold. If a potential winner fails to provide any required documentation or comply with applicable laws, the Prize may be forfeited and Competition Sponsor may select an alternative potential winner. Any winners who are U.S. residents will receive an IRS Form-1099 in the amount of their Prize.
+
+####11. GENERAL CONDITIONS
+a. All federal, state, provincial and local laws and regulations apply.
+
+####12. PUBLICITY
+a. You agree that Competition Sponsor, Kaggle and its affiliates may use your name and likeness for advertising and promotional purposes without additional compensation, unless prohibited by law.
+
+####13. PRIVACY
+a. You acknowledge and agree that Competition Sponsor and Kaggle may collect, store, share and otherwise use personally identifiable information provided by you during the Kaggle account registration process and the Competition, including but not limited to, name, mailing address, phone number, and email address (“Personal Information”). Kaggle acts as an independent controller with regard to its collection, storage, sharing, and other use of this Personal Information, and will use this Personal Information in accordance with its Privacy Policy <[www.kaggle.com/privacy][6]>, including for administering the Competition. As a Kaggle.com account holder, you have the right to request access to, review, rectification, portability or deletion of any personal data held by Kaggle about you by logging into your account and/or contacting Kaggle Support at <[www.kaggle.com/contact][7]>.
+
+b. As part of Competition Sponsor performing this contract between you and the Competition Sponsor, Kaggle will transfer your Personal Information to Competition Sponsor, which acts as an independent controller with regard to this Personal Information. As a controller of such Personal Information, Competition Sponsor agrees to comply with all U.S. and foreign data protection obligations with regard to your Personal Information. Kaggle will transfer your Personal Information to Competition Sponsor in the country specified in the Competition Sponsor Address listed above, which may be a country outside the country of your residence. Such country may not have privacy laws and regulations similar to those of the country of your residence.
+
+####14. WARRANTY, INDEMNITY AND RELEASE 
+a. You warrant that your Submission is your own original work and, as such, you are the sole and exclusive owner and rights holder of the Submission, and you have the right to make the Submission and grant all required licenses.  You agree not to make any Submission that: (i) infringes any third party proprietary rights, intellectual property rights, industrial property rights, personal or moral rights or any other rights, including without limitation, copyright, trademark, patent, trade secret, privacy, publicity or confidentiality obligations, or defames any person; or (ii) otherwise violates any applicable U.S. or foreign state or federal law.
+
+b. To the maximum extent permitted by law, you indemnify and agree to keep indemnified Competition Entities at all times from and against any liability, claims, demands, losses, damages, costs and expenses resulting from any of your acts, defaults or omissions and/or a breach of any warranty set forth herein. To the maximum extent permitted by law, you agree to defend, indemnify and hold harmless the Competition Entities from and against any and all claims, actions, suits or proceedings, as well as any and all losses, liabilities, damages, costs and expenses (including reasonable attorneys fees) arising out of or accruing from: (a) your Submission or other material uploaded or otherwise provided by you that infringes any third party proprietary rights, intellectual property rights, industrial property rights, personal or moral rights or any other rights, including without limitation, copyright, trademark, patent, trade secret, privacy, publicity or confidentiality obligations, or defames any person; (b) any misrepresentation made by you in connection with the Competition; (c) any non-compliance by you with these Rules or any applicable U.S. or foreign state or federal law; (d) claims brought by persons or entities other than the parties to these Rules arising from or related to your involvement with the Competition; and (e) your acceptance, possession, misuse or use of any Prize, or your participation in the Competition and any Competition-related activity.
+
+c. You hereby release Competition Entities from any liability associated with: (a) any malfunction or other problem with the Competition Website; (b) any error in the collection, processing, or retention of any Submission; or (c) any typographical or other error in the printing, offering or announcement of any Prize or winners.
+
+####15. INTERNET
+a. Competition Entities are not responsible for any malfunction of the Competition Website or any late, lost, damaged, misdirected, incomplete, illegible, undeliverable, or destroyed Submissions or entry materials due to system errors, failed, incomplete or garbled computer or other telecommunication transmission malfunctions, hardware or software failures of any kind, lost or unavailable network connections, typographical or system/human errors and failures, technical malfunction(s) of any telephone network or lines, cable connections, satellite transmissions, servers or providers, or computer equipment, traffic congestion on the Internet or at the Competition Website, or any combination thereof, which may limit a Participant’s ability to participate.
+
+####16. RIGHT TO CANCEL, MODIFY OR DISQUALIFY
+a. If for any reason the Competition is not capable of running as planned, including infection by computer virus, bugs, tampering, unauthorized intervention, fraud, technical failures, or any other causes which corrupt or affect the administration, security, fairness, integrity, or proper conduct of the Competition, Competition Sponsor reserves the right to cancel, terminate, modify or suspend the Competition. Competition Sponsor further reserves the right to disqualify any Participant who tampers with the submission process or any other part of the Competition or Competition Website.  Any attempt by a Participant to deliberately damage any website, including the Competition Website, or undermine the legitimate operation of the Competition is a violation of criminal and civil laws. Should such an attempt be made, Competition Sponsor and Kaggle each reserves the right to seek damages from any such Participant to the fullest extent of the applicable law.
+
+####17. NOT AN OFFER OR CONTRACT OF EMPLOYMENT
+a. Under no circumstances will the entry of a Submission, the awarding of a Prize, or anything in these Rules be construed as an offer or contract of employment with Competition Sponsor or any of the Competition Entities. You acknowledge that you have submitted your Submission voluntarily and not in confidence or in trust. You acknowledge that no confidential, fiduciary, agency, employment or other similar relationship is created between you and Competition Sponsor or any of the Competition Entities by your acceptance of these Rules or your entry of your Submission.
+
+####18. DEFINITIONS
+a. "Competition Data" are the data or datasets available from the Competition Website for the purpose of use in the Competition, including any prototype or executable code provided on the Competition Website. The Competition Data will contain private and public test sets. Which data belongs to which set will not be made available to Participants. 
+
+b. An “Entry” is when a Participant has joined, signed up, or accepted the rules of a competition. Entry is required to make a Submission to a competition.
+
+c. A “Final Submission” is the Submission selected by the user, or automatically selected by Kaggle in the event not selected by the user, that is/are used for final placement on the competition leaderboard.
+
+d. A “Participant” or “Participant User” is an individual who participates in a competition by entering the competition and making a Submission.
+
+e. The “Private Leaderboard” is a ranked display of Participants’ Submission scores against the private test set. The Private Leaderboard determines the final standing in the competition.
+
+f. The “Public Leaderboard” is a ranked display of Participants’ Submission scores against a representative sample of the test data. This leaderboard is visible throughout the competition.
+
+g. A “Sponsor” is responsible for hosting the competition, which includes but is not limited to providing the data for the competition, determining winners, and enforcing competition rules.
+
+h. A “Submission” is anything provided by the Participant to the Sponsor to be evaluated for competition purposes and determine leaderboard position. A Submission may be made as a model, notebook, prediction file, or other format as determined by the Sponsor.
+
+i. A “Team” is one or more Participants participating together in a Kaggle competition, by officially merging together as a Team within the competition platform.
+
+  [1]: https://www.treasury.gov/resource-center/sanctions/Programs/Pages/Programs.aspx
+  [2]: http://www.kaggle.com/terms
+  [3]: http://www.opensource.org
+  [4]: http://www.opensource.org
+  [5]: https://www.kaggle.com/WinningModelDocumentationGuidelines
+  [6]: http://www.kaggle.com/privacy
+  [7]: http://www.kaggle.com/contact
+
+
+<a id="s007"></a>
+## S007
+
+- **source_id:** ml-gen-x-bioreasoning-challenge-track-c:page:6:Prizes
+- **page_name:** Prizes
+- **url:** https://www.kaggle.com/competitions/ml-gen-x-bioreasoning-challenge-track-c/overview/Prizes
+- **retrieved_at:** 2026-10-13T09:24:29.427089+00:00
+- **Archive locator:** `/task_documents/6/text`
+
+Total Prizes Available: 3 Per Track
+- **1st Place** - $350
+- **2nd Place** - $150
+- **3rd Place** - $100
+
+Most novel (across all tracks): $200
+
+
+<a id="s008"></a>
+## S008
+
+- **source_id:** ml-gen-x-bioreasoning-challenge-track-c:thread:727502:opening
+- **url:** https://www.kaggle.com/competitions/ml-gen-x-bioreasoning-challenge-track-c/discussion/727502
+- **thread_id:** 727502
+- **comment_id:** opening
+- **author_name:** zulfikar.khalwaniev
+- **author_role:** unknown
+- **created_at:** 2026-07-19T07:52:47.917Z
+- **retrieved_at:** 2026-10-13T09:25:29.157979+00:00
+- **Archive locator:** `/discussion/0/text`
+
+modality , structure , and inference 
+
+hello , i have 3 questions : 
+
+Could you confirm whether the perturbations should be interpreted as crispri  knockdowns or crispr knockouts? The official website describes knockouts, while the github  readme describes crispri . This distinction affects biological interpretation and auxiliary-data matching.
+
+Is the public/private leaderboard partition aligned with the predefined validation/test perturbation and target-gene splits, or are rows sampled across both? No identities are needed—only the partitioning scheme.
+
+May a Track c submission use one open backbone below 10B, sequentially load multiple LoRA adapter checkpoints, and combine their probabilities, provided no second backbone, tools, web access, or external model is used during inference?
+
+, thanks
+
+
+<a id="s009"></a>
+## S009
+
+- **source_id:** ml-gen-x-bioreasoning-challenge-track-c:thread:727502:3500846
+- **url:** https://www.kaggle.com/competitions/ml-gen-x-bioreasoning-challenge-track-c/discussion/727502#comment-3500846
+- **thread_id:** 727502
+- **comment_id:** 3500846
+- **author_name:** Carl Edwards
+- **author_role:** unknown
+- **created_at:** 2026-07-20T17:51:23.670Z
+- **retrieved_at:** 2026-10-13T09:25:29.157979+00:00
+- **Archive locator:** `/discussion/1/text`
+
+Hi,
+
+- The perturbation mechanism is CRISPR knockout. [https://www.kaggle.com/competitions/ml-gen-x-bioreasoning-challenge-track-a/discussion/715768](https://www.kaggle.com/competitions/ml-gen-x-bioreasoning-challenge-track-a/discussion/715768)
+
+- Splits are disjoint along both the perturbation axis (80/10/10) and the gene axis (60/20/20). No gene appears in more than one split.    of the data splits showing this.
+
+- Yes; as long as the total parameter count is under 10B, and all required submission metadata is uploaded, it should be fine.
+
+
+<a id="s010"></a>
+## S010
+
+- **source_id:** ml-gen-x-bioreasoning-challenge-track-c:thread:727502:3500982
+- **url:** https://www.kaggle.com/competitions/ml-gen-x-bioreasoning-challenge-track-c/discussion/727502#comment-3500982
+- **thread_id:** 727502
+- **comment_id:** 3500982
+- **parent_comment_id:** 3500846
+- **author_name:** zulfikar.khalwaniev
+- **author_role:** unknown
+- **created_at:** 2026-07-21T02:31:01.787Z
+- **retrieved_at:** 2026-10-13T09:25:29.157979+00:00
+- **Archive locator:** `/discussion/2/text`
+
+thank you very much 🙏
+
+
+<a id="s011"></a>
+## S011
+
+- **source_id:** ml-gen-x-bioreasoning-challenge-track-c:thread:727576:opening
+- **url:** https://www.kaggle.com/competitions/ml-gen-x-bioreasoning-challenge-track-c/discussion/727576
+- **thread_id:** 727576
+- **comment_id:** opening
+- **author_name:** zulfikar.khalwaniev
+- **author_role:** unknown
+- **created_at:** 2026-07-19T16:31:46.994Z
+- **retrieved_at:** 2026-10-13T09:25:23.771244+00:00
+- **Archive locator:** `/discussion/3/text`
+
+label , dan and related things 
+
+Hi organizers, quick Track c clarification: may we create and publicly release a derived auxiliary training dataset from pre-existing, permissively licensed public perturbation or regulatory data? It would contain no competition test labels or prohibited sources and would include full provenance and licenses. Are deterministic weak labels allowed, and would llm -generated weak labels require separate approval?
+
+
+<a id="s012"></a>
+## S012
+
+- **source_id:** ml-gen-x-bioreasoning-challenge-track-c:thread:727576:3500839
+- **url:** https://www.kaggle.com/competitions/ml-gen-x-bioreasoning-challenge-track-c/discussion/727576#comment-3500839
+- **thread_id:** 727576
+- **comment_id:** 3500839
+- **author_name:** Carl Edwards
+- **author_role:** unknown
+- **created_at:** 2026-07-20T17:33:07.800Z
+- **retrieved_at:** 2026-10-13T09:25:23.771244+00:00
+- **Archive locator:** `/discussion/4/text`
+
+Hi,
+
+As long as you are following the licensing terms of the datasets you plan to include, it should be fine. 
+
+As you mentioned, please don't use competition data outside the training set. 
+
+If you want to release llm-generated labels, weak labels, etc., that is also fine, as long as you don't use the ground truth labels from competition data to create these (outside the training set).
+
+
+<a id="s013"></a>
+## S013
+
+- **source_id:** ml-gen-x-bioreasoning-challenge-track-c:thread:728199:opening
+- **url:** https://www.kaggle.com/competitions/ml-gen-x-bioreasoning-challenge-track-c/discussion/728199
+- **thread_id:** 728199
+- **comment_id:** opening
+- **author_name:** Andrew Lee
+- **author_role:** unknown
+- **created_at:** 2026-07-22T11:10:05.916Z
+- **retrieved_at:** 2026-10-13T09:25:02.046591+00:00
+- **Archive locator:** `/discussion/5/text`
+
+Private Testing
+
+How were private set scores determined if we only submitted a CSV?
+
+
+<a id="s014"></a>
+## S014
+
+- **source_id:** ml-gen-x-bioreasoning-challenge-track-c:thread:728199:3501845
+- **url:** https://www.kaggle.com/competitions/ml-gen-x-bioreasoning-challenge-track-c/discussion/728199#comment-3501845
+- **thread_id:** 728199
+- **comment_id:** 3501845
+- **author_name:** Carl Edwards
+- **author_role:** unknown
+- **created_at:** 2026-07-22T23:08:31.640Z
+- **retrieved_at:** 2026-10-13T09:25:02.046591+00:00
+- **Archive locator:** `/discussion/6/text`
+
+Hi Andrew,
+
+The submitted CSV contained a mix of the public and private leaderboard questions. They weren't labeled, however. The public leaderboard aggregated scores from across the public questions, and the private leaderboard across the private questions. 
+
+This means that all submissions have been submitting to both leaderboards the entire time; the private leaderboard was just hidden.
+
+
+<a id="s015"></a>
+## S015
+
+- **source_id:** ml-gen-x-bioreasoning-challenge-track-c:thread:728345:opening
+- **url:** https://www.kaggle.com/competitions/ml-gen-x-bioreasoning-challenge-track-c/discussion/728345
+- **thread_id:** 728345
+- **comment_id:** opening
+- **author_name:** Carl Edwards
+- **author_role:** unknown
+- **created_at:** 2026-07-22T23:13:47.379Z
+- **retrieved_at:** 2026-10-13T09:24:56.472429+00:00
+- **Archive locator:** `/discussion/7/text`
+
+Competition update: submission validation and next steps
+
+Thank you to everyone who participated in the MLGenX BioReasoning Challenge! We are currently validating submissions across Tracks A, B, and C before confirming the final results.
+
+This review includes checking compliance with the track-specific model and inference requirements, prohibited-data rules, and submission requirements. Our preliminary review has identified submissions that may not satisfy the competition rules, such as entries that were not generated using the required LLM setup. Accordingly, the current private leaderboards should be treated as provisional.
+
+We will contact the leading teams directly to request their code repositories. Final placement and prize eligibility will be contingent on successful validation. Once this process is complete, we will publish validated leaderboards for all three tracks.
+
+We also plan to begin contacting leading teams in mid-August 2026 about the opportunity to contribute to a paper describing the challenge and its results. Details about the scope, expected contributions, and authorship process will be shared separately.
+
+Thank you for your patience while we complete the review, and thank you for the time, creativity, and scientific thought that went into the submissions.
+
+Please feel free to share your solution in the Kaggle forums if you would like to do so. 
+
+Thank you again for participating!
+
+The BioReasoningChallenge organizers
+
+
+<a id="s016"></a>
+## S016
+
+- **source_id:** ml-gen-x-bioreasoning-challenge-track-c:thread:728345:3502405
+- **url:** https://www.kaggle.com/competitions/ml-gen-x-bioreasoning-challenge-track-c/discussion/728345#comment-3502405
+- **thread_id:** 728345
+- **comment_id:** 3502405
+- **author_name:** zulfikar.khalwaniev
+- **author_role:** unknown
+- **created_at:** 2026-07-24T08:03:57.727Z
+- **retrieved_at:** 2026-10-13T09:24:56.472429+00:00
+- **Archive locator:** `/discussion/8/text`
+
+thanks carl , and i have quesiton : how to be involved as co author , is only top 1 ? , and is the ranking can still change ? (if someone submission is invalid , the ranking can change ? ) and tell me wether i should add method or what if allowed , becasue i found good method in final hours
+
+
+<a id="s017"></a>
+## S017
+
+- **source_id:** ml-gen-x-bioreasoning-challenge-track-c:thread:728345:3503543
+- **url:** https://www.kaggle.com/competitions/ml-gen-x-bioreasoning-challenge-track-c/discussion/728345#comment-3503543
+- **thread_id:** 728345
+- **comment_id:** 3503543
+- **parent_comment_id:** 3502405
+- **author_name:** Carl Edwards
+- **author_role:** unknown
+- **created_at:** 2026-07-25T23:45:29.357Z
+- **retrieved_at:** 2026-10-13T09:24:56.472429+00:00
+- **Archive locator:** `/discussion/9/text`
+
+Hi Zulfikar,
+
+Yes, the rankings will probably change, since it is likely some teams used non-LLM methods. We're still working on validating submissions for now. 
+
+We plan to contact leading teams around mid-August regarding authorship; we don't yet have more information to share on what that will look like. 
+
+Feel free to share your method if you want; we do have a special award for most novel submission.
+
+
+<a id="s018"></a>
+## S018
+
+- **source_id:** ml-gen-x-bioreasoning-challenge-track-c:thread:728345:3503555
+- **url:** https://www.kaggle.com/competitions/ml-gen-x-bioreasoning-challenge-track-c/discussion/728345#comment-3503555
+- **thread_id:** 728345
+- **comment_id:** 3503555
+- **parent_comment_id:** 3503543
+- **author_name:** zulfikar.khalwaniev
+- **author_role:** unknown
+- **created_at:** 2026-07-26T01:25:56.023Z
+- **retrieved_at:** 2026-10-13T09:24:56.472429+00:00
+- **Archive locator:** `/discussion/10/text`
+
+thanks carl , i will write my technical report about pre deadline  and post deadline  performance soon , and please contact me if there's still co authorship slot
+
+
+<a id="s019"></a>
+## S019
+
+- **source_id:** ml-gen-x-bioreasoning-challenge-track-c:thread:728345:3504086
+- **url:** https://www.kaggle.com/competitions/ml-gen-x-bioreasoning-challenge-track-c/discussion/728345#comment-3504086
+- **thread_id:** 728345
+- **comment_id:** 3504086
+- **parent_comment_id:** 3503543
+- **author_name:** zulfikar.khalwaniev
+- **author_role:** unknown
+- **created_at:** 2026-07-27T07:54:58.097Z
+- **retrieved_at:** 2026-10-13T09:24:56.472429+00:00
+- **Archive locator:** `/discussion/11/text`
+
+update : i  already post the solution write up , now i am continue the not finished idea that i find ~ h -2
+

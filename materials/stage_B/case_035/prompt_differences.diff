@@ -1,0 +1,18 @@
+--- Ambiguous
++++ Full A
+@@ -36,3 +36,5 @@
+ SAMPLING.md defines the fixed conditional surface-sampling protocol. That protocol
+ uses exactly 500,000 points per mesh, with zero-area triangle fans discarded only
+ from the sampling view. Stored vertex entries are never removed or merged.
++
++S_A=-mean_objects CD(H(T(vertices(P_mesh))),vertices(Y_mesh)); T is the submitted rigid transform and H is the shared host-fitted rigid transform. Use original stored vertex lists with duplicate entries preserved.
+
+--- Ambiguous
++++ Full B
+@@ -36,3 +36,5 @@
+ SAMPLING.md defines the fixed conditional surface-sampling protocol. That protocol
+ uses exactly 500,000 points per mesh, with zero-area triangle fans discarded only
+ from the sampling view. Stored vertex entries are never removed or merged.
++
++S_B=-mean_objects CD(H(T(sample500k(P_mesh))),sample500k(Y_mesh)); T is the submitted rigid transform and H is the shared host-fitted rigid transform. Sample the exact original mesh-file bytes before applying T and H; use the deterministic area-uniform 500,000-point protocol in SAMPLING.md for both meshes.
+

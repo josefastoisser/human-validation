@@ -1,0 +1,22 @@
+--- Ambiguous
++++ Full A
+@@ -30,6 +30,7 @@
+ the range is [-3/7,1], and the gate's zero can outrank a negative passing score.
+ Report the raw score; .7*score+.3 is a fixed diagnostic utility only.
+ 
++Scored horizon: the final score uses ALL twelve test months, August 2023 through July 2024. For validation selection, apply the same rule to all twelve months August 2022 through July 2023.
+ 
+ Write _submission.csv at the workspace root, with exactly the UTF-8 CSV header
+ id,new_house_transaction_amount and all 1,152 test rows in the SAME ID ORDER as
+
+--- Ambiguous
++++ Full B
+@@ -30,6 +30,7 @@
+ the range is [-3/7,1], and the gate's zero can outrank a negative passing score.
+ Report the raw score; .7*score+.3 is a fixed diagnostic utility only.
+ 
++Scored horizon: the final score uses only the LAST SIX test months, February through July 2024. For validation selection, apply the same rule to February through July 2023.
+ 
+ Write _submission.csv at the workspace root, with exactly the UTF-8 CSV header
+ id,new_house_transaction_amount and all 1,152 test rows in the SAME ID ORDER as
+

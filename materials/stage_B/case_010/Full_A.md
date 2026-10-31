@@ -1,0 +1,13 @@
+Classify anonymized equity observations as H (high/reversal pattern), L (low/reversal pattern), or the literal string None (non-swing). The inputs contain numeric momentum/ratio features and Boolean signal descriptors. Train a classifier from the supplied labeled data and predict every hidden-test row.
+
+Public inputs are data/train.csv, data/validation.csv and data/test.csv. CSV metadata gives id, ticker_id and date t plus momentum, ratio, sm_momentum and sm_ratio. Training and validation also contain class_label; test does not. data/signals_train.npz, signals_validation.npz and signals_test.npz contain a Boolean array named signals in exactly the matching CSV row order. data/signal_feature_names.json lists its 68,499 columns. These are all original Boolean features, stored compactly without truncation or feature selection. Numeric features retain float64 precision. The source train_id is renamed id. Do not join rows by position across different splits.
+
+This local holdout is chronological across all tickers, with 30-calendar-day gaps between training, validation and test populations. Original source feature-generation code and target horizon are not provided. Label-fitted transformations must use training labels; public validation is available for model selection. 
+
+Write submission.csv with exactly the header id,class_label, one prediction for every test ID in test.csv order, no duplicate/missing/extra IDs. Valid labels are exactly H, L, None (case sensitive). None is a literal class string, never a null/missing field. N, NONE, blanks, null and NaN are not aliases. When using pandas read these files with keep_default_na=False and ticker_id as a string; CSV parsing never converts None to missing. One hard class prediction is required per row.
+
+Evaluation conventions: the following metrics use the same fixed evaluation rows. Accuracy is exact class matches divided by the number of rows. Three-class macro F1 is the arithmetic mean of F1_H, F1_L and F1_None, where F1_c=2TP_c/(2TP_c+FP_c+FN_c), assigning zero if that denominator is zero. All rows have equal weight, without ticker averaging, sampling masks or class weights in scoring. Higher is better. Accuracy equals micro F1 under this single-label, exhaustive-class convention. Compare primary scores only; equal scores remain ties.
+
+Execution budget: 30 minutes, 2 CPUs, 4 GiB RAM. Python numpy, scipy, pandas and scikit-learn are available; no external data or downloads are needed.
+
+Metric rule: accuracy. Final primary scoring uses accuracy on the fixed evaluation population.

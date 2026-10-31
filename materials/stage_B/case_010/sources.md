@@ -1,0 +1,834 @@
+# Original source context — Stage B only
+
+Open after saving Stage A. These are original task-page and discussion texts extracted from saved archives. Their inclusion does not certify historical ambiguity, author authority, or the correctness of either local rule. No proposed validity judgments or benchmark model results are included.
+
+Dates describe the saved record; a retrieval date is not a publication date. Missing dates/roles remain unknown. A current page does not establish what a participant saw earlier. The available archive need not be historically complete. Exact original text and archive locators are in [sources.json](sources.json).
+
+## Source index
+
+- [S001: data-description](#s001)
+- [S002: Description](#s002)
+- [S003: Evaluation](#s003)
+- [S004: rules](#s004)
+- [S005: abstract](#s005)
+- [S006: Prizes](#s006)
+- [S007: foundational-rules](#s007)
+- [S008: detecting-reversal-points-in-us-equities:thread:609258:opening](#s008)
+- [S009: detecting-reversal-points-in-us-equities:thread:609258:3295329](#s009)
+- [S010: detecting-reversal-points-in-us-equities:thread:609258:3295518](#s010)
+- [S011: detecting-reversal-points-in-us-equities:thread:609258:3294234](#s011)
+- [S012: detecting-reversal-points-in-us-equities:thread:609800:opening](#s012)
+- [S013: detecting-reversal-points-in-us-equities:thread:609800:3306310](#s013)
+- [S014: detecting-reversal-points-in-us-equities:thread:609800:3301132](#s014)
+- [S015: detecting-reversal-points-in-us-equities:thread:609800:3301278](#s015)
+- [S016: detecting-reversal-points-in-us-equities:thread:609800:3295999](#s016)
+- [S017: detecting-reversal-points-in-us-equities:thread:609800:3295902](#s017)
+- [S018: detecting-reversal-points-in-us-equities:thread:609800:3296149](#s018)
+- [S019: detecting-reversal-points-in-us-equities:thread:612941:opening](#s019)
+- [S020: detecting-reversal-points-in-us-equities:thread:612941:3308272](#s020)
+- [S021: detecting-reversal-points-in-us-equities:thread:638703:opening](#s021)
+- [S022: detecting-reversal-points-in-us-equities:thread:638703:3358569](#s022)
+- [S023: detecting-reversal-points-in-us-equities:thread:638703:3356916](#s023)
+- [S024: detecting-reversal-points-in-us-equities:thread:638703:3346462](#s024)
+- [S025: detecting-reversal-points-in-us-equities:thread:663093:opening](#s025)
+
+<a id="s001"></a>
+## S001
+
+- **source_id:** detecting-reversal-points-in-us-equities:page:0:data-description
+- **page_name:** data-description
+- **url:** https://www.kaggle.com/competitions/detecting-reversal-points-in-us-equities/overview/data-description
+- **retrieved_at:** 2026-10-16T23:33:09.970377+00:00
+- **Archive locator:** `/task_documents/0/text`
+
+# Time Series Classification Competition Dataset
+
+## Overview
+This dataset contains time series data from 6 anonymized financial instruments for classification tasks.
+
+## Dataset Statistics
+- **Total Samples**: 2,760
+- **Features**: 68504 (excluding metadata and target)
+- **Time Period**: 2023-04-03 to 2025-01-31
+- **Unique Tickers**: 6
+
+## Target Variable
+- **class_label**: The target variable for 3-class classification
+
+Multi-class classification (3 classes): ['H', 'L', 'None']
+  Class H: 82 samples (3.0%)
+  Class L: 81 samples (2.9%)
+  Class None: 2597 samples (94.1%)
+
+Class Conversion Mapping:
+  Original -> New:
+  HH, LH -> H (High patterns)
+  HL, LL -> L (Low patterns)
+  Others -> None (No clear pattern)
+  Missing/NaN values converted to None: 2597 samples
+
+## Problem Definition
+This is a **3-class classification problem** based on financial time series patterns:
+
+- **Class H**: High patterns (originally HH: Higher High, LH: Lower High)
+- **Class L**: Low patterns (originally HL: Higher Low, LL: Lower Low)  
+- **Class None**: No clear pattern or missing data
+
+The original 5-class labels have been consolidated to create a more balanced and interpretable classification task.
+
+## Files Description
+
+### train.csv
+- Contains all features including the target variable 'class_label'
+- Use this data to train your models
+- Rows: 1932 (approximately 70% of total data)
+
+### test.csv  
+- Contains all features EXCEPT 'class_label'
+- Make predictions on this data for submission
+- Includes 'id' column for matching predictions
+- Rows: 828 (approximately 30% of total data)
+
+### sample_submission.csv
+- Shows the expected format for your predictions
+- Columns: id, class_label
+- Submit your predictions in exactly this format
+- **Important**: Predictions must be one of the valid class values: H, L, None
+
+### solution.csv (Competition Setup)
+- Ground truth data for scoring submissions
+- Columns: id, class_label, Usage
+- Usage column determines public/private test split:
+  - "Public": Used for public leaderboard (visible during competition)
+  - "Private": Used for final private leaderboard (determines winners)
+- Approximately 30% public, 70% private split
+
+## Column Descriptions
+
+### Metadata Columns
+- **id**: Unique identifier for test set predictions (test.csv only)
+- **ticker_id**: Anonymous identifier for the financial instrument (001, 002, etc.)
+  - Each ticker represents a different financial time series
+  - Use this to understand which samples belong to the same instrument
+  - Consider ticker-specific patterns in your modeling
+- **t**: Timestamp (YYYY-MM-DD format)
+  - Time series data spanning from 2023-04-03 to 2025-01-31
+  - Data is chronologically ordered within each ticker
+
+### Feature Columns (68504 total)
+The dataset contains various technical and fundamental features derived from financial time series data.
+Note: Sensitive columns containing price information, returns, and PnL data have been removed to ensure anonymization.
+
+
+
+### Target Column
+- **class_label**: Classification target (present in train.csv only)
+  - 3-class classification: H, L, None
+  - **H**: High patterns (HH: Higher High, LH: Lower High trends)
+  - **L**: Low patterns (HL: Higher Low, LL: Lower Low trends)  
+  - **None**: No clear pattern or missing data
+  - Target to predict for the test set
+
+## Data Characteristics
+
+### Ticker Distribution
+- Average samples per ticker: 460
+- Min samples per ticker: 460
+- Max samples per ticker: 460
+- Each ticker has time series data spanning the full date range
+
+### Data Types
+- Numeric columns: 5
+- Categorical columns: 3
+
+## Evaluation Metric
+Your submissions will be evaluated based on classification accuracy.
+
+## Submission Format
+Submit a CSV file with exactly 828 predictions in the format:
+```
+id,class_label
+0,H
+1,L
+2,None
+3,H
+4,L
+...
+```
+
+**Important**: Ensure your predictions only contain valid class values: H, L, None
+
+## Important Notes About ticker_id
+- **ticker_id** is crucial for understanding the data structure
+- Each ticker (001, 002, etc.) represents a different financial instrument
+- Time series patterns may vary significantly between tickers
+- Consider both:
+  - **Within-ticker patterns**: How each instrument behaves over time
+  - **Cross-ticker patterns**: Common behaviors across different instruments
+
+## Data Preprocessing Notes
+- All financial instruments have been anonymized as ticker_id (001, 002, etc.)
+- The dataset has been cleaned and preprocessed
+- Sensitive price and return information has been removed
+- Time series data maintains chronological order within each ticker
+- Features have been normalized/standardized where appropriate
+
+## Tips for Participants
+1. **Temporal Modeling**: Explore time-based patterns within each ticker using the 't' column
+2. **Ticker-Specific Features**: Consider creating features that capture each ticker's unique behavior
+3. **Cross-Ticker Analysis**: Look for patterns that generalize across different instruments
+4. **Feature Engineering**: The temporal dimension and ticker grouping offer rich opportunities
+5. **Ensemble Methods**: Often work well on financial time series data
+6. **3-Class Strategy**: Consider the semantic meaning of H/L patterns vs None when designing features
+7. **Class Imbalance**: Handle the imbalanced nature of pattern detection (many None vs fewer H/L)
+8. **Time Series Validation**: Use time-aware cross-validation strategies
+9. **Ticker Leakage**: Be careful not to use future information when creating features
+10. **Pattern Recognition**: Focus on features that can distinguish trend patterns (H vs L) from noise (None)
+
+## Data Usage Strategy
+Consider these modeling approaches:
+- **Global Model**: Train one model on all tickers
+- **Ticker-Specific Models**: Train separate models for each ticker
+- **Hierarchical Models**: Combine global and ticker-specific approaches
+- **Transfer Learning**: Use patterns from well-represented tickers for sparse ones
+
+Good luck with your predictions!
+
+Dataset prepared on: 2025-09-10 21:56:14
+Total tickers: 6
+Date range: 2023-04-03 to 2025-01-31
+Class distribution: {'H': 82, 'L': 81, 'None': 2597}
+
+
+
+<a id="s002"></a>
+## S002
+
+- **source_id:** detecting-reversal-points-in-us-equities:page:1:Description
+- **page_name:** Description
+- **url:** https://www.kaggle.com/competitions/detecting-reversal-points-in-us-equities/overview/Description
+- **retrieved_at:** 2026-10-16T23:33:09.970377+00:00
+- **Archive locator:** `/task_documents/1/text`
+
+A financial time series consists of continuous price movements with intermittent turning points. Traders call these reversals — local highs and lows where the market direction shifts.
+
+This competition challenges you to classify swing points in anonymized stock data. Using both raw numerical features (momentum and ratios) and boolean Signal Descriptors, you’ll build models that map reversal points into one of the four classical swing categories:
+
+H: Local or Global High
+
+L: Local or Global Low
+
+None: Not a swing point
+
+These labels define market structure and are widely used in trend analysis, chart pattern recognition, and algorithmic trading.
+
+Participants will train on a provided dataset (train.csv) and submit models that Kaggle will score against a hidden validation set.
+
+
+<a id="s003"></a>
+## S003
+
+- **source_id:** detecting-reversal-points-in-us-equities:page:2:Evaluation
+- **page_name:** Evaluation
+- **url:** https://www.kaggle.com/competitions/detecting-reversal-points-in-us-equities/overview/Evaluation
+- **retrieved_at:** 2026-10-16T23:33:09.970377+00:00
+- **Archive locator:** `/task_documents/2/text`
+
+Submissions will be evaluated on the hidden validation set using:
+
+Primary Metric
+
+Macro F1-score — treats all swing classes equally, regardless of class imbalance.
+
+Tie-breakers (in order)
+
+Macro Balanced Accuracy
+
+Matthews Correlation Coefficient (multi-class)
+
+Inference runtime
+
+This ensures that winning models capture swing structure across all four categories, not just the majority class.
+
+
+
+<a id="s004"></a>
+## S004
+
+- **source_id:** detecting-reversal-points-in-us-equities:page:3:rules
+- **page_name:** rules
+- **url:** https://www.kaggle.com/competitions/detecting-reversal-points-in-us-equities/overview/rules
+- **retrieved_at:** 2026-10-16T23:33:09.970377+00:00
+- **Archive locator:** `/task_documents/3/text`
+
+External data: Not allowed unless it is explicitly provided or whitelisted in the “Data” tab.
+
+Pretrained models: Allowed only if trained exclusively on provided/whitelisted data.
+
+Single-account per participant; team mergers per Kaggle policy.
+
+No leakage: Do not engineer features that peek into future timestamps.
+
+Reproducibility: Finalists must provide an inference notebook or script (CPU-only) and the trained model artifact so organizers can run on the validation set.
+
+Determinism: Set seeds; avoid non-deterministic ops that change outputs between runs.
+
+
+<a id="s005"></a>
+## S005
+
+- **source_id:** detecting-reversal-points-in-us-equities:page:4:abstract
+- **page_name:** abstract
+- **url:** https://www.kaggle.com/competitions/detecting-reversal-points-in-us-equities/overview/abstract
+- **retrieved_at:** 2026-10-16T23:33:09.970377+00:00
+- **Archive locator:** `/task_documents/4/text`
+
+Local highs/lows (reversals) are among the market’s most actionable signals—and the hardest to pinpoint in real time. Your challenge is to build a model that detects these reversal points from anonymized stock (stk) data using a mix of raw features and boolean Signal Descriptors.
+
+🥇 $2,000 — 1st place
+
+🥈 $1,000 — 2nd place
+
+🥉 $500 — 3rd place
+
+
+
+<a id="s006"></a>
+## S006
+
+- **source_id:** detecting-reversal-points-in-us-equities:page:5:Prizes
+- **page_name:** Prizes
+- **url:** https://www.kaggle.com/competitions/detecting-reversal-points-in-us-equities/overview/Prizes
+- **retrieved_at:** 2026-10-16T23:33:09.970377+00:00
+- **Archive locator:** `/task_documents/5/text`
+
+Describe how many participants will win and what they'll receive. You can edit the list below.
+
+Total Prizes Available: $4000
+- **1st Place** - $2000
+- **2nd Place** - $1000
+- **3rd Place** - $500
+
+
+
+
+<a id="s007"></a>
+## S007
+
+- **source_id:** detecting-reversal-points-in-us-equities:page:6:foundational-rules
+- **page_name:** foundational-rules
+- **url:** https://www.kaggle.com/competitions/detecting-reversal-points-in-us-equities/overview/foundational-rules
+- **retrieved_at:** 2026-10-16T23:33:09.970377+00:00
+- **Archive locator:** `/task_documents/6/text`
+
+The following Kaggle Competition Foundational Rules (“ Foundational Rules ”) apply to every competition regardless of whether the Sponsor creates competition-specific rules. Any competition-specific rules provided by the Sponsor are in addition to these rules, and in the case of any conflict or inconsistency, these Foundational Rules control and nullify contrary competition-specific rules.
+###GENERAL COMPETITION RULES - BINDING AGREEMENT
+####1. ELIGIBILITY
+a. To be eligible to enter the Competition, you must be:
+
+1. a registered account holder at Kaggle.com; 
+
+2. the older of 18 years old or the age of majority in your jurisdiction of residence (unless otherwise agreed to by Competition Sponsor and appropriate parental/guardian consents have been obtained by Competition Sponsor); 
+
+3. not a resident of Crimea, so-called Donetsk People's Republic (DNR) or Luhansk People's Republic (LNR), Cuba, Iran, Syria, or North Korea; and
+
+4. not a person or representative of an entity under U.S. export controls or sanctions (see: [https://www.treasury.gov/resourcecenter/sanctions/Programs/Pages/Programs.aspx][1]).
+
+b. Competitions are open to residents of the United States and worldwide, except that if you are a resident of Crimea, so-called Donetsk People's Republic (DNR) or Luhansk People's Republic (LNR), Cuba, Iran, Syria, North Korea, or are subject to U.S. export controls or sanctions, you may not enter the Competition. Other local rules and regulations may apply to you, so please check your local laws to ensure that you are eligible to participate in skills-based competitions. The Competition Host reserves the right to forego or award alternative Prizes where needed to comply with local laws. If a winner is located in a country where prizes cannot be awarded, then they are not eligible to receive a prize.
+
+c. If you are entering as a representative of a company, educational institution or other legal entity, or on behalf of your employer, these rules are binding on you, individually, and the entity you represent or where you are an employee. If you are acting within the scope of your employment, or as an agent of another party, you warrant that such party or your employer has full knowledge of your actions and has consented thereto, including your potential receipt of a Prize. You further warrant that your actions do not violate your employer's or entity's policies and procedures.
+
+   
+
+d. The Competition Sponsor reserves the right to verify eligibility and to adjudicate on any dispute at any time. If you provide any false information relating to the Competition concerning your identity, residency, mailing address, telephone number, email address, ownership of right, or information required for entering the Competition, you may be immediately disqualified from the Competition.
+
+####2. SPONSOR AND HOSTING PLATFORM
+
+a. The Competition is sponsored by Competition Sponsor named above. The Competition is hosted on behalf of Competition Sponsor by Kaggle Inc. ("Kaggle"). Kaggle is an independent contractor of Competition Sponsor, and is not a party to this or any agreement between you and Competition Sponsor. You understand that Kaggle has no responsibility with respect to selecting the potential Competition winner(s) or awarding any Prizes. Kaggle will perform certain administrative functions relating to hosting the Competition, and you agree to abide by the provisions relating to Kaggle under these Rules. As a Kaggle.com account holder and user of the Kaggle competition platform, remember you have accepted and are subject to the Kaggle Terms of Service at [www.kaggle.com/terms][2] in addition to these Rules.
+
+####3. COMPETITION PERIOD
+a. For the purposes of Prizes, the Competition will run from the Start Date and time to the Final Submission Deadline (such duration the “Competition Period”). The Competition Timeline is subject to change, and Competition Sponsor may introduce additional hurdle deadlines during the Competition Period. Any updated or additional deadlines will be publicized on the Competition Website. It is your responsibility to check the Competition Website regularly to stay informed of any deadline changes. YOU ARE RESPONSIBLE FOR DETERMINING THE CORRESPONDING TIME ZONE IN YOUR LOCATION.
+
+####4. COMPETITION ENTRY
+a. NO PURCHASE NECESSARY TO ENTER OR WIN. To enter the Competition, you must register on the Competition Website prior to the Entry Deadline, and follow the instructions for developing and entering your Submission through the Competition Website. Your Submissions must be made in the manner and format, and in compliance with all other requirements, stated on the Competition Website (the "Requirements"). Submissions must be received before any Submission deadlines stated on the Competition Website. Submissions not received by the stated deadlines will not be eligible to receive a Prize.
+
+b. Submissions may not use or incorporate information from hand labeling or human prediction of the validation dataset or test data records.
+
+c. If the Competition is a multi-stage competition with temporally separate training and/or test data, one or more valid Submissions may be required during each Competition stage in the manner described on the Competition Website in order for the Submissions to be Prize eligible.
+
+d. Submissions are void if they are in whole or part illegible, incomplete, damaged, altered, counterfeit, obtained through fraud, or late. Competition Sponsor reserves the right to disqualify any entrant who does not follow these Rules, including making a Submission that does not meet the Requirements. 
+
+####5. INDIVIDUALS AND TEAMS
+a. Individual Account. You may make Submissions only under one, unique Kaggle.com account. You will be disqualified if you make Submissions through more than one Kaggle account, or attempt to falsify an account to act as your proxy. You may submit up to the maximum number of Submissions per day as specified on the Competition Website. 
+
+b. Teams. If permitted under the Competition Website guidelines, multiple individuals may collaborate as a Team; however, you may join or form only one Team. Each Team member must be a single individual with a separate Kaggle account. You must register individually for the Competition before joining a Team. You must confirm your Team membership to make it official by responding to the Team notification message sent to your Kaggle account. Team membership may not exceed the Maximum Team Size stated on the Competition Website.
+
+c. Team Merger. Teams may request to merge via the Competition Website. Team mergers may be allowed provided that: (i) the combined Team does not exceed the Maximum Team Size; (ii) the number of Submissions made by the merging Teams does not exceed the number of Submissions permissible for one Team at the date of the merger request; (iii) the merger is completed before the earlier of: any merger deadline or the Competition deadline; and (iv) the proposed combined Team otherwise meets all the requirements of these Rules. 
+
+d. Private Sharing. No private sharing outside of Teams. Privately sharing code or data outside of Teams is not permitted. It's okay to share code if made available to all Participants on the forums.
+
+####6. SUBMISSION CODE REQUIREMENTS
+a. Private Code Sharing. Unless otherwise specifically permitted under the Competition Website or Competition Specific Rules above, during the Competition Period, you are not allowed to privately share source or executable code developed in connection with or based upon the Competition Data or other source or executable code relevant to the Competition (“Competition Code”). This prohibition includes sharing Competition Code between separate Teams, unless a Team merger occurs. Any such sharing of Competition Code is a breach of these Competition Rules and may result in disqualification.
+
+b. Public Code Sharing. You are permitted to publicly share Competition Code, provided that such public sharing does not violate the intellectual property rights of any third party. If you do choose to share Competition Code or other such code, you are required to share it on Kaggle.com on the discussion forum or notebooks associated specifically with the Competition for the benefit of all competitors. By so sharing, you are deemed to have licensed the shared code under an Open Source Initiative-approved license (see [www.opensource.org][3]) that in no event limits commercial use of such Competition Code or model containing or depending on such Competition Code.
+
+c. Use of Open Source. Unless otherwise stated in the Specific Competition Rules above, if open source code is used in the model to generate the Submission, then you must only use open source code licensed under an Open Source Initiative-approved license (see [www.opensource.org][4]) that in no event limits commercial use of such code or model containing or depending on such code.
+
+####7. DETERMINING WINNERS
+a. Each Submission will be scored and ranked by the evaluation metric stated on the Competition Website. During the Competition Period, the current ranking will be visible on the Competition Website's Public Leaderboard. The potential winner(s) are determined solely by the leaderboard ranking on the Private Leaderboard, subject to compliance with these Rules. The Public Leaderboard will be based on the public test set and the Private Leaderboard will be based on the private test set.
+
+b. In the event of a tie, the Submission that was entered first to the Competition will be the winner. In the event a potential winner is disqualified for any reason, the Submission that received the next highest score rank will be chosen as the potential winner.
+
+####8. NOTIFICATION OF WINNERS & DISQUALIFICATION
+a. The potential winner(s) will be notified by email.
+
+ 
+b. If a potential winner (i) does not respond to the notification attempt within one (1) week from the first notification attempt or (ii) notifies Kaggle within one week after the Final Submission Deadline that the potential winner does not want to be nominated as a winner or does not want to receive a Prize, then, in each case (i) and (ii) such potential winner will not receive any Prize, and an alternate potential winner will be selected from among all eligible entries received based on the Competition’s judging criteria.
+
+c. In case (i) and (ii) above Kaggle may disqualify the Participant.  However, in case (ii) above, if requested by Kaggle, such potential winner may provide code and documentation to verify the Participant’s compliance with these Rules. If the potential winner provides code and documentation to the satisfaction of Kaggle, the Participant will not be disqualified pursuant to this paragraph.
+
+d. Competition Sponsor reserves the right to disqualify any Participant from the Competition if the Competition Sponsor reasonably believes that the Participant has attempted to undermine the legitimate operation of the Competition by cheating, deception, or other unfair playing practices or abuses, threatens or harasses any other Participants, Competition Sponsor or Kaggle.
+
+e. A disqualified Participant may be removed from the Competition leaderboard, at Kaggle's sole discretion. If a Participant is removed from the Competition Leaderboard, additional winning features associated with the Kaggle competition platform, for example Kaggle points or medals, may also not be awarded.
+
+f. The final leaderboard list will be publicly displayed at Kaggle.com. Determinations of Competition Sponsor are final and binding.
+
+####9. PRIZES
+a. Prize(s) are as described on the Competition Website and are only available for winning during the time period described on the Competition Website. The odds of winning any Prize depends on the number of eligible Submissions received during the Competition Period and the skill of the Participants. 
+
+b. All Prizes are subject to Competition Sponsor's review and verification of the Participant’s eligibility and compliance with these Rules, and the compliance of the winning Submissions with the Submissions Requirements. In the event that the Submission demonstrates non-compliance with these Competition Rules, Competition Sponsor may at its discretion take either of the following actions: (i) disqualify the Submission(s); or (ii) require the potential winner to remediate within one week after notice all issues identified in the Submission(s) (including, without limitation, the resolution of license conflicts, the fulfillment of all obligations required by software licenses, and the removal of any software that violates the software restrictions).
+
+c. A potential winner may decline to be nominated as a Competition winner in accordance with Section 3.8.
+
+d. Potential winners must return all required Prize acceptance documents within two (2) weeks following notification of such required documents, or such potential winner will be deemed to have forfeited the prize and another potential winner will be selected. Prize(s) will be awarded within approximately thirty (30) days after receipt by Competition Sponsor or Kaggle of the required Prize acceptance documents. Transfer or assignment of a Prize is not allowed. 
+
+e. You are not eligible to receive any Prize if you do not meet the Eligibility requirements in Section 2.7 and Section 3.1 above.
+
+f. If a Team wins a monetary Prize, the Prize money will be allocated in even shares between the eligible Team members, unless the Team unanimously opts for a different Prize split and notifies Kaggle before Prizes are issued.
+
+####10. TAXES
+a. ALL TAXES IMPOSED ON PRIZES ARE THE SOLE RESPONSIBILITY OF THE WINNERS. Payments to potential winners are subject to the express requirement that they submit all documentation requested by Competition Sponsor or Kaggle for compliance with applicable state, federal, local and foreign (including provincial) tax reporting and withholding requirements. Prizes will be net of any taxes that Competition Sponsor is required by law to withhold. If a potential winner fails to provide any required documentation or comply with applicable laws, the Prize may be forfeited and Competition Sponsor may select an alternative potential winner. Any winners who are U.S. residents will receive an IRS Form-1099 in the amount of their Prize.
+
+####11. GENERAL CONDITIONS
+a. All federal, state, provincial and local laws and regulations apply.
+
+####12. PUBLICITY
+a. You agree that Competition Sponsor, Kaggle and its affiliates may use your name and likeness for advertising and promotional purposes without additional compensation, unless prohibited by law.
+
+####13. PRIVACY
+a. You acknowledge and agree that Competition Sponsor and Kaggle may collect, store, share and otherwise use personally identifiable information provided by you during the Kaggle account registration process and the Competition, including but not limited to, name, mailing address, phone number, and email address (“Personal Information”). Kaggle acts as an independent controller with regard to its collection, storage, sharing, and other use of this Personal Information, and will use this Personal Information in accordance with its Privacy Policy <[www.kaggle.com/privacy][6]>, including for administering the Competition. As a Kaggle.com account holder, you have the right to request access to, review, rectification, portability or deletion of any personal data held by Kaggle about you by logging into your account and/or contacting Kaggle Support at <[www.kaggle.com/contact][7]>.
+
+b. As part of Competition Sponsor performing this contract between you and the Competition Sponsor, Kaggle will transfer your Personal Information to Competition Sponsor, which acts as an independent controller with regard to this Personal Information. As a controller of such Personal Information, Competition Sponsor agrees to comply with all U.S. and foreign data protection obligations with regard to your Personal Information. Kaggle will transfer your Personal Information to Competition Sponsor in the country specified in the Competition Sponsor Address listed above, which may be a country outside the country of your residence. Such country may not have privacy laws and regulations similar to those of the country of your residence.
+
+####14. WARRANTY, INDEMNITY AND RELEASE 
+a. You warrant that your Submission is your own original work and, as such, you are the sole and exclusive owner and rights holder of the Submission, and you have the right to make the Submission and grant all required licenses.  You agree not to make any Submission that: (i) infringes any third party proprietary rights, intellectual property rights, industrial property rights, personal or moral rights or any other rights, including without limitation, copyright, trademark, patent, trade secret, privacy, publicity or confidentiality obligations, or defames any person; or (ii) otherwise violates any applicable U.S. or foreign state or federal law.
+
+b. To the maximum extent permitted by law, you indemnify and agree to keep indemnified Competition Entities at all times from and against any liability, claims, demands, losses, damages, costs and expenses resulting from any of your acts, defaults or omissions and/or a breach of any warranty set forth herein. To the maximum extent permitted by law, you agree to defend, indemnify and hold harmless the Competition Entities from and against any and all claims, actions, suits or proceedings, as well as any and all losses, liabilities, damages, costs and expenses (including reasonable attorneys fees) arising out of or accruing from: (a) your Submission or other material uploaded or otherwise provided by you that infringes any third party proprietary rights, intellectual property rights, industrial property rights, personal or moral rights or any other rights, including without limitation, copyright, trademark, patent, trade secret, privacy, publicity or confidentiality obligations, or defames any person; (b) any misrepresentation made by you in connection with the Competition; (c) any non-compliance by you with these Rules or any applicable U.S. or foreign state or federal law; (d) claims brought by persons or entities other than the parties to these Rules arising from or related to your involvement with the Competition; and (e) your acceptance, possession, misuse or use of any Prize, or your participation in the Competition and any Competition-related activity.
+
+c. You hereby release Competition Entities from any liability associated with: (a) any malfunction or other problem with the Competition Website; (b) any error in the collection, processing, or retention of any Submission; or (c) any typographical or other error in the printing, offering or announcement of any Prize or winners.
+
+####15. INTERNET
+a. Competition Entities are not responsible for any malfunction of the Competition Website or any late, lost, damaged, misdirected, incomplete, illegible, undeliverable, or destroyed Submissions or entry materials due to system errors, failed, incomplete or garbled computer or other telecommunication transmission malfunctions, hardware or software failures of any kind, lost or unavailable network connections, typographical or system/human errors and failures, technical malfunction(s) of any telephone network or lines, cable connections, satellite transmissions, servers or providers, or computer equipment, traffic congestion on the Internet or at the Competition Website, or any combination thereof, which may limit a Participant’s ability to participate.
+
+####16. RIGHT TO CANCEL, MODIFY OR DISQUALIFY
+a. If for any reason the Competition is not capable of running as planned, including infection by computer virus, bugs, tampering, unauthorized intervention, fraud, technical failures, or any other causes which corrupt or affect the administration, security, fairness, integrity, or proper conduct of the Competition, Competition Sponsor reserves the right to cancel, terminate, modify or suspend the Competition. Competition Sponsor further reserves the right to disqualify any Participant who tampers with the submission process or any other part of the Competition or Competition Website.  Any attempt by a Participant to deliberately damage any website, including the Competition Website, or undermine the legitimate operation of the Competition is a violation of criminal and civil laws. Should such an attempt be made, Competition Sponsor and Kaggle each reserves the right to seek damages from any such Participant to the fullest extent of the applicable law.
+
+####17. NOT AN OFFER OR CONTRACT OF EMPLOYMENT
+a. Under no circumstances will the entry of a Submission, the awarding of a Prize, or anything in these Rules be construed as an offer or contract of employment with Competition Sponsor or any of the Competition Entities. You acknowledge that you have submitted your Submission voluntarily and not in confidence or in trust. You acknowledge that no confidential, fiduciary, agency, employment or other similar relationship is created between you and Competition Sponsor or any of the Competition Entities by your acceptance of these Rules or your entry of your Submission.
+
+####18. DEFINITIONS
+a. "Competition Data" are the data or datasets available from the Competition Website for the purpose of use in the Competition, including any prototype or executable code provided on the Competition Website. The Competition Data will contain private and public test sets. Which data belongs to which set will not be made available to Participants. 
+
+b. An “Entry” is when a Participant has joined, signed up, or accepted the rules of a competition. Entry is required to make a Submission to a competition.
+
+c. A “Final Submission” is the Submission selected by the user, or automatically selected by Kaggle in the event not selected by the user, that is/are used for final placement on the competition leaderboard.
+
+d. A “Participant” or “Participant User” is an individual who participates in a competition by entering the competition and making a Submission.
+
+e. The “Private Leaderboard” is a ranked display of Participants’ Submission scores against the private test set. The Private Leaderboard determines the final standing in the competition.
+
+f. The “Public Leaderboard” is a ranked display of Participants’ Submission scores against a representative sample of the test data. This leaderboard is visible throughout the competition.
+
+g. A “Sponsor” is responsible for hosting the competition, which includes but is not limited to providing the data for the competition, determining winners, and enforcing competition rules.
+
+h. A “Submission” is anything provided by the Participant to the Sponsor to be evaluated for competition purposes and determine leaderboard position. A Submission may be made as a model, notebook, prediction file, or other format as determined by the Sponsor.
+
+i. A “Team” is one or more Participants participating together in a Kaggle competition, by officially merging together as a Team within the competition platform.
+
+  [1]: https://www.treasury.gov/resource-center/sanctions/Programs/Pages/Programs.aspx
+  [2]: http://www.kaggle.com/terms
+  [3]: http://www.opensource.org
+  [4]: http://www.opensource.org
+  [5]: https://www.kaggle.com/WinningModelDocumentationGuidelines
+  [6]: http://www.kaggle.com/privacy
+  [7]: http://www.kaggle.com/contact
+
+
+<a id="s008"></a>
+## S008
+
+- **source_id:** detecting-reversal-points-in-us-equities:thread:609258:opening
+- **url:** https://www.kaggle.com/competitions/detecting-reversal-points-in-us-equities/discussion/609258
+- **thread_id:** 609258
+- **comment_id:** opening
+- **author_name:** PatrickAIForFun
+- **author_role:** unknown
+- **created_at:** 2025-09-25T11:29:03.122Z
+- **retrieved_at:** 2026-10-16T23:38:01.979160+00:00
+- **Archive locator:** `/discussion/0/text`
+
+Scoring Metric "micro" vs "macro" F1 Score
+
+Dear host [@ozzymet](https://www.kaggle.com/ozzymet) 
+
+I think the used evaluation metric is wrong / not in concordance with the description.
+
+The description mentions the use of the macro F1 score (which would make sense due to the high class imbalance). However, after seeing that an all `N` submission scores 0.93840, I am certain that this is the result of (incorrectly) using the micro F1 score (which is quite susceptible to a high class imbalance).
+
+To verify this, one can use the following code snippet and see the expected score of an all `N` submission for the micro or macro F1 score:
+
+` numpy  np
+ sklearn.metrics  f1_score
+ matplotlib.pyplot  plt
+
+scores = []
+ _  ():
+    y_true = np.random.choice([, , ], size=, p=[, , ])
+    y_pred = [] * (y_true)
+    scores.append(f1_score(y_true, y_pred, average=))
+plt.hist(scores, bins=)
+plt.title()
+plt.xlabel()
+plt.ylabel()
+plt.show()
+`
+
+The expected micro F1 score of an all `N` submission is around 0.94, which is in concordance with the observed LB behaviour. A macro F1 score would be expected to be around 0.33, which is much more sensible.
+
+Please check this and maybe change the used evaluation metric.
+
+
+<a id="s009"></a>
+## S009
+
+- **source_id:** detecting-reversal-points-in-us-equities:thread:609258:3295329
+- **url:** https://www.kaggle.com/competitions/detecting-reversal-points-in-us-equities/discussion/609258#comment-3295329
+- **thread_id:** 609258
+- **comment_id:** 3295329
+- **author_name:** Prakash Nandaniya
+- **author_role:** unknown
+- **created_at:** 2025-09-28T12:42:11.623Z
+- **retrieved_at:** 2026-10-16T23:38:01.979160+00:00
+- **Archive locator:** `/discussion/1/text`
+
+The host should address the current problem because, as things stand, the leaderboard does not make sense: the top scores (all around 0.9384) are from submissions that predict only the 'N' label everywhere. This defeats the purpose of the competition, as it does not actually identify 'H' or 'L' points. The host should discard or penalize submissions that contain only 'N' labels, otherwise there is no meaningful competition.
+
+
+<a id="s010"></a>
+## S010
+
+- **source_id:** detecting-reversal-points-in-us-equities:thread:609258:3295518
+- **url:** https://www.kaggle.com/competitions/detecting-reversal-points-in-us-equities/discussion/609258#comment-3295518
+- **thread_id:** 609258
+- **comment_id:** 3295518
+- **parent_comment_id:** 3295329
+- **author_name:** Sam Bui
+- **author_role:** unknown
+- **created_at:** 2025-09-29T02:33:29.240Z
+- **retrieved_at:** 2026-10-16T23:38:01.979160+00:00
+- **Archive locator:** `/discussion/2/text`
+
+I think the host has already abandoned this competition, or maybe they simply created it just to see if anyone could come up with a better solution than what they already had. Even in the data description, they didn’t explain anything about the features and only mentioned what the labels were, so it seems they weren’t really that invested in this competition. I also tried searching and found that there are many events with a True value, which I don’t really understand why.
+
+
+<a id="s011"></a>
+## S011
+
+- **source_id:** detecting-reversal-points-in-us-equities:thread:609258:3294234
+- **url:** https://www.kaggle.com/competitions/detecting-reversal-points-in-us-equities/discussion/609258#comment-3294234
+- **thread_id:** 609258
+- **comment_id:** 3294234
+- **author_name:** 
+- **author_role:** unknown
+- **created_at:** 2025-09-25T16:25:41.567Z
+- **retrieved_at:** 2026-10-16T23:38:01.979160+00:00
+- **Archive locator:** `/discussion/3/text`
+
+I think you are right
+
+
+<a id="s012"></a>
+## S012
+
+- **source_id:** detecting-reversal-points-in-us-equities:thread:609800:opening
+- **url:** https://www.kaggle.com/competitions/detecting-reversal-points-in-us-equities/discussion/609800
+- **thread_id:** 609800
+- **comment_id:** opening
+- **author_name:** Ozzy Met
+- **author_role:** unknown
+- **created_at:** 2025-09-29T18:13:50.649Z
+- **retrieved_at:** 2026-10-16T23:37:05.215727+00:00
+- **Archive locator:** `/discussion/4/text`
+
+!!! Clarification about Scoring from the Host !!! 
+
+A quick clarification:
+
+I initially planned to use F1 score for evaluation.
+
+Unfortunately, Kaggle’s evaluation backend threw errors when I tried both Micro-F1 and Macro-F1 with this multi-class setup.
+
+To keep the leaderboard functional, I switched to accuracy.
+
+Because over 90% of the data points are class N, predicting all N gives a baseline score of about 0.93840. Any score above this baseline reflects a real improvement. Please view the current leaderboard as a guideline only.
+
+In addition, I also maintain a non-public dataset that I plan to use for the final evaluation after the competition ends.
+
+I’d like your input on how we should handle this final step:
+
+Should we run final evaluation on the non-public dataset only, after the competition ends (similar to Kaggle’s private leaderboard)?
+
+Should I resubmit another dataset with private values to Kaggle and use their standard public/private split?
+
+Or would you prefer another process (e.g., collecting submissions and running them offline on my dataset)?
+
+Since Kaggle normally handles a public leaderboard (based on a subset) and a private leaderboard (final scoring) automatically, I want to align with how participants expect things to work.
+
+Looking forward to your suggestions on how to make the final evaluation fair and transparent.
+
+
+<a id="s013"></a>
+## S013
+
+- **source_id:** detecting-reversal-points-in-us-equities:thread:609800:3306310
+- **url:** https://www.kaggle.com/competitions/detecting-reversal-points-in-us-equities/discussion/609800#comment-3306310
+- **thread_id:** 609800
+- **comment_id:** 3306310
+- **author_name:** Mostafa Beik
+- **author_role:** unknown
+- **created_at:** 2025-10-24T09:37:38.857Z
+- **retrieved_at:** 2026-10-16T23:37:05.215727+00:00
+- **Archive locator:** `/discussion/5/text`
+
+something else
+
+predict (`H`,`L`, `None`) as mention flat model score 0.008 while replace the `None` with `N` scored 0.77 !!! 
+
+the `None` were mentioned in contest page
+
+the final accurate labels are what, kindly confirm ?
+
+[@ozzymet](https://www.kaggle.com/ozzymet)
+
+
+<a id="s014"></a>
+## S014
+
+- **source_id:** detecting-reversal-points-in-us-equities:thread:609800:3301132
+- **url:** https://www.kaggle.com/competitions/detecting-reversal-points-in-us-equities/discussion/609800#comment-3301132
+- **thread_id:** 609800
+- **comment_id:** 3301132
+- **author_name:** Meet Babariya
+- **author_role:** unknown
+- **created_at:** 2025-10-12T15:02:05.610Z
+- **retrieved_at:** 2026-10-16T23:37:05.215727+00:00
+- **Archive locator:** `/discussion/6/text`
+
+Do we have to predict only H/L? not 'None'?
+
+are all the ids in test are those where you identified 'H' or 'L', or we have 'None' also in test set?
+
+
+<a id="s015"></a>
+## S015
+
+- **source_id:** detecting-reversal-points-in-us-equities:thread:609800:3301278
+- **url:** https://www.kaggle.com/competitions/detecting-reversal-points-in-us-equities/discussion/609800#comment-3301278
+- **thread_id:** 609800
+- **comment_id:** 3301278
+- **parent_comment_id:** 3301132
+- **author_name:** Sam Bui
+- **author_role:** unknown
+- **created_at:** 2025-10-13T03:12:00.643Z
+- **retrieved_at:** 2026-10-16T23:37:05.215727+00:00
+- **Archive locator:** `/discussion/7/text`
+
+Test set contains None, bro. There's a public notebook named baseline, it predicted all the sample of test set is None, and got lb 0.93
+
+
+<a id="s016"></a>
+## S016
+
+- **source_id:** detecting-reversal-points-in-us-equities:thread:609800:3295999
+- **url:** https://www.kaggle.com/competitions/detecting-reversal-points-in-us-equities/discussion/609800#comment-3295999
+- **thread_id:** 609800
+- **comment_id:** 3295999
+- **author_name:** Sam Bui
+- **author_role:** unknown
+- **created_at:** 2025-09-30T00:57:01.187Z
+- **retrieved_at:** 2026-10-16T23:37:05.215727+00:00
+- **Archive locator:** `/discussion/8/text`
+
+I hope you host can provide a clearer explanation of the features in the dataset, specifically how the four main features—ratio, momentum, sm_ratio, and sm_momentum—are generated, as well as the difference between happens_within and occurs_within.
+
+
+<a id="s017"></a>
+## S017
+
+- **source_id:** detecting-reversal-points-in-us-equities:thread:609800:3295902
+- **url:** https://www.kaggle.com/competitions/detecting-reversal-points-in-us-equities/discussion/609800#comment-3295902
+- **thread_id:** 609800
+- **comment_id:** 3295902
+- **author_name:** Prince Rajak
+- **author_role:** unknown
+- **created_at:** 2025-09-29T18:28:19.713Z
+- **retrieved_at:** 2026-10-16T23:37:05.215727+00:00
+- **Archive locator:** `/discussion/9/text`
+
+Thanks for the clarification, [@OzzyMet](https://www.kaggle.com/OzzyMet) 🙌
+
+I think the fairest and most transparent approach would be to follow a process similar to Kaggle’s public/private leaderboard setup:
+
+Use the current leaderboard for public scores,
+
+Then evaluate final results on your non-public dataset (as a private leaderboard) after the competition ends.
+
+This way, participants can still iterate and compare progress during the competition, while the final ranking reflects true generalization performance.
+
+Really appreciate your effort in keeping things fair and transparent! 💪📊
+
+
+<a id="s018"></a>
+## S018
+
+- **source_id:** detecting-reversal-points-in-us-equities:thread:609800:3296149
+- **url:** https://www.kaggle.com/competitions/detecting-reversal-points-in-us-equities/discussion/609800#comment-3296149
+- **thread_id:** 609800
+- **comment_id:** 3296149
+- **parent_comment_id:** 3295902
+- **author_name:** 
+- **author_role:** unknown
+- **created_at:** 2025-09-30T09:20:18.930Z
+- **retrieved_at:** 2026-10-16T23:37:05.215727+00:00
+- **Archive locator:** `/discussion/10/text`
+
+I aggre with you
+
+
+<a id="s019"></a>
+## S019
+
+- **source_id:** detecting-reversal-points-in-us-equities:thread:612941:opening
+- **url:** https://www.kaggle.com/competitions/detecting-reversal-points-in-us-equities/discussion/612941
+- **thread_id:** 612941
+- **comment_id:** opening
+- **author_name:** Napat Siripaisarn
+- **author_role:** unknown
+- **created_at:** 2025-10-23T05:40:28.977Z
+- **retrieved_at:** 2026-10-16T23:35:41.375965+00:00
+- **Archive locator:** `/discussion/11/text`
+
+will there be priv evaluation??? ts is not machine learning bruv its just guessing the answer
+
+ts is not machine learning bruv its just guessing the answer
+
+
+<a id="s020"></a>
+## S020
+
+- **source_id:** detecting-reversal-points-in-us-equities:thread:612941:3308272
+- **url:** https://www.kaggle.com/competitions/detecting-reversal-points-in-us-equities/discussion/612941#comment-3308272
+- **thread_id:** 612941
+- **comment_id:** 3308272
+- **author_name:** Ozzy Met
+- **author_role:** unknown
+- **created_at:** 2025-10-29T02:13:13.707Z
+- **retrieved_at:** 2026-10-16T23:35:41.375965+00:00
+- **Archive locator:** `/discussion/12/text`
+
+Yes it will be , I just extended the competition for end of Nov, I will upload a new data set tomorrow that will have private data appended as well
+
+
+<a id="s021"></a>
+## S021
+
+- **source_id:** detecting-reversal-points-in-us-equities:thread:638703:opening
+- **url:** https://www.kaggle.com/competitions/detecting-reversal-points-in-us-equities/discussion/638703
+- **thread_id:** 638703
+- **comment_id:** opening
+- **author_name:** Ozzy Met
+- **author_role:** unknown
+- **created_at:** 2025-11-23T23:50:06.817Z
+- **retrieved_at:** 2026-10-16T23:35:13.312432+00:00
+- **Archive locator:** `/discussion/13/text`
+
+New Data with Private and Public Uploaded: Please resubmit your results
+
+I just update the data with extended set , now the data has extended as well as we have private data as well. Please resubmit your results.
+
+
+<a id="s022"></a>
+## S022
+
+- **source_id:** detecting-reversal-points-in-us-equities:thread:638703:3358569
+- **url:** https://www.kaggle.com/competitions/detecting-reversal-points-in-us-equities/discussion/638703#comment-3358569
+- **thread_id:** 638703
+- **comment_id:** 3358569
+- **author_name:** Forrest_xlz
+- **author_role:** unknown
+- **created_at:** 2025-12-01T15:29:55.300Z
+- **retrieved_at:** 2026-10-16T23:35:13.312432+00:00
+- **Archive locator:** `/discussion/14/text`
+
+Has the leaderboard been updated?
+
+
+<a id="s023"></a>
+## S023
+
+- **source_id:** detecting-reversal-points-in-us-equities:thread:638703:3356916
+- **url:** https://www.kaggle.com/competitions/detecting-reversal-points-in-us-equities/discussion/638703#comment-3356916
+- **thread_id:** 638703
+- **comment_id:** 3356916
+- **author_name:** Tarzan D
+- **author_role:** unknown
+- **created_at:** 2025-12-01T05:09:47.680Z
+- **retrieved_at:** 2026-10-16T23:35:13.312432+00:00
+- **Archive locator:** `/discussion/15/text`
+
+I submit prediction with all 'None' label, result:Submission contains null values.I submit prediction with all 'N' and 'NONE', result 0.0000 acc. how can i predict a class with 'None' label?
+
+
+<a id="s024"></a>
+## S024
+
+- **source_id:** detecting-reversal-points-in-us-equities:thread:638703:3346462
+- **url:** https://www.kaggle.com/competitions/detecting-reversal-points-in-us-equities/discussion/638703#comment-3346462
+- **thread_id:** 638703
+- **comment_id:** 3346462
+- **author_name:** techtech69
+- **author_role:** unknown
+- **created_at:** 2025-11-24T11:41:52.707Z
+- **retrieved_at:** 2026-10-16T23:35:13.312432+00:00
+- **Archive locator:** `/discussion/16/text`
+
+Distribution: {'N': 2683} . train.csv contains only N
+
+
+<a id="s025"></a>
+## S025
+
+- **source_id:** detecting-reversal-points-in-us-equities:thread:663093:opening
+- **url:** https://www.kaggle.com/competitions/detecting-reversal-points-in-us-equities/discussion/663093
+- **thread_id:** 663093
+- **comment_id:** opening
+- **author_name:** bluetriad
+- **author_role:** unknown
+- **created_at:** 2025-12-16T10:56:49.889Z
+- **retrieved_at:** 2026-10-16T23:34:45.270731+00:00
+- **Archive locator:** `/discussion/18/text`
+
+What will be the final evaluation metric? 
+
+We see accuracy in the leaderboard right now but will the winners be selected using the accuracy on the hidden dataset or the f-1 score.
+

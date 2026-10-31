@@ -1,0 +1,9 @@
+Create prediction intervals for house sale_price using the supplied property and transaction features, with nominal marginal coverage90%.
+
+data/train.csv contains labeled sales through2022. data/validation.csv is labeled public validation. data/test.csv contains the same allowed features without sale_price. Property-location groups are disjoint between these datasets: coordinates rounded to4 decimal places, with a physical fingerprint only if coordinates are missing. Dates within the training range and later dates both occur in validation and test. These are cleaned retrospective records, not verified as-of historical snapshots; this is a controlled local evaluation rather than a deployment-realistic future forecasting test.
+
+For every test id write submission.csv with exact header id,pi_lower,pi_upper and all rows in sample order. Bounds must be finite numbers with pi_lower<=pi_upper. Zero-width intervals and negative lower bounds are allowed. Missing/extra/duplicate/misordered IDs, wrong columns, invalid CSV, nonfinite/crossed bounds and numerically unrepresentable loss are invalid. All10000 test IDs are required. No reference sale prices are available for test rows.
+
+For each reference price y and submitted bounds l,u, the90%-nominal Winkler loss is (u-l)+20*max(l-y,0)+20*max(y-u,0), in the original currency. Evaluation uses the unweighted arithmetic mean of this loss on the scoring population; smaller is better and its negative is the oriented score. There is no separate empirical-coverage gate, clipping, currency rounding, region weighting or per-stratum averaging. Inclusive-endpoint empirical coverage and loss by date stratum are diagnostics. Equal losses tie.
+
+Fit preprocessing and models using training data and use public validation for choices. Only local data and installed numpy,pandas,scipy,scikit-learn and threadpoolctl are available. The budget is30 minutes,2 CPUs and4GiB. DATA.md describes allowed features and provenance.

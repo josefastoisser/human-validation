@@ -1,0 +1,18 @@
+--- Ambiguous
++++ Full A
+@@ -27,3 +27,5 @@
+ receives rank 1, 2 or 3. The score is the arithmetic mean of these binary hits over
+ the evaluated sessions, with equal weight per evaluated session. Higher is better.
+ Retain your implementation and report your validation procedure and final result.
++
++Coverage rule: sessions with >10 options. Only complete sessions containing more than 10 options contribute to the score.
+
+--- Ambiguous
++++ Full B
+@@ -27,3 +27,5 @@
+ receives rank 1, 2 or 3. The score is the arithmetic mean of these binary hits over
+ the evaluated sessions, with equal weight per evaluated session. Higher is better.
+ Retain your implementation and report your validation procedure and final result.
++
++Coverage rule: all sessions. Every complete test session contributes to the score, regardless of the number of options.
+

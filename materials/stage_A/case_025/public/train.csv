@@ -1,0 +1,3 @@
+training_setting,annotation_path,crops_path
+T1,T1/train.csv,T1/train_crops.npy
+T2,T2/train.csv,T2/train_crops.npy

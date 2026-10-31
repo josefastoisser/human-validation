@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "scope": "Handout integrity only; no human semantic validation completed",
+  "forms": 35,
+  "prompt_copies_verified": 105,
+  "public_text_copies_verified": 416,
+  "local_links_verified": 661,
+  "original_source_entries": 963,
+  "handout_files_before_this_report": 743,
+  "handout_bytes_before_this_report": 23342457,
+  "form_version": "AB-1.1",
+  "form_structure_verified": {
+    "forms": 35,
+    "stage_A_questions_per_form": 4,
+    "stage_B_questions_per_form": 9,
+    "removed_question_absent": true
+  }
+}

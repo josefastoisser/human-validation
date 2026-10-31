@@ -1,0 +1,15 @@
+scene_id,scene_name,object_ids,image_path,rgb_path
+1,bagel+cream_cheese,1;2,photographs/scene-1.jpg,rgb/scene-1.npy
+2,breaded_fish+lemon+broccoli,3;4;5,photographs/scene-2.jpg,rgb/scene-2.npy
+3,burger+hot_dog,6;7,photographs/scene-3.jpg,rgb/scene-3.npy
+4,cheesecake+strawberry+raspberry,8;9;10,photographs/scene-4.jpg,rgb/scene-4.npy
+5,energy_bar+cheddar_cheese+banana,11;12;13,photographs/scene-5.jpg,rgb/scene-5.npy
+6,grilled_salmon+broccoli,14;5,photographs/scene-6.jpg,rgb/scene-6.npy
+7,pasta+garlic_bread,15;16,photographs/scene-7.jpg,rgb/scene-7.npy
+8,pb&j+carrot_stick+apple+celery,17;18;19;20,photographs/scene-8.jpg,rgb/scene-8.npy
+9,pizza+chicken_wing,21;22,photographs/scene-9.jpg,rgb/scene-9.npy
+10,quesadilla+guacamole+salsa,23;24;25,photographs/scene-10.jpg,rgb/scene-10.npy
+11,roast_chicken_leg+biscuit,26;27,photographs/scene-11.jpg,rgb/scene-11.npy
+12,sandwich+cookie,28;29,photographs/scene-12.jpg,rgb/scene-12.npy
+13,steak+mashed_potatoes,30;31,photographs/scene-13.jpg,rgb/scene-13.npy
+14,toast+sausage+fried_egg,32;33;34,photographs/scene-14.jpg,rgb/scene-14.npy

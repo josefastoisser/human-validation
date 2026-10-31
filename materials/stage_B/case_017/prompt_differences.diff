@@ -1,0 +1,18 @@
+--- Ambiguous
++++ Full A
+@@ -7,3 +7,5 @@
+ Evaluation uses one fixed population, all supplied test rows. A reference row has weight 2 exactly when both reference targets equal 1 (female ADHD), otherwise 1. This same reference-derived vector weights both target scores; it never depends on predicted labels. Weighted F1 is calculated separately for each target, and the two target scores are averaged equally. For a class-specific F1, count TP, FP and FN with these row weights and calculate 2TP/(2TP+FP+FN); return zero when that denominator is zero. Higher final scores are better; equal scores remain ties.
+ 
+ Execution budget: 30 minutes, 2 CPUs, 4 GiB RAM. Python numpy, scipy, pandas and scikit-learn are available. No extra dependency is needed to read the staged data. This is a local research reconstruction; retain the source competition's data-use restrictions and do not redistribute participant data.
++
++Metric rule: positive-class binary F1. For each target use only the F1 for positive label 1, computed with the fixed reference-row weights, then take the equal mean of the two target scores.
+
+--- Ambiguous
++++ Full B
+@@ -7,3 +7,5 @@
+ Evaluation uses one fixed population, all supplied test rows. A reference row has weight 2 exactly when both reference targets equal 1 (female ADHD), otherwise 1. This same reference-derived vector weights both target scores; it never depends on predicted labels. Weighted F1 is calculated separately for each target, and the two target scores are averaged equally. For a class-specific F1, count TP, FP and FN with these row weights and calculate 2TP/(2TP+FP+FN); return zero when that denominator is zero. Higher final scores are better; equal scores remain ties.
+ 
+ Execution budget: 30 minutes, 2 CPUs, 4 GiB RAM. Python numpy, scipy, pandas and scikit-learn are available. No extra dependency is needed to read the staged data. This is a local research reconstruction; retain the source competition's data-use restrictions and do not redistribute participant data.
++
++Metric rule: support-weighted class F1. For each target compute F1 for classes 0 and 1 with the fixed reference-row weights. Average those two F1 values using their weighted reference supports n_c=sum_i(w_i*1[y_i=c]) divided by total row weight. Then take the equal mean of the two target scores.
+

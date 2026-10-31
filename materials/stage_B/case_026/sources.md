@@ -1,0 +1,847 @@
+# Original source context — Stage B only
+
+Open after saving Stage A. These are original task-page and discussion texts extracted from saved archives. Their inclusion does not certify historical ambiguity, author authority, or the correctness of either local rule. No proposed validity judgments or benchmark model results are included.
+
+Dates describe the saved record; a retrieval date is not a publication date. Missing dates/roles remain unknown. A current page does not establish what a participant saw earlier. The available archive need not be historically complete. Exact original text and archive locators are in [sources.json](sources.json).
+
+## Source index
+
+- [S001: data-description](#s001)
+- [S002: Description](#s002)
+- [S003: Evaluation](#s003)
+- [S004: rules](#s004)
+- [S005: abstract](#s005)
+- [S006: foundational-rules](#s006)
+- [S007: 3d-reconstruction-from-monocular-multi-food-images:thread:576039:opening](#s007)
+- [S008: 3d-reconstruction-from-monocular-multi-food-images:thread:576039:3193113](#s008)
+- [S009: 3d-reconstruction-from-monocular-multi-food-images:thread:579252:opening](#s009)
+- [S010: 3d-reconstruction-from-monocular-multi-food-images:thread:579252:3203932](#s010)
+- [S011: 3d-reconstruction-from-monocular-multi-food-images:thread:579446:opening](#s011)
+- [S012: 3d-reconstruction-from-monocular-multi-food-images:thread:579446:3207611](#s012)
+- [S013: 3d-reconstruction-from-monocular-multi-food-images:thread:579446:3205651](#s013)
+- [S014: 3d-reconstruction-from-monocular-multi-food-images:thread:579446:3205937](#s014)
+- [S015: 3d-reconstruction-from-monocular-multi-food-images:thread:579446:3205221](#s015)
+- [S016: 3d-reconstruction-from-monocular-multi-food-images:thread:579446:3205239](#s016)
+- [S017: 3d-reconstruction-from-monocular-multi-food-images:thread:579446:3205307](#s017)
+- [S018: 3d-reconstruction-from-monocular-multi-food-images:thread:579446:3205314](#s018)
+- [S019: 3d-reconstruction-from-monocular-multi-food-images:thread:579446:3205328](#s019)
+- [S020: 3d-reconstruction-from-monocular-multi-food-images:thread:580508:opening](#s020)
+- [S021: 3d-reconstruction-from-monocular-multi-food-images:thread:580508:3208679](#s021)
+- [S022: 3d-reconstruction-from-monocular-multi-food-images:thread:580508:3209245](#s022)
+- [S023: 3d-reconstruction-from-monocular-multi-food-images:thread:580508:3208671](#s023)
+
+<a id="s001"></a>
+## S001
+
+- **source_id:** 3d-reconstruction-from-monocular-multi-food-images:page:0:data-description
+- **page_name:** data-description
+- **url:** https://www.kaggle.com/competitions/3d-reconstruction-from-monocular-multi-food-images/overview/data-description
+- **retrieved_at:** 2026-10-17T07:10:58.124628+00:00
+- **Archive locator:** `/task_documents/0/text`
+
+The challenge features **14 curated food combo scenes**, each containing multiple food items accompanied by utensils and plates. These items are meticulously captured using a **high-precision 3D scanner**.
+
+Utensils and plates are intentionally included to serve as **implicit physical references** for scale, helping ensure that the reconstructed 3D models are not only visually accurate but also **physically accurate in size**—a key evaluation metric.
+
+To build this dataset, we follow the **MetaFood3D** data collection pipeline [[1]](#metafood3d). Each food item is individually scanned and annotated.
+
+![](https://www.googleapis.com/download/storage/v1/b/kaggle-user-content/o/inbox%2F19611415%2F5a4328f13778c762d7f36b7cce45fd5a%2Fprocess.png?generation=1743727414000892&alt=media)
+
+The difficulty level of the challenge varies with the number of food items, and occlusions caused by camera angles. Detailed information on these food items is provided below (note that the same broccoli appears twice):
+
+| Combo Index | Combo Name                        | Food Index | Food Name         | With Container? | Private or Public |
+|-------------|-----------------------------------|------------|-------------------|------------------|--------------------|
+| 1           | bagel+cream_cheese                | 1          | bagel             |                  | Public             |
+|             |                                   | 2          | cream_cheese      |                | Public             |
+| 2           | breaded_fish+lemon+broccoli       | 3          | breaded_fish      |                  | Public             |
+|             |                                   | 4          | lemon             |                  | Public             |
+|             |                                   | 5          | broccoli          |                  | Public             |
+| 3           | burger+hot_dog                    | 6          | burger            |                  | Public             |
+|             |                                   | 7          | hotdog            |                  | Public             |
+| 4           | cheesecake+strawberry+raspberry   | 8          | cheesecake        |                  | Public             |
+|             |                                   | 9          | strawberry        |                  | Public             |
+|             |                                   | 10         | raspberry         |                  | Public             |
+| 5           | energy_bar+cheddar_cheese+banana  | 11         | energy_bar        |                  | Private            |
+|             |                                   | 12         | cheddar_cheese    |                  | Private            |
+|             |                                   | 13         | banana            |                  | Private            |
+| 6           | grilled_salmon+broccoli           | 14         | grilled_salmon    |                  | Private            |
+|             |                                   | 5          | broccoli          |                  | Public             |
+| 7           | pasta+garlic_bread                | 15         | pasta             | With Bowl              | Private            |
+|             |                                   | 16         | garlic_bread      |                  | Private            |
+| 8           | pb&j+carrot_stick+apple+celery    | 17         | pb&j              |                  | Private            |
+|             |                                   | 18         | carrot_stick      |                  | Private            |
+|             |                                   | 19         | apple             |                  | Private            |
+|             |                                   | 20         | celery            |                  | Private            |
+| 9           | pizza+chicken_wing                | 21         | pizza             |                  | Private            |
+|             |                                   | 22         | chicken_wing      |                  | Private            |
+| 10          | quesadilla+guacamole+salsa        | 23         | quesadilla        |                  | Private            |
+|             |                                   | 24         | guacamole         | With Cup              | Private            |
+|             |                                   | 25         | salsa             | With Cup             | Private            |
+| 11          | roast_chicken_leg+biscuit         | 26         | roast_chicken_leg |                  | Private            |
+|             |                                   | 27         | biscuit           |                  | Private            |
+| 12          | sandwich+cookie                   | 28         | sandwich          |                  | Private            |
+|             |                                   | 29         | cookie            |                  | Private            |
+| 13          | steak+mashed_potatoes             | 30         | steak             |                  | Private            |
+|             |                                   | 31         | mashed_potatoes   | With Bowl              | Private            |
+| 14          | toast+sausage+fried_egg           | 32         | toast             |                  | Private            |
+|             |                                   | 33         | sausage           |                  | Private            |
+|             |                                   | 34         | fried_egg         |                  | Private            |
+
+---
+
+### 📚 Reference
+
+[1] Chen, Yuhao, et al. "*MetaFood3D: Large 3D Food Object Dataset with Nutrition Values.*" *arXiv preprint arXiv:2409.01966* (2024).
+
+
+<a id="s002"></a>
+## S002
+
+- **source_id:** 3d-reconstruction-from-monocular-multi-food-images:page:1:Description
+- **page_name:** Description
+- **url:** https://www.kaggle.com/competitions/3d-reconstruction-from-monocular-multi-food-images/overview/Description
+- **retrieved_at:** 2026-10-17T07:10:58.124628+00:00
+- **Archive locator:** `/task_documents/1/text`
+
+**This year's challenge will emphasize multi-food scenarios without explicit physical references. **
+These changes are motivated to align the challenge more closely with real-world applications. By focusing on multi-food scenarios, we aim to address the complexity of actual eating occasions where multiple items with diverse shapes, textures, and reflective properties coexist on a plate. In addition, the removal of explicit physical references encourages the development of algorithms that can infer scale and orientation from implicit cues (such as plates, utensils, or common food items of known size) found in natural eating settings. This realistic setup not only enhances the challenge's relevance to practical applications in nutrition tracking and dietary assessment but promotes the creation of more intelligent and adaptive computer vision solutions. 
+
+To start, we recommend you use image to 3D generation model to create a mesh. Then use metric depth estimation model to calibrate the size. See rules for the recommended external resources.
+
+![](https://www.googleapis.com/download/storage/v1/b/kaggle-user-content/o/inbox%2F19611415%2F5a4328f13778c762d7f36b7cce45fd5a%2Fprocess.png?generation=1743727414000892&alt=media)
+
+
+
+<a id="s003"></a>
+## S003
+
+- **source_id:** 3d-reconstruction-from-monocular-multi-food-images:page:2:Evaluation
+- **page_name:** Evaluation
+- **url:** https://www.kaggle.com/competitions/3d-reconstruction-from-monocular-multi-food-images/overview/Evaluation
+- **retrieved_at:** 2026-10-17T07:10:58.124628+00:00
+- **Archive locator:** `/task_documents/2/text`
+
+The evaluation will consist of a two-phase process focused on assessing the precision of the reconstructed 3D models in terms of both **shape (3D structure)** and **portion size (volume)**. Results will be compared against reference models of the same food items captured using a 3D scanner.
+
+### Phase I: Volume Accuracy (measured in mL)
+
+In Phase I, we will use the **Mean Absolute Percentage Error (MAPE)** metric to evaluate the accuracy of predicted portion sizes. Only **volume accuracy** will be considered during this stage.
+
+### Phase II: Shape Accuracy (Top Teams) (measured in mm^3)
+
+The top-ranking teams (3-5, depends on the total number of teams) from Phase I will proceed to Phase II, where they will submit **complete 3D mesh files** for each food item. We will use the **L1 Chamfer Distance** metric to evaluate the **shape accuracy** of the models. Our evaluation protocol follows the Chamfer Distance metric used in **DTU** benchmark [[1]](#dtu).
+
+The **final winner** will be determined by combining scores from both phases for all private food objects. Each team will receive a ranking (1–5) in each phase, and the final score will be a weighted sum:
+
+- **Phase I (Volume Accuracy):** 55% weight  
+- **Phase II (Shape Accuracy):** 45% weight
+
+---
+
+## 📦 Phase II Evaluation (Top Teams)
+
+### 1. Upload Models  
+Submit all private **reconstructed 3D models** as `.obj` files, each named according to the corresponding **object ID**. Upload the files to a downloadable location (e.g., Google Drive, Dropbox).
+
+### 2. Send the Download Link  
+Email the **download link** and your **team ID** to us by **May 13rd, 11:59 PM AOE**.
+
+- **Email:** `metafood.cvpr@gmail.com`  
+- For support, post in the **Kaggle discussion forum**.
+
+### 3. Model Verification  
+We will verify your submitted models against your final Phase I predictions and visually inspect them for compliance.  
+_Models composed of primitive shapes (e.g., spheres or cubes) will be disqualified._
+
+### 4. Ground Truth Models & Evaluation Script  
+We will release the **ground truth 3D models** and **Chamfer Distance evaluation script** on Kaggle by **May 13rd, 11:59 PM AOE**.
+
+### 5. Align Models  
+You must align your models to the ground truth by preparing a **transformation matrix** for each object.  
+We will compute your Chamfer Distance score as follows:
+
+- Randomly sample 16384 points from each transformed point cloud, **10 times**  
+- Compute the **L1-Chamfer Distance** for each sample  
+- Average the 10 scores to obtain your **final Chamfer Distance score**
+
+### 6. Submit Transformation Matrices  
+Email us your transformation matrices by **May 16th, 11:59 PM AOE**.
+
+---
+
+### 🏆 Winner Announcement  
+The winning team will be announced on **May 18th**.
+
+## Submission File
+For each id in the test set, you must reconstruct a 3D model from the provided images and report the volume of the model. The file should contain a header and have the following format:
+
+    id,predicted
+    2,0
+    5,0
+    6,0
+    etc.
+
+### 📚 Reference
+
+[1] Aanæs, Henrik, et al. "*Large-scale data for multiple-view stereopsis.*" *International Journal of Computer Vision*, 120 (2016): 153–168.
+
+
+<a id="s004"></a>
+## S004
+
+- **source_id:** 3d-reconstruction-from-monocular-multi-food-images:page:3:rules
+- **page_name:** rules
+- **url:** https://www.kaggle.com/competitions/3d-reconstruction-from-monocular-multi-food-images/overview/rules
+- **retrieved_at:** 2026-10-17T07:10:58.124628+00:00
+- **Archive locator:** `/task_documents/3/text`
+
+## 📝 Challenge Rules
+
+Participants are required to submit all **private `.obj` mesh files** corresponding to the selected private food items. These submissions will be evaluated based on **shape and size accuracy** of the reconstruction.
+
+Please carefully review the following rules:
+
+### ✅ Submission Guidelines
+
+- Submissions **must follow the provided instructions**. Submissions will be disqualified if they contain inappropriate content or do not meet the official rules.
+- Each registered participant or team may **submit once per day**.
+- The contest is **open to all**. However, individuals involved in organizing or supporting this competition are **not eligible to participate**.
+- Participants may use **publicly available data and models**, but **must provide proper attribution** by including references in their submitted code.
+- During the **final evaluation phase**, the organizers will thoroughly inspect the submitted code and 3D models of top-performing teams.  
+  Disqualification will occur in the following cases:
+  - Use of plagiarized or similar code to other teams.
+  - Submissions lacking substantial original work.
+  - Submissions with 3D models that do **not represent the correct shape of the object class**.  
+    For example:  
+    ❌ Submitting a **sphere** for the class `strawberry`  
+    ✅ Submitting a **hemisphere with a cone** for the class `strawberry`
+- Mesh does not have to be watertight.
+- Contestants are fully responsible for ensuring their submissions, including files, data, and code, are **legal and comply with all regulations**.  
+  The organizers **assume no legal liability** for issues that arise from participant submissions.
+- If participants publish papers related to their results in this competition, **they must acknowledge the competition**.
+
+### 🏆 Winner and Prize
+
+- The **top-3 teams** will be selected as winners.
+- Winners will be **invited for an oral presentation** at the MetaFood workshop and will be asked to write a **technical report** about the challenge.
+- Visit the [MetaFood 2025 Workshop Website](https://sites.google.com/view/cvpr-metafood-2025) for prize details.
+
+---
+
+## 📦 Use of External Resources
+
+Participants are allowed to use **external resources**, provided **sources are clearly cited** in the submission. Here are some external resources you can start with.
+
+### 3D Generation Models
+- TRELLIS [[1]](#references)
+- Hunyuan3D 2.0 [[2]](#references)
+
+### 3D Object Datasets
+- OmniObject3D [[3]](#references)
+- NutritionVerse-3D [[4]](#references)
+- MetaFood3D [[5]](#references)
+- Objaverse [[6]](#references)
+
+### Depth Estimation Models
+- DepthPro [[7]](#references)
+- Depth Anything V2 [[8]](#references)
+
+---
+
+## 📚 References
+
+[1] Xiang, Jianfeng, et al. "Structured 3D Latents for Scalable and Versatile 3D Generation." *arXiv preprint arXiv:2412.01506* (2024).  
+[2] Zhao, Zibo, et al. "Hunyuan3D 2.0: Scaling Diffusion Models for High Resolution Textured 3D Assets Generation." *arXiv preprint arXiv:2501.12202* (2025).  
+[3] Wu, Tong, et al. "OmniObject3D: Large-Vocabulary 3D Object Dataset for Realistic Perception, Reconstruction and Generation." *CVPR 2023*.  
+[4] Tai, Chi-en Amy, et al. "NutritionVerse-3D: A 3D Food Model Dataset for Nutritional Intake Estimation." *arXiv preprint arXiv:2304.05619*, 2023.  
+[5] Chen, Yuhao, et al. "MetaFood3D: Large 3D Food Object Dataset with Nutrition Values." *arXiv preprint arXiv:2409.01966* (2024).  
+[6] Deitke, Matt, et al. "Objaverse-XL: A Universe of 10M+ 3D Objects." *NeurIPS 2023*, pp. 35799–35813.  
+[7] Bochkovskii, Aleksei, et al. "DepthPro: Sharp Monocular Metric Depth in Less Than a Second." *arXiv preprint arXiv:2410.02073* (2024).  
+[8] Yang, Lihe, et al. "Depth Anything V2." *NeurIPS 2024*, pp. 21875–21911.
+
+---
+
+
+<a id="s005"></a>
+## S005
+
+- **source_id:** 3d-reconstruction-from-monocular-multi-food-images:page:4:abstract
+- **page_name:** abstract
+- **url:** https://www.kaggle.com/competitions/3d-reconstruction-from-monocular-multi-food-images/overview/abstract
+- **retrieved_at:** 2026-10-17T07:10:58.124628+00:00
+- **Archive locator:** `/task_documents/4/text`
+
+3D reconstruction from monocular images is a rapidly evolving research area in computer vision with significant applications in food image analysis. The ability to reconstruct 3D food models from single 2D eating occasion images in real-world physical units allows users to share food experiences in three dimensions and provides crucial information about food portions, facilitating the tracking of individual nutrition intake. However, 3D reconstruction presents unique challenges that make it particularly valuable to evaluate the robustness and capability of existing computer vision algorithms. Specifically, food items in in-the-wild images exhibit a wide variety of colors, textures, shapes, and sizes. Their reflective properties can vary drastically, from the glossy surface such as a boiled egg to the matte exterior such as yeast bread. Furthermore, when multiple food items are placed together, occlusions, overlapping, and shadows introduce complex scenarios that a robust algorithm needs to extract useful information. Additionally, food is rarely uniform where the same dish can be presented in multiple ways, making approaches using predefined 3D models or shapes as references insufficient. Therefore, evaluating CV/AI algorithms on 3D food reconstruction pushes the boundaries of current technologies and encourages them to handle high intra-class variability and inter-class data with complex spatial arrangements. 
+
+CVPR2025 MetaFood workshop site:
+https://sites.google.com/view/cvpr-metafood-2025/
+
+**The deadline of this competition has been extended to May 11 2025**
+
+
+<a id="s006"></a>
+## S006
+
+- **source_id:** 3d-reconstruction-from-monocular-multi-food-images:page:5:foundational-rules
+- **page_name:** foundational-rules
+- **url:** https://www.kaggle.com/competitions/3d-reconstruction-from-monocular-multi-food-images/overview/foundational-rules
+- **retrieved_at:** 2026-10-17T07:10:58.124628+00:00
+- **Archive locator:** `/task_documents/5/text`
+
+The following Kaggle Competition Foundational Rules (“ Foundational Rules ”) apply to every competition regardless of whether the Sponsor creates competition-specific rules. Any competition-specific rules provided by the Sponsor are in addition to these rules, and in the case of any conflict or inconsistency, these Foundational Rules control and nullify contrary competition-specific rules.
+###GENERAL COMPETITION RULES - BINDING AGREEMENT
+####1. ELIGIBILITY
+a. To be eligible to enter the Competition, you must be:
+
+1. a registered account holder at Kaggle.com; 
+
+2. the older of 18 years old or the age of majority in your jurisdiction of residence (unless otherwise agreed to by Competition Sponsor and appropriate parental/guardian consents have been obtained by Competition Sponsor); 
+
+3. not a resident of Crimea, so-called Donetsk People's Republic (DNR) or Luhansk People's Republic (LNR), Cuba, Iran, Syria, or North Korea; and
+
+4. not a person or representative of an entity under U.S. export controls or sanctions (see: [https://www.treasury.gov/resourcecenter/sanctions/Programs/Pages/Programs.aspx][1]).
+
+b. Competitions are open to residents of the United States and worldwide, except that if you are a resident of Crimea, so-called Donetsk People's Republic (DNR) or Luhansk People's Republic (LNR), Cuba, Iran, Syria, North Korea, or are subject to U.S. export controls or sanctions, you may not enter the Competition. Other local rules and regulations may apply to you, so please check your local laws to ensure that you are eligible to participate in skills-based competitions. The Competition Host reserves the right to forego or award alternative Prizes where needed to comply with local laws. If a winner is located in a country where prizes cannot be awarded, then they are not eligible to receive a prize.
+
+c. If you are entering as a representative of a company, educational institution or other legal entity, or on behalf of your employer, these rules are binding on you, individually, and the entity you represent or where you are an employee. If you are acting within the scope of your employment, or as an agent of another party, you warrant that such party or your employer has full knowledge of your actions and has consented thereto, including your potential receipt of a Prize. You further warrant that your actions do not violate your employer's or entity's policies and procedures.
+
+   
+
+d. The Competition Sponsor reserves the right to verify eligibility and to adjudicate on any dispute at any time. If you provide any false information relating to the Competition concerning your identity, residency, mailing address, telephone number, email address, ownership of right, or information required for entering the Competition, you may be immediately disqualified from the Competition.
+
+####2. SPONSOR AND HOSTING PLATFORM
+
+a. The Competition is sponsored by Competition Sponsor named above. The Competition is hosted on behalf of Competition Sponsor by Kaggle Inc. ("Kaggle"). Kaggle is an independent contractor of Competition Sponsor, and is not a party to this or any agreement between you and Competition Sponsor. You understand that Kaggle has no responsibility with respect to selecting the potential Competition winner(s) or awarding any Prizes. Kaggle will perform certain administrative functions relating to hosting the Competition, and you agree to abide by the provisions relating to Kaggle under these Rules. As a Kaggle.com account holder and user of the Kaggle competition platform, remember you have accepted and are subject to the Kaggle Terms of Service at [www.kaggle.com/terms][2] in addition to these Rules.
+
+####3. COMPETITION PERIOD
+a. For the purposes of Prizes, the Competition will run from the Start Date and time to the Final Submission Deadline (such duration the “Competition Period”). The Competition Timeline is subject to change, and Competition Sponsor may introduce additional hurdle deadlines during the Competition Period. Any updated or additional deadlines will be publicized on the Competition Website. It is your responsibility to check the Competition Website regularly to stay informed of any deadline changes. YOU ARE RESPONSIBLE FOR DETERMINING THE CORRESPONDING TIME ZONE IN YOUR LOCATION.
+
+####4. COMPETITION ENTRY
+a. NO PURCHASE NECESSARY TO ENTER OR WIN. To enter the Competition, you must register on the Competition Website prior to the Entry Deadline, and follow the instructions for developing and entering your Submission through the Competition Website. Your Submissions must be made in the manner and format, and in compliance with all other requirements, stated on the Competition Website (the "Requirements"). Submissions must be received before any Submission deadlines stated on the Competition Website. Submissions not received by the stated deadlines will not be eligible to receive a Prize.
+
+b. Submissions may not use or incorporate information from hand labeling or human prediction of the validation dataset or test data records.
+
+c. If the Competition is a multi-stage competition with temporally separate training and/or test data, one or more valid Submissions may be required during each Competition stage in the manner described on the Competition Website in order for the Submissions to be Prize eligible.
+
+d. Submissions are void if they are in whole or part illegible, incomplete, damaged, altered, counterfeit, obtained through fraud, or late. Competition Sponsor reserves the right to disqualify any entrant who does not follow these Rules, including making a Submission that does not meet the Requirements. 
+
+####5. INDIVIDUALS AND TEAMS
+a. Individual Account. You may make Submissions only under one, unique Kaggle.com account. You will be disqualified if you make Submissions through more than one Kaggle account, or attempt to falsify an account to act as your proxy. You may submit up to the maximum number of Submissions per day as specified on the Competition Website. 
+
+b. Teams. If permitted under the Competition Website guidelines, multiple individuals may collaborate as a Team; however, you may join or form only one Team. Each Team member must be a single individual with a separate Kaggle account. You must register individually for the Competition before joining a Team. You must confirm your Team membership to make it official by responding to the Team notification message sent to your Kaggle account. Team membership may not exceed the Maximum Team Size stated on the Competition Website.
+
+c. Team Merger. Teams may request to merge via the Competition Website. Team mergers may be allowed provided that: (i) the combined Team does not exceed the Maximum Team Size; (ii) the number of Submissions made by the merging Teams does not exceed the number of Submissions permissible for one Team at the date of the merger request; (iii) the merger is completed before the earlier of: any merger deadline or the Competition deadline; and (iv) the proposed combined Team otherwise meets all the requirements of these Rules. 
+
+d. Private Sharing. No private sharing outside of Teams. Privately sharing code or data outside of Teams is not permitted. It's okay to share code if made available to all Participants on the forums.
+
+####6. SUBMISSION CODE REQUIREMENTS
+a. Private Code Sharing. Unless otherwise specifically permitted under the Competition Website or Competition Specific Rules above, during the Competition Period, you are not allowed to privately share source or executable code developed in connection with or based upon the Competition Data or other source or executable code relevant to the Competition (“Competition Code”). This prohibition includes sharing Competition Code between separate Teams, unless a Team merger occurs. Any such sharing of Competition Code is a breach of these Competition Rules and may result in disqualification.
+
+b. Public Code Sharing. You are permitted to publicly share Competition Code, provided that such public sharing does not violate the intellectual property rights of any third party. If you do choose to share Competition Code or other such code, you are required to share it on Kaggle.com on the discussion forum or notebooks associated specifically with the Competition for the benefit of all competitors. By so sharing, you are deemed to have licensed the shared code under an Open Source Initiative-approved license (see [www.opensource.org][3]) that in no event limits commercial use of such Competition Code or model containing or depending on such Competition Code.
+
+c. Use of Open Source. Unless otherwise stated in the Specific Competition Rules above, if open source code is used in the model to generate the Submission, then you must only use open source code licensed under an Open Source Initiative-approved license (see [www.opensource.org][4]) that in no event limits commercial use of such code or model containing or depending on such code.
+
+####7. DETERMINING WINNERS
+a. Each Submission will be scored and ranked by the evaluation metric stated on the Competition Website. During the Competition Period, the current ranking will be visible on the Competition Website's Public Leaderboard. The potential winner(s) are determined solely by the leaderboard ranking on the Private Leaderboard, subject to compliance with these Rules. The Public Leaderboard will be based on the public test set and the Private Leaderboard will be based on the private test set.
+
+b. In the event of a tie, the Submission that was entered first to the Competition will be the winner. In the event a potential winner is disqualified for any reason, the Submission that received the next highest score rank will be chosen as the potential winner.
+
+####8. NOTIFICATION OF WINNERS & DISQUALIFICATION
+a. The potential winner(s) will be notified by email.
+
+ 
+b. If a potential winner (i) does not respond to the notification attempt within one (1) week from the first notification attempt or (ii) notifies Kaggle within one week after the Final Submission Deadline that the potential winner does not want to be nominated as a winner or does not want to receive a Prize, then, in each case (i) and (ii) such potential winner will not receive any Prize, and an alternate potential winner will be selected from among all eligible entries received based on the Competition’s judging criteria.
+
+c. In case (i) and (ii) above Kaggle may disqualify the Participant.  However, in case (ii) above, if requested by Kaggle, such potential winner may provide code and documentation to verify the Participant’s compliance with these Rules. If the potential winner provides code and documentation to the satisfaction of Kaggle, the Participant will not be disqualified pursuant to this paragraph.
+
+d. Competition Sponsor reserves the right to disqualify any Participant from the Competition if the Competition Sponsor reasonably believes that the Participant has attempted to undermine the legitimate operation of the Competition by cheating, deception, or other unfair playing practices or abuses, threatens or harasses any other Participants, Competition Sponsor or Kaggle.
+
+e. A disqualified Participant may be removed from the Competition leaderboard, at Kaggle's sole discretion. If a Participant is removed from the Competition Leaderboard, additional winning features associated with the Kaggle competition platform, for example Kaggle points or medals, may also not be awarded.
+
+f. The final leaderboard list will be publicly displayed at Kaggle.com. Determinations of Competition Sponsor are final and binding.
+
+####9. PRIZES
+a. Prize(s) are as described on the Competition Website and are only available for winning during the time period described on the Competition Website. The odds of winning any Prize depends on the number of eligible Submissions received during the Competition Period and the skill of the Participants. 
+
+b. All Prizes are subject to Competition Sponsor's review and verification of the Participant’s eligibility and compliance with these Rules, and the compliance of the winning Submissions with the Submissions Requirements. In the event that the Submission demonstrates non-compliance with these Competition Rules, Competition Sponsor may at its discretion take either of the following actions: (i) disqualify the Submission(s); or (ii) require the potential winner to remediate within one week after notice all issues identified in the Submission(s) (including, without limitation, the resolution of license conflicts, the fulfillment of all obligations required by software licenses, and the removal of any software that violates the software restrictions).
+
+c. A potential winner may decline to be nominated as a Competition winner in accordance with Section 3.8.
+
+d. Potential winners must return all required Prize acceptance documents within two (2) weeks following notification of such required documents, or such potential winner will be deemed to have forfeited the prize and another potential winner will be selected. Prize(s) will be awarded within approximately thirty (30) days after receipt by Competition Sponsor or Kaggle of the required Prize acceptance documents. Transfer or assignment of a Prize is not allowed. 
+
+e. You are not eligible to receive any Prize if you do not meet the Eligibility requirements in Section 2.7 and Section 3.1 above.
+
+f. If a Team wins a monetary Prize, the Prize money will be allocated in even shares between the eligible Team members, unless the Team unanimously opts for a different Prize split and notifies Kaggle before Prizes are issued.
+
+####10. TAXES
+a. ALL TAXES IMPOSED ON PRIZES ARE THE SOLE RESPONSIBILITY OF THE WINNERS. Payments to potential winners are subject to the express requirement that they submit all documentation requested by Competition Sponsor or Kaggle for compliance with applicable state, federal, local and foreign (including provincial) tax reporting and withholding requirements. Prizes will be net of any taxes that Competition Sponsor is required by law to withhold. If a potential winner fails to provide any required documentation or comply with applicable laws, the Prize may be forfeited and Competition Sponsor may select an alternative potential winner. Any winners who are U.S. residents will receive an IRS Form-1099 in the amount of their Prize.
+
+####11. GENERAL CONDITIONS
+a. All federal, state, provincial and local laws and regulations apply.
+
+####12. PUBLICITY
+a. You agree that Competition Sponsor, Kaggle and its affiliates may use your name and likeness for advertising and promotional purposes without additional compensation, unless prohibited by law.
+
+####13. PRIVACY
+a. You acknowledge and agree that Competition Sponsor and Kaggle may collect, store, share and otherwise use personally identifiable information provided by you during the Kaggle account registration process and the Competition, including but not limited to, name, mailing address, phone number, and email address (“Personal Information”). Kaggle acts as an independent controller with regard to its collection, storage, sharing, and other use of this Personal Information, and will use this Personal Information in accordance with its Privacy Policy <[www.kaggle.com/privacy][6]>, including for administering the Competition. As a Kaggle.com account holder, you have the right to request access to, review, rectification, portability or deletion of any personal data held by Kaggle about you by logging into your account and/or contacting Kaggle Support at <[www.kaggle.com/contact][7]>.
+
+b. As part of Competition Sponsor performing this contract between you and the Competition Sponsor, Kaggle will transfer your Personal Information to Competition Sponsor, which acts as an independent controller with regard to this Personal Information. As a controller of such Personal Information, Competition Sponsor agrees to comply with all U.S. and foreign data protection obligations with regard to your Personal Information. Kaggle will transfer your Personal Information to Competition Sponsor in the country specified in the Competition Sponsor Address listed above, which may be a country outside the country of your residence. Such country may not have privacy laws and regulations similar to those of the country of your residence.
+
+####14. WARRANTY, INDEMNITY AND RELEASE 
+a. You warrant that your Submission is your own original work and, as such, you are the sole and exclusive owner and rights holder of the Submission, and you have the right to make the Submission and grant all required licenses.  You agree not to make any Submission that: (i) infringes any third party proprietary rights, intellectual property rights, industrial property rights, personal or moral rights or any other rights, including without limitation, copyright, trademark, patent, trade secret, privacy, publicity or confidentiality obligations, or defames any person; or (ii) otherwise violates any applicable U.S. or foreign state or federal law.
+
+b. To the maximum extent permitted by law, you indemnify and agree to keep indemnified Competition Entities at all times from and against any liability, claims, demands, losses, damages, costs and expenses resulting from any of your acts, defaults or omissions and/or a breach of any warranty set forth herein. To the maximum extent permitted by law, you agree to defend, indemnify and hold harmless the Competition Entities from and against any and all claims, actions, suits or proceedings, as well as any and all losses, liabilities, damages, costs and expenses (including reasonable attorneys fees) arising out of or accruing from: (a) your Submission or other material uploaded or otherwise provided by you that infringes any third party proprietary rights, intellectual property rights, industrial property rights, personal or moral rights or any other rights, including without limitation, copyright, trademark, patent, trade secret, privacy, publicity or confidentiality obligations, or defames any person; (b) any misrepresentation made by you in connection with the Competition; (c) any non-compliance by you with these Rules or any applicable U.S. or foreign state or federal law; (d) claims brought by persons or entities other than the parties to these Rules arising from or related to your involvement with the Competition; and (e) your acceptance, possession, misuse or use of any Prize, or your participation in the Competition and any Competition-related activity.
+
+c. You hereby release Competition Entities from any liability associated with: (a) any malfunction or other problem with the Competition Website; (b) any error in the collection, processing, or retention of any Submission; or (c) any typographical or other error in the printing, offering or announcement of any Prize or winners.
+
+####15. INTERNET
+a. Competition Entities are not responsible for any malfunction of the Competition Website or any late, lost, damaged, misdirected, incomplete, illegible, undeliverable, or destroyed Submissions or entry materials due to system errors, failed, incomplete or garbled computer or other telecommunication transmission malfunctions, hardware or software failures of any kind, lost or unavailable network connections, typographical or system/human errors and failures, technical malfunction(s) of any telephone network or lines, cable connections, satellite transmissions, servers or providers, or computer equipment, traffic congestion on the Internet or at the Competition Website, or any combination thereof, which may limit a Participant’s ability to participate.
+
+####16. RIGHT TO CANCEL, MODIFY OR DISQUALIFY
+a. If for any reason the Competition is not capable of running as planned, including infection by computer virus, bugs, tampering, unauthorized intervention, fraud, technical failures, or any other causes which corrupt or affect the administration, security, fairness, integrity, or proper conduct of the Competition, Competition Sponsor reserves the right to cancel, terminate, modify or suspend the Competition. Competition Sponsor further reserves the right to disqualify any Participant who tampers with the submission process or any other part of the Competition or Competition Website.  Any attempt by a Participant to deliberately damage any website, including the Competition Website, or undermine the legitimate operation of the Competition is a violation of criminal and civil laws. Should such an attempt be made, Competition Sponsor and Kaggle each reserves the right to seek damages from any such Participant to the fullest extent of the applicable law.
+
+####17. NOT AN OFFER OR CONTRACT OF EMPLOYMENT
+a. Under no circumstances will the entry of a Submission, the awarding of a Prize, or anything in these Rules be construed as an offer or contract of employment with Competition Sponsor or any of the Competition Entities. You acknowledge that you have submitted your Submission voluntarily and not in confidence or in trust. You acknowledge that no confidential, fiduciary, agency, employment or other similar relationship is created between you and Competition Sponsor or any of the Competition Entities by your acceptance of these Rules or your entry of your Submission.
+
+####18. DEFINITIONS
+a. "Competition Data" are the data or datasets available from the Competition Website for the purpose of use in the Competition, including any prototype or executable code provided on the Competition Website. The Competition Data will contain private and public test sets. Which data belongs to which set will not be made available to Participants. 
+
+b. An “Entry” is when a Participant has joined, signed up, or accepted the rules of a competition. Entry is required to make a Submission to a competition.
+
+c. A “Final Submission” is the Submission selected by the user, or automatically selected by Kaggle in the event not selected by the user, that is/are used for final placement on the competition leaderboard.
+
+d. A “Participant” or “Participant User” is an individual who participates in a competition by entering the competition and making a Submission.
+
+e. The “Private Leaderboard” is a ranked display of Participants’ Submission scores against the private test set. The Private Leaderboard determines the final standing in the competition.
+
+f. The “Public Leaderboard” is a ranked display of Participants’ Submission scores against a representative sample of the test data. This leaderboard is visible throughout the competition.
+
+g. A “Sponsor” is responsible for hosting the competition, which includes but is not limited to providing the data for the competition, determining winners, and enforcing competition rules.
+
+h. A “Submission” is anything provided by the Participant to the Sponsor to be evaluated for competition purposes and determine leaderboard position. A Submission may be made as a model, notebook, prediction file, or other format as determined by the Sponsor.
+
+i. A “Team” is one or more Participants participating together in a Kaggle competition, by officially merging together as a Team within the competition platform.
+
+  [1]: https://www.treasury.gov/resource-center/sanctions/Programs/Pages/Programs.aspx
+  [2]: http://www.kaggle.com/terms
+  [3]: http://www.opensource.org
+  [4]: http://www.opensource.org
+  [5]: https://www.kaggle.com/WinningModelDocumentationGuidelines
+  [6]: http://www.kaggle.com/privacy
+  [7]: http://www.kaggle.com/contact
+
+
+<a id="s007"></a>
+## S007
+
+- **source_id:** 3d-reconstruction-from-monocular-multi-food-images:thread:576039:opening
+- **url:** https://www.kaggle.com/competitions/3d-reconstruction-from-monocular-multi-food-images/discussion/576039
+- **thread_id:** 576039
+- **comment_id:** opening
+- **author_name:** Ahmad Al Mughrabi
+- **author_role:** unknown
+- **created_at:** 2025-05-02T10:31:39.998Z
+- **retrieved_at:** 2026-10-17T07:13:12.926250+00:00
+- **Archive locator:** `/discussion/0/text`
+
+Are the food items included in the generated meshes contained within the same mesh file, or are they separated?
+
+Are the food items included in the generated meshes contained within the same mesh file, or are they separated?
+
+
+<a id="s008"></a>
+## S008
+
+- **source_id:** 3d-reconstruction-from-monocular-multi-food-images:thread:576039:3193113
+- **url:** https://www.kaggle.com/competitions/3d-reconstruction-from-monocular-multi-food-images/discussion/576039#comment-3193113
+- **thread_id:** 576039
+- **comment_id:** 3193113
+- **author_name:** metafood-cvpr
+- **author_role:** unknown
+- **created_at:** 2025-05-03T21:53:29.357Z
+- **retrieved_at:** 2026-10-17T07:13:12.926250+00:00
+- **Archive locator:** `/discussion/1/text`
+
+They are separated
+
+
+<a id="s009"></a>
+## S009
+
+- **source_id:** 3d-reconstruction-from-monocular-multi-food-images:thread:579252:opening
+- **url:** https://www.kaggle.com/competitions/3d-reconstruction-from-monocular-multi-food-images/discussion/579252
+- **thread_id:** 579252
+- **comment_id:** opening
+- **author_name:** soon gu
+- **author_role:** unknown
+- **created_at:** 2025-05-16T07:59:45.034Z
+- **retrieved_at:** 2026-10-17T07:11:48.922720+00:00
+- **Archive locator:** `/discussion/2/text`
+
+Has the GT mesh been released?
+
+Hello, has the GT mesh been released? I haven’t been able to find it anywhere.
+
+
+<a id="s010"></a>
+## S010
+
+- **source_id:** 3d-reconstruction-from-monocular-multi-food-images:thread:579252:3203932
+- **url:** https://www.kaggle.com/competitions/3d-reconstruction-from-monocular-multi-food-images/discussion/579252#comment-3203932
+- **thread_id:** 579252
+- **comment_id:** 3203932
+- **author_name:** metafood-cvpr
+- **author_role:** unknown
+- **created_at:** 2025-05-17T14:06:00.667Z
+- **retrieved_at:** 2026-10-17T07:11:48.922720+00:00
+- **Archive locator:** `/discussion/3/text`
+
+it is available now
+
+
+<a id="s011"></a>
+## S011
+
+- **source_id:** 3d-reconstruction-from-monocular-multi-food-images:thread:579446:opening
+- **url:** https://www.kaggle.com/competitions/3d-reconstruction-from-monocular-multi-food-images/discussion/579446
+- **thread_id:** 579446
+- **comment_id:** opening
+- **author_name:** metafood-cvpr
+- **author_role:** unknown
+- **created_at:** 2025-05-17T14:13:34.983Z
+- **retrieved_at:** 2026-10-17T07:11:34.893833+00:00
+- **Archive locator:** `/discussion/4/text`
+
+Phase II Evaluation Procedure and Required Actions
+
+Dear Participants,
+
+Thank you for your food model submissions. We are now advancing to Phase II of the competition, which will focus on chamfer distance evaluation.
+
+**Phase II Materials Available**
+
+We have uploaded all necessary Phase II files to the "**phase_2_data_and_scripts**" folder, which you should now have access to.
+
+**Required Action: Submit transform.json Files**
+
+Before we can proceed with distance measurements between ground truth and predicted models, **you must provide a transform.json file for each of your models** to ensure proper alignment with the ground truth.
+
+- An example transformation file is available in the "**example_transform**" folder for your reference
+
+- **The transform.json file must be submitted to us no later than May 21st, 2025**
+
+**Evaluation Process Clarification**
+
+The "phase_2_eval_scripts" folder contains three evaluation scripts that will be used to determine Phase II rankings:
+
+- **eval_obj_cd.py**: Measures chamfer distance without any transformation
+
+- **eval_obj_cd_with_transform.py**: Measures distance after applying your transform.json files to predicted models
+
+- **eval_obj_cd_with_transform_open3d.py**: Uses an alternative Python library to measure distance and apply transformation matrices
+
+**Important**: Your final evaluation score will be the lowest value produced by either the second or third script (eval_obj_cd_with_transform.py or eval_obj_cd_with_transform_open3d.py).
+
+Please contact us if you have any questions about this procedure.
+
+Thanks,
+
+MetaFood Workshop Organizing Committee
+
+
+<a id="s012"></a>
+## S012
+
+- **source_id:** 3d-reconstruction-from-monocular-multi-food-images:thread:579446:3207611
+- **url:** https://www.kaggle.com/competitions/3d-reconstruction-from-monocular-multi-food-images/discussion/579446#comment-3207611
+- **thread_id:** 579446
+- **comment_id:** 3207611
+- **author_name:** yanyushen
+- **author_role:** unknown
+- **created_at:** 2025-05-23T03:50:18.073Z
+- **retrieved_at:** 2026-10-17T07:11:34.893833+00:00
+- **Archive locator:** `/discussion/5/text`
+
+Hello Organizers,
+
+We would like to ask when is the final deadline for submitting the Transformation Matrices, by 0:00 on May 21st?
+
+
+<a id="s013"></a>
+## S013
+
+- **source_id:** 3d-reconstruction-from-monocular-multi-food-images:thread:579446:3205651
+- **url:** https://www.kaggle.com/competitions/3d-reconstruction-from-monocular-multi-food-images/discussion/579446#comment-3205651
+- **thread_id:** 579446
+- **comment_id:** 3205651
+- **author_name:** wuhu648648
+- **author_role:** unknown
+- **created_at:** 2025-05-20T07:56:49.210Z
+- **retrieved_at:** 2026-10-17T07:11:34.893833+00:00
+- **Archive locator:** `/discussion/6/text`
+
+Hello Organizers,
+
+We would like to ask when is the final deadline for submitting the Transformation Matrices, by 0:00 on May 21st?
+
+
+<a id="s014"></a>
+## S014
+
+- **source_id:** 3d-reconstruction-from-monocular-multi-food-images:thread:579446:3205937
+- **url:** https://www.kaggle.com/competitions/3d-reconstruction-from-monocular-multi-food-images/discussion/579446#comment-3205937
+- **thread_id:** 579446
+- **comment_id:** 3205937
+- **parent_comment_id:** 3205651
+- **author_name:** metafood-cvpr
+- **author_role:** unknown
+- **created_at:** 2025-05-20T15:13:37.753Z
+- **retrieved_at:** 2026-10-17T07:11:34.893833+00:00
+- **Archive locator:** `/discussion/7/text`
+
+We use end of day 11:59PM AOE time.
+
+
+<a id="s015"></a>
+## S015
+
+- **source_id:** 3d-reconstruction-from-monocular-multi-food-images:thread:579446:3205221
+- **url:** https://www.kaggle.com/competitions/3d-reconstruction-from-monocular-multi-food-images/discussion/579446#comment-3205221
+- **thread_id:** 579446
+- **comment_id:** 3205221
+- **author_name:** Umair Haroon
+- **author_role:** unknown
+- **created_at:** 2025-05-19T13:44:13.100Z
+- **retrieved_at:** 2026-10-17T07:11:34.893833+00:00
+- **Archive locator:** `/discussion/8/text`
+
+Hello Organizers,
+
+We want to highlight an observation about the ground truths you provided. According to your Phase 1 Evaluation script, the mesh unit was in meters, but the ground truth meshes you provided are not in the same unit. Can you please advise us on what we need to do in this case? Should we scale our meshes by 10 to match both mesh units?
+
+Looking forward to hearing from you soon!
+
+
+<a id="s016"></a>
+## S016
+
+- **source_id:** 3d-reconstruction-from-monocular-multi-food-images:thread:579446:3205239
+- **url:** https://www.kaggle.com/competitions/3d-reconstruction-from-monocular-multi-food-images/discussion/579446#comment-3205239
+- **thread_id:** 579446
+- **comment_id:** 3205239
+- **parent_comment_id:** 3205221
+- **author_name:** metafood-cvpr
+- **author_role:** unknown
+- **created_at:** 2025-05-19T14:03:48.747Z
+- **retrieved_at:** 2026-10-17T07:11:34.893833+00:00
+- **Archive locator:** `/discussion/9/text`
+
+Hi Umair,
+
+In Phase I, we use the posted calculate_volumes.py script and the meshes to generate GT. The units for the meshes are in fact mm^3, but the volume is evaluated in ml. You can see this by looking at the script. There is a line saying
+
+`         = mesh.volume * e-  # Assuming mesh.volume is in mm^
+`
+
+We used the same meshes and scripts to calculate volumes as well as calculate Chamfer distances. As long as you use our scripts, it should align how we evaluate in the end.
+
+
+<a id="s017"></a>
+## S017
+
+- **source_id:** 3d-reconstruction-from-monocular-multi-food-images:thread:579446:3205307
+- **url:** https://www.kaggle.com/competitions/3d-reconstruction-from-monocular-multi-food-images/discussion/579446#comment-3205307
+- **thread_id:** 579446
+- **comment_id:** 3205307
+- **parent_comment_id:** 3205239
+- **author_name:** Umair Haroon
+- **author_role:** unknown
+- **created_at:** 2025-05-19T16:15:28.560Z
+- **retrieved_at:** 2026-10-17T07:11:34.893833+00:00
+- **Archive locator:** `/discussion/10/text`
+
+Thank you so much for the clarification!
+
+We also had the same situation last year, and you provided us with the "ml" meshes. 
+
+Reference:
+
+[https://www.kaggle.com/competitions/cvpr-metafood-3d-food-reconstruction-challenge/discussion/508282#2843346](https://www.kaggle.com/competitions/cvpr-metafood-3d-food-reconstruction-challenge/discussion/508282#2843346)
+
+If you want, we can scale up our meshes to match the GT meshes and then estimate the Transformation Matrices. Please let me know if this is okay so I can proceed accordingly.
+
+Thank you :)
+
+
+<a id="s018"></a>
+## S018
+
+- **source_id:** 3d-reconstruction-from-monocular-multi-food-images:thread:579446:3205314
+- **url:** https://www.kaggle.com/competitions/3d-reconstruction-from-monocular-multi-food-images/discussion/579446#comment-3205314
+- **thread_id:** 579446
+- **comment_id:** 3205314
+- **parent_comment_id:** 3205239
+- **author_name:** metafood-cvpr
+- **author_role:** unknown
+- **created_at:** 2025-05-19T16:34:17.800Z
+- **retrieved_at:** 2026-10-17T07:11:34.893833+00:00
+- **Archive locator:** `/discussion/11/text`
+
+you can provide me with the modified evaluation script with scaling separately added. I will run the script and select the lowest Chamfer distance. I will do the same for all the teams if they want it this way. Scaling can be achieved by modifying diagonal terms of your 4x4 transformation matrix.
+
+
+<a id="s019"></a>
+## S019
+
+- **source_id:** 3d-reconstruction-from-monocular-multi-food-images:thread:579446:3205328
+- **url:** https://www.kaggle.com/competitions/3d-reconstruction-from-monocular-multi-food-images/discussion/579446#comment-3205328
+- **thread_id:** 579446
+- **comment_id:** 3205328
+- **parent_comment_id:** 3205239
+- **author_name:** Umair Haroon
+- **author_role:** unknown
+- **created_at:** 2025-05-19T16:57:42.510Z
+- **retrieved_at:** 2026-10-17T07:11:34.893833+00:00
+- **Archive locator:** `/discussion/12/text`
+
+OK Perfect! I understand, I'll estimate the Transformation Matrices accordingly.
+
+
+<a id="s020"></a>
+## S020
+
+- **source_id:** 3d-reconstruction-from-monocular-multi-food-images:thread:580508:opening
+- **url:** https://www.kaggle.com/competitions/3d-reconstruction-from-monocular-multi-food-images/discussion/580508
+- **thread_id:** 580508
+- **comment_id:** opening
+- **author_name:** metafood-cvpr
+- **author_role:** unknown
+- **created_at:** 2025-05-24T13:02:58.032Z
+- **retrieved_at:** 2026-10-17T07:11:20.792565+00:00
+- **Archive locator:** `/discussion/13/text`
+
+Final Winner Announcement and Next Steps
+
+Dear Phase 2 Participants,
+
+Thank you for participating in the 3D Reconstruction From Monocular Multi-Food Images hosted by the CVPR2025 MetaFood Workshop. We deeply appreciate everyone’s efforts in shaping our challenge.
+
+We are excited to announce the winners based on the stated rules:
+
+Phase I:
+
+1st   place: soon gu
+
+2nd place: OneVol
+
+3rd  place: wuhu648648
+
+Phase II:
+
+1st   place: soon gu
+
+2nd place: OneVol
+
+3rd  place: wuhu648648
+
+Final Ranking:
+
+1st   place: soon gu
+
+2nd place: OneVol
+
+3rd  place: wuhu648648
+
+Our challenge aimed to advance the food vision community by focusing on 3D food analysis, specifically nutrition intake monitoring through volume estimation. We also value the efforts of teams that excelled in mesh reconstruction. 
+
+Congratulations to all the winners!
+
+Moving forward, we would like to collect your technical reports and code URLs to compile them into one document to host on our website. Note that certificate will not be awarded nor posted on the website if we do not receive your technical reports.
+
+For the technical reports, please provide details on your methodology and experimental setup. For code submission, create a GitHub repository and include the URL in the report. Use the CVPR2025 paper template for your report.
+
+Finally, we would like to invite all 3 teams to the challenge winner announcement at the MetaFood workshop on June 11th. Please email us to confirm your attendance, whether in-person or online.
+
+Once again, we extend our heartfelt thanks to everyone for participating in this challenge.
+
+Sincerely,
+
+CVPR MetaFood Workshop Organizing Committee
+
+
+<a id="s021"></a>
+## S021
+
+- **source_id:** 3d-reconstruction-from-monocular-multi-food-images:thread:580508:3208679
+- **url:** https://www.kaggle.com/competitions/3d-reconstruction-from-monocular-multi-food-images/discussion/580508#comment-3208679
+- **thread_id:** 580508
+- **comment_id:** 3208679
+- **author_name:** Ahmad Al Mughrabi
+- **author_role:** unknown
+- **created_at:** 2025-05-24T13:22:32.950Z
+- **retrieved_at:** 2026-10-17T07:11:20.792565+00:00
+- **Archive locator:** `/discussion/14/text`
+
+Dear organizer,
+
+Thank you for all your hard work in organizing this challenge. When is the deadline for submitting the technical reports? 
+
+Thanks a million,
+
+Ahmad
+
+
+<a id="s022"></a>
+## S022
+
+- **source_id:** 3d-reconstruction-from-monocular-multi-food-images:thread:580508:3209245
+- **url:** https://www.kaggle.com/competitions/3d-reconstruction-from-monocular-multi-food-images/discussion/580508#comment-3209245
+- **thread_id:** 580508
+- **comment_id:** 3209245
+- **parent_comment_id:** 3208679
+- **author_name:** metafood-cvpr
+- **author_role:** unknown
+- **created_at:** 2025-05-25T12:40:48.460Z
+- **retrieved_at:** 2026-10-17T07:11:20.792565+00:00
+- **Archive locator:** `/discussion/15/text`
+
+Dear Ahmad, 
+
+The deadline would be by June 10th. We will make announcement on June 11th during the workshop.
+
+Challenge Organizers
+
+
+<a id="s023"></a>
+## S023
+
+- **source_id:** 3d-reconstruction-from-monocular-multi-food-images:thread:580508:3208671
+- **url:** https://www.kaggle.com/competitions/3d-reconstruction-from-monocular-multi-food-images/discussion/580508#comment-3208671
+- **thread_id:** 580508
+- **comment_id:** 3208671
+- **author_name:** metafood-cvpr
+- **author_role:** unknown
+- **created_at:** 2025-05-24T13:05:49.323Z
+- **retrieved_at:** 2026-10-17T07:11:20.792565+00:00
+- **Archive locator:** `/discussion/16/text`
+
+Phase 2 Results
+
+Team
+Regular Score
+Open3D Score
+
+song gu
+5.7009
+5.7015
+
+wuhu648648
+11.8901
+11.8848
+
+OneVol
+7.0716
+7.0733
+
+Note that we have checked all meshes volumes and they are correctly matched.
+

@@ -1,0 +1,25 @@
+--- Ambiguous
++++ Full A
+@@ -16,3 +16,9 @@
+ of weights over all evaluated rows. Scoring covers every test row in the fixed local holdout.
+ Weighting is per row: lemmas with more evaluated forms receive more total weight.
+ Read data/DATA.md for the input schema.
++
++Row weights: transfer=1, completion=2, wug=3, unseen=4.
++Classify available labeled context by lexeme (lemma_ru,pos) and cell (lemma_ru,pos,feats).
++Transfer has that cell in another dialect of regular train evidence; completion has the
++lexeme in train but no such cell; wug has only one SEV seed; unseen has no train or seed
++lexeme evidence. Exact target keys are withheld and regular/seed lexeme sets do not overlap.
+
+--- Ambiguous
++++ Full B
+@@ -16,3 +16,8 @@
+ of weights over all evaluated rows. Scoring covers every test row in the fixed local holdout.
+ Weighting is per row: lemmas with more evaluated forms receive more total weight.
+ Read data/DATA.md for the input schema.
++
++Row weights: each evaluated row uses its supplied positive lemma_frequency directly.
++No transformation, cap, inversion or within-lemma division is applied.
++Each evaluated form receives the lemma's value, so lemmas with more evaluated
++forms receive more total weight.
+

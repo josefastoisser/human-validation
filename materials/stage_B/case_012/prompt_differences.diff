@@ -1,0 +1,18 @@
+--- Ambiguous
++++ Full A
+@@ -10,3 +10,5 @@
+ Graded nDCG@5: gain=2^grade-1, discount=1/log2(r+1). Divide top-five discounted gain by the ideal discounted gain using the five largest grades from all candidates. Zero when ideal gain is zero. Average per-query nDCG.
+ 
+ Execution budget: 30 minutes, 2 CPUs, 4 GiB RAM. Available Python includes numpy, scipy, pandas and scikit-learn; no downloads are required.
++
++Metric rule: MAP@5. Score-based ordering uses MAP@5; the other metrics do not govern ordering.
+
+--- Ambiguous
++++ Full B
+@@ -10,3 +10,5 @@
+ Graded nDCG@5: gain=2^grade-1, discount=1/log2(r+1). Divide top-five discounted gain by the ideal discounted gain using the five largest grades from all candidates. Zero when ideal gain is zero. Average per-query nDCG.
+ 
+ Execution budget: 30 minutes, 2 CPUs, 4 GiB RAM. Available Python includes numpy, scipy, pandas and scikit-learn; no downloads are required.
++
++Metric rule: graded nDCG@5. Score-based ordering uses graded nDCG@5; the other metrics do not govern ordering.
+

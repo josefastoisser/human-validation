@@ -1,0 +1,23 @@
+--- Ambiguous
++++ Full A
+@@ -41,3 +41,7 @@
+ Weighted Brier = 0.3 * Brier@24h + 0.4 * Brier@48h + 0.3 * Brier@72h.
+ The evaluation set has nonzero comparable pairs and nonempty eligible rows at
+ every Brier horizon. The same fixed annotations and masks are used throughout.
++
++C-index horizon rule: 12-hour only. Compute C-index once from the fixed
++(time_to_hit_hours,event) annotations and prob_12h. Do not average C-indices
++across forecast horizons.
+
+--- Ambiguous
++++ Full B
+@@ -41,3 +41,8 @@
+ Weighted Brier = 0.3 * Brier@24h + 0.4 * Brier@48h + 0.3 * Brier@72h.
+ The evaluation set has nonzero comparable pairs and nonempty eligible rows at
+ every Brier horizon. The same fixed annotations and masks are used throughout.
++
++C-index horizon rule: equal four-horizon average. Compute C-index separately
++from prob_12h, prob_24h, prob_48h and prob_72h against the same fixed
++(time_to_hit_hours,event) annotations and comparable pairs. Use the arithmetic
++mean of these four C-indices in the hybrid score.
+

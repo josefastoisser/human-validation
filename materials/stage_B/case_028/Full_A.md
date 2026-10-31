@@ -1,0 +1,7 @@
+Predict both century and within-century decade labels for every book chunk in data/test.csv. Read the individual UTF-8 text member named by text_path from data/texts.zip. Training tuples are in data/train.csv; additional labeled development examples are in data/validation.csv. Use only the supplied local assets. Do not concatenate different chunks into one input.
+
+Century codes are 1=17th, 2=18th, 3=19th, 4=20th and 5=21st century. Decade codes are the original within-century integers 1..10. These codes do not identify an exact year. Preserve the integer tuple output: never output years, probabilities or a timeline coordinate in place of the two labels.
+
+Write _submission.csv with exactly id,century_label,decade_label. Use canonical integer strings C in 1..5 and D in 1..10. Include every test ID exactly once; row order is immaterial. Missing, padded, fractional, float-spelled, nonfinite, out-of-range or year-valued labels are invalid. No subset evaluation or abstention is allowed. Each chunk has equal weight. The score is negative dating error; higher is better. No clipping, smoothing, epsilon or rounding is applied to scores. Provide method.md with a short ungraded method description. See data/DATA.md for source and dependence limitations.
+
+S_A=-mean(abs((10*C_true+D_true)-(10*C_pred+D_pred))). The unit is a decade-bin displacement, not exact-year error. Compute this coupled absolute distance for every unchanged tuple, then average across all test IDs. Maximize this score.

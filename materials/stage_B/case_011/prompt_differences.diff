@@ -1,0 +1,25 @@
+--- Ambiguous
++++ Full A
+@@ -21,3 +21,9 @@
+ 
+ Retain the implementation and provide a brief report describing the validation,
+ selected solution and how to reproduce its predictions.
++
++## Evaluation
++Score all test rows together using signed Pearson correlation between predictions
++and reference labels, with equal row weights. Center each vector by its own mean:
++sum((y-mean(y))*(p-mean(p))) / sqrt(sum((y-mean(y))^2)*sum((p-mean(p))^2)).
++Its range is -1 to 1; higher is better.
+
+--- Ambiguous
++++ Full B
+@@ -21,3 +21,8 @@
+ 
+ Retain the implementation and provide a brief report describing the validation,
+ selected solution and how to reproduce its predictions.
++
++## Evaluation
++Score all test rows together using residual R² = 1 - sum((y-p)^2) / sum((y-mean(y))^2),
++with equal row weights. This is not squared Pearson correlation. Its maximum is 1,
++and negative values are retained without clipping; higher is better.
+

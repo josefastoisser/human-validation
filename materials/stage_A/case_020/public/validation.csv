@@ -1,0 +1,268 @@
+annotation_id,image_id,crop_path,concept_name
+6073,1660,crops/6073.png,Brisingida
+6074,1660,crops/6074.png,Chorilia longipes
+6075,1660,crops/6075.png,Sebastolobus
+6078,1662,crops/6078.png,Munnopsidae
+6109,1670,crops/6109.png,Scotoplanes
+6110,1670,crops/6110.png,Scotoplanes
+6120,1675,crops/6120.png,Munnopsidae
+6121,1675,crops/6121.png,Munnopsidae
+6122,1675,crops/6122.png,Munnopsidae
+6131,1683,crops/6131.png,Keratoisis
+6132,1684,crops/6132.png,Munnopsidae
+6140,1688,crops/6140.png,Scotoplanes globosa
+6182,1710,crops/6182.png,Amphipoda
+6188,1713,crops/6188.png,Peniagone
+6189,1713,crops/6189.png,Brisingida
+6190,1713,crops/6190.png,Peniagone
+6197,1720,crops/6197.png,Amphipoda
+6209,1730,crops/6209.png,Scotoplanes
+6217,1735,crops/6217.png,Munnopsidae
+6218,1735,crops/6218.png,Munnopsidae
+6239,1740,crops/6239.png,Peniagone
+6240,1740,crops/6240.png,Elpidia
+6241,1740,crops/6241.png,Peniagone
+6242,1740,crops/6242.png,Paelopatides confundens
+6332,1752,crops/6332.png,Pannychia moseleyi
+6333,1753,crops/6333.png,Liponema brevicorne
+6334,1753,crops/6334.png,Sebastolobus
+6335,1753,crops/6335.png,Actiniaria
+6343,1755,crops/6343.png,Heteropolypus ritteri
+6344,1755,crops/6344.png,Heteropolypus ritteri
+6347,1758,crops/6347.png,Vesicomyidae
+6348,1758,crops/6348.png,Vesicomyidae
+6349,1758,crops/6349.png,Vesicomyidae
+6350,1758,crops/6350.png,Vesicomyidae
+6351,1758,crops/6351.png,Vesicomyidae
+6352,1758,crops/6352.png,Vesicomyidae
+6353,1758,crops/6353.png,Vesicomyidae
+6354,1758,crops/6354.png,Vesicomyidae
+6355,1759,crops/6355.png,Keratoisis
+9513,2853,crops/9513.png,Munidopsis
+9520,2857,crops/9520.png,Merluccius productus
+9521,2857,crops/9521.png,Merluccius productus
+9522,2857,crops/9522.png,Merluccius productus
+9523,2857,crops/9523.png,Merluccius productus
+9524,2857,crops/9524.png,Merluccius productus
+9525,2857,crops/9525.png,Merluccius productus
+9526,2857,crops/9526.png,Merluccius productus
+9527,2857,crops/9527.png,Merluccius productus
+9528,2857,crops/9528.png,Merluccius productus
+9529,2858,crops/9529.png,Paragorgia arborea
+9535,2861,crops/9535.png,Munnopsidae
+9536,2861,crops/9536.png,Munnopsidae
+9537,2861,crops/9537.png,Munnopsidae
+9538,2861,crops/9538.png,Munnopsidae
+9539,2861,crops/9539.png,Munnopsidae
+9540,2862,crops/9540.png,Brisingida
+9541,2863,crops/9541.png,Umbellula
+9542,2864,crops/9542.png,Paragorgia arborea
+9543,2865,crops/9543.png,Keratoisis
+9544,2865,crops/9544.png,Keratoisis
+9545,2865,crops/9545.png,Paragorgia arborea
+9546,2865,crops/9546.png,Keratoisis
+9552,2868,crops/9552.png,Merluccius productus
+9599,2879,crops/9599.png,Sebastes
+9623,2890,crops/9623.png,Munnopsidae
+9624,2890,crops/9624.png,Munnopsidae
+9636,2895,crops/9636.png,Sebastes
+9637,2895,crops/9637.png,Sebastes
+9638,2895,crops/9638.png,Sebastes
+9671,2904,crops/9671.png,Parastenella
+9676,2909,crops/9676.png,Isididae
+9682,2912,crops/9682.png,Paelopatides confundens
+9694,2919,crops/9694.png,Umbellula
+9695,2919,crops/9695.png,Gastropoda
+9696,2919,crops/9696.png,Gastropoda
+9798,2940,crops/9798.png,Pandalus amplus
+9799,2940,crops/9799.png,Heteropolypus ritteri
+9800,2940,crops/9800.png,Asbestopluma monticola
+9801,2940,crops/9801.png,Pandalus amplus
+9802,2940,crops/9802.png,Pandalus amplus
+9812,2946,crops/9812.png,Funiculina
+9813,2946,crops/9813.png,Funiculina
+9814,2946,crops/9814.png,Isosicyonis
+9815,2946,crops/9815.png,Funiculina
+9816,2946,crops/9816.png,Umbellula
+9817,2946,crops/9817.png,Funiculina
+9818,2946,crops/9818.png,Funiculina
+9819,2946,crops/9819.png,Funiculina
+9820,2946,crops/9820.png,Umbellula
+9821,2946,crops/9821.png,Funiculina
+9822,2946,crops/9822.png,Funiculina
+9823,2946,crops/9823.png,Funiculina
+9824,2946,crops/9824.png,Funiculina
+9825,2946,crops/9825.png,Funiculina
+9826,2946,crops/9826.png,Funiculina
+9827,2946,crops/9827.png,Funiculina
+9828,2946,crops/9828.png,Funiculina
+9829,2946,crops/9829.png,Funiculina
+9830,2946,crops/9830.png,Umbellula
+9831,2946,crops/9831.png,Funiculina
+9832,2946,crops/9832.png,Funiculina
+9833,2946,crops/9833.png,Funiculina
+9834,2946,crops/9834.png,Funiculina
+9835,2946,crops/9835.png,Funiculina
+9836,2946,crops/9836.png,Funiculina
+9837,2946,crops/9837.png,Funiculina
+9838,2946,crops/9838.png,Funiculina
+9839,2946,crops/9839.png,Funiculina
+9840,2946,crops/9840.png,Funiculina
+9841,2946,crops/9841.png,Funiculina
+9842,2946,crops/9842.png,Umbellula
+9843,2946,crops/9843.png,Umbellula
+9844,2946,crops/9844.png,Funiculina
+9845,2946,crops/9845.png,Funiculina
+9846,2946,crops/9846.png,Funiculina
+9847,2946,crops/9847.png,Funiculina
+9848,2946,crops/9848.png,Funiculina
+9849,2946,crops/9849.png,Funiculina
+9850,2946,crops/9850.png,Funiculina
+9851,2946,crops/9851.png,Funiculina
+9852,2946,crops/9852.png,Funiculina
+9853,2946,crops/9853.png,Umbellula
+9854,2946,crops/9854.png,Umbellula
+9855,2946,crops/9855.png,Funiculina
+9856,2946,crops/9856.png,Funiculina
+9857,2946,crops/9857.png,Umbellula
+9858,2947,crops/9858.png,Scotoplanes
+14821,4876,crops/14821.png,Chorilia longipes
+14822,4876,crops/14822.png,Lithodidae
+14823,4876,crops/14823.png,Chorilia longipes
+14834,4882,crops/14834.png,Hippasteria
+14835,4882,crops/14835.png,Hippasteria
+14836,4882,crops/14836.png,Isidella tentaculum
+14837,4882,crops/14837.png,Hippasteria
+14838,4883,crops/14838.png,Asbestopluma monticola
+14848,4890,crops/14848.png,Acanthoptilum
+14850,4892,crops/14850.png,Mycale
+14851,4892,crops/14851.png,Acanthascinae
+14854,4895,crops/14854.png,Apostichopus leukothele
+14857,4898,crops/14857.png,Isosicyonis
+14858,4898,crops/14858.png,Gastropoda
+14859,4898,crops/14859.png,Isosicyonis
+14878,4910,crops/14878.png,Caridea
+14879,4910,crops/14879.png,Caridea
+14880,4911,crops/14880.png,Tunicata
+14882,4913,crops/14882.png,Liponema brevicorne
+14892,4916,crops/14892.png,Hippasteria
+14897,4918,crops/14897.png,Munnopsidae
+14898,4918,crops/14898.png,Munnopsidae
+14899,4918,crops/14899.png,Munnopsidae
+14900,4918,crops/14900.png,Munnopsidae
+14920,4926,crops/14920.png,Gastropoda
+14930,4934,crops/14930.png,Terebellidae
+14931,4934,crops/14931.png,Terebellidae
+14932,4934,crops/14932.png,Terebellidae
+14933,4934,crops/14933.png,Terebellidae
+14934,4934,crops/14934.png,Terebellidae
+14935,4934,crops/14935.png,Terebellidae
+14939,4936,crops/14939.png,Liponema brevicorne
+14940,4936,crops/14940.png,Apostichopus leukothele
+14952,4946,crops/14952.png,Pannychia moseleyi
+14958,4952,crops/14958.png,Pandalus amplus
+14959,4953,crops/14959.png,Umbellula
+14960,4953,crops/14960.png,Umbellula
+14961,4953,crops/14961.png,Umbellula
+14962,4953,crops/14962.png,Isosicyonis
+14963,4953,crops/14963.png,Isosicyonis
+14968,4957,crops/14968.png,Asbestopluma
+14969,4957,crops/14969.png,Asbestopluma
+14970,4957,crops/14970.png,Asbestopluma
+14971,4957,crops/14971.png,Farrea
+14972,4957,crops/14972.png,Asbestopluma
+14973,4957,crops/14973.png,Asbestopluma
+14974,4957,crops/14974.png,Farrea
+14975,4957,crops/14975.png,Farrea
+14976,4957,crops/14976.png,Asbestopluma
+14977,4957,crops/14977.png,Asbestopluma
+14978,4957,crops/14978.png,Farrea
+14992,4962,crops/14992.png,Sebastes
+15021,4968,crops/15021.png,Florometra serratissima
+19451,6889,crops/19451.png,Apostichopus leukothele
+19452,6890,crops/19452.png,Sebastes diploproa
+19453,6890,crops/19453.png,Sebastes diploproa
+19454,6890,crops/19454.png,Sebastes diploproa
+19455,6890,crops/19455.png,Sebastes diploproa
+19456,6890,crops/19456.png,Sebastes diploproa
+19457,6890,crops/19457.png,Sebastes diploproa
+19458,6890,crops/19458.png,Sebastes diploproa
+19459,6890,crops/19459.png,Sebastes diploproa
+19466,6896,crops/19466.png,Isidella tentaculum
+19467,6896,crops/19467.png,Parastenella
+19468,6896,crops/19468.png,Isidella tentaculum
+19469,6896,crops/19469.png,Parastenella
+19485,6905,crops/19485.png,Microstomus pacificus
+19513,6916,crops/19513.png,Pandalus amplus
+19514,6916,crops/19514.png,Pandalus amplus
+19515,6916,crops/19515.png,Pandalus amplus
+19516,6916,crops/19516.png,Pandalus amplus
+19517,6916,crops/19517.png,Pandalus amplus
+19519,6918,crops/19519.png,Apostichopus leukothele
+19535,6925,crops/19535.png,Chorilia longipes
+19536,6925,crops/19536.png,Chorilia longipes
+19539,6928,crops/19539.png,Gersemia juliepackardae
+19540,6928,crops/19540.png,Gersemia juliepackardae
+19541,6928,crops/19541.png,Gersemia juliepackardae
+19542,6928,crops/19542.png,Gersemia juliepackardae
+19543,6928,crops/19543.png,Gersemia juliepackardae
+19544,6928,crops/19544.png,Gersemia juliepackardae
+19545,6928,crops/19545.png,Gersemia juliepackardae
+19546,6928,crops/19546.png,Gersemia juliepackardae
+19547,6928,crops/19547.png,Gersemia juliepackardae
+19548,6928,crops/19548.png,Gersemia juliepackardae
+19549,6928,crops/19549.png,Gersemia juliepackardae
+19555,6932,crops/19555.png,Actinopterygii
+19559,6934,crops/19559.png,Chorilia longipes
+19563,6936,crops/19563.png,Asbestopluma monticola
+19564,6936,crops/19564.png,Asbestopluma monticola
+19565,6936,crops/19565.png,Pandalus amplus
+19566,6936,crops/19566.png,Asbestopluma
+19572,6942,crops/19572.png,Isidella tentaculum
+19598,6951,crops/19598.png,Parastenella
+19599,6952,crops/19599.png,Ceriantharia
+19600,6952,crops/19600.png,Ceriantharia
+19601,6952,crops/19601.png,Ceriantharia
+19614,6961,crops/19614.png,Chorilia longipes
+19632,6969,crops/19632.png,Asbestopluma monticola
+19633,6969,crops/19633.png,Asbestopluma monticola
+19642,6977,crops/19642.png,Ophiacanthidae
+19643,6977,crops/19643.png,Ophiacanthidae
+19644,6977,crops/19644.png,Ophiacanthidae
+19645,6977,crops/19645.png,Ophiacanthidae
+19646,6977,crops/19646.png,Ophiacanthidae
+19647,6977,crops/19647.png,Ophiacanthidae
+19655,6983,crops/19655.png,Florometra serratissima
+23560,8916,crops/23560.png,Mediaster aequalis
+23571,8923,crops/23571.png,Mediaster aequalis
+23620,8946,crops/23620.png,Psathyrometra fragilis
+23621,8946,crops/23621.png,Psathyrometra fragilis
+23622,8946,crops/23622.png,Psathyrometra fragilis
+23633,8953,crops/23633.png,Psathyrometra fragilis
+23638,8958,crops/23638.png,Acanthoptilum
+23639,8958,crops/23639.png,Acanthoptilum
+23640,8958,crops/23640.png,Acanthoptilum
+23641,8958,crops/23641.png,Acanthoptilum
+23642,8958,crops/23642.png,Acanthoptilum
+23643,8958,crops/23643.png,Acanthoptilum
+23656,8964,crops/23656.png,Psathyrometra fragilis
+23658,8966,crops/23658.png,Psathyrometra fragilis
+23661,8968,crops/23661.png,Psathyrometra fragilis
+23662,8968,crops/23662.png,Psathyrometra fragilis
+23674,8972,crops/23674.png,Psathyrometra fragilis
+23675,8972,crops/23675.png,Psathyrometra fragilis
+23676,8972,crops/23676.png,Psathyrometra fragilis
+23677,8972,crops/23677.png,Psathyrometra fragilis
+23678,8972,crops/23678.png,Psathyrometra fragilis
+23681,8975,crops/23681.png,Psathyrometra fragilis
+23682,8975,crops/23682.png,Psathyrometra fragilis
+23683,8975,crops/23683.png,Psathyrometra fragilis
+23684,8975,crops/23684.png,Psathyrometra fragilis
+23685,8975,crops/23685.png,Psathyrometra fragilis
+23686,8975,crops/23686.png,Psathyrometra fragilis
+23687,8975,crops/23687.png,Psathyrometra fragilis
+23693,8978,crops/23693.png,Psathyrometra fragilis
+23694,8978,crops/23694.png,Psathyrometra fragilis
+23695,8978,crops/23695.png,Psathyrometra fragilis
+23698,8980,crops/23698.png,Psathyrometra fragilis
+23699,8980,crops/23699.png,Psathyrometra fragilis

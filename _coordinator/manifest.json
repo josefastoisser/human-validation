@@ -1,0 +1,1004 @@
+{
+  "form_version": "AB-1.1",
+  "dataset_repository": "joso2/XYZ-eval",
+  "dataset_revision": "db936831dcd994fb83490b6cc921999f4af6fce6",
+  "dataset_snapshot_tasks": 37,
+  "review_cases": 35,
+  "excluded_case_ids": [
+    36,
+    "2024-smoking"
+  ],
+  "cohort_source": "Ambig-DS-v3/analysis/haiku35_20261031/results.json:case_ids",
+  "verification_basis": "Saved upload verification; live remote access was unavailable during handout creation.",
+  "repository_private_at_verification": true,
+  "scope": "Text/source review only. No human judgments have been filled; no grader, execution, or behavioral validation is implied.",
+  "blinding": "Ordered review with self-reported exposure; not technically enforced. Exact original package paths may be informative.",
+  "cases": [
+    {
+      "review_id": "case_001",
+      "case_id": 2,
+      "task_id": "filament-segmentation-2026::decision-7e2f1537c264301f8747",
+      "case_name": "Solar background",
+      "hf_package": "filament-segmentation-2026/decision-7e2f1537c264301f8747/packages-final",
+      "prompt_sha256": {
+        "ambig": "f3e0e6fa5f9fdfbfaa861bb4fa300154df6fc2bba8c27f53f3edeb0226781189",
+        "A": "e5655fc96102531adb2a81515580632e28a1fb07d353b236f9b223fe8ee979cd",
+        "B": "90d0fd84e7dfb7ae5ca20c650c59694a2ea63ec51adc2aad7c6cc63c0bc468ca"
+      },
+      "public_file_count": 71,
+      "copied_public_text_files": 6,
+      "source_materials": {
+        "original_entries": 74,
+        "source_inputs": [
+          {
+            "path": "Ambig-DS-v3/RQ1/dataset/filament-segmentation-2026/decision-7e2f1537c264301f8747/sources/evidence.json",
+            "sha256": "29b1c91f533e6c11ddae175a0eb80a27fc789fb9398e59f14697a1740c471a91"
+          },
+          {
+            "path": "Ambig-DS-v3/RQ1/dataset/filament-segmentation-2026/decision-7e2f1537c264301f8747/sources/raw-pages.json",
+            "sha256": "486c57b7ba877396ae1e7fc01bd21e7984d52e480dd8932c53947f19f0713449"
+          },
+          {
+            "path": "Ambig-DS-v3/RQ1/dataset/filament-segmentation-2026/decision-7e2f1537c264301f8747/sources/raw-thread-724492-000001.json",
+            "sha256": "d0fa70f3a584eabf940dd78a30c44ac9ab7edf9735ab4565287432e6c65d734b"
+          },
+          {
+            "path": "Ambig-DS-v3/RQ1/dataset/filament-segmentation-2026/decision-7e2f1537c264301f8747/sources/raw-thread-727186-000001.json",
+            "sha256": "b303b0170465e64288d4bcf9be73e9ba64e50cff35cad35a077862d682a1d447"
+          },
+          {
+            "path": "Ambig-DS-v3/RQ1/dataset/filament-segmentation-2026/decision-7e2f1537c264301f8747/sources/raw-thread-728474-000001.json",
+            "sha256": "787cb0272f7b80f22467aad8e7f559402d984dd606c1d16811379fc447e95437"
+          },
+          {
+            "path": "Ambig-DS-v3/RQ1/dataset/filament-segmentation-2026/decision-7e2f1537c264301f8747/sources/raw-thread-729809-000001.json",
+            "sha256": "3d155a5b13de5fab3e1fb308679f41c92bd67c1201ed17be7aff414a18a6abda"
+          }
+        ],
+        "supplements": []
+      }
+    },
+    {
+      "review_id": "case_002",
+      "case_id": 3,
+      "task_id": "filament-segmentation-2026::decision-ea7f0b6368070c3af655",
+      "case_name": "Solar averaging",
+      "hf_package": "filament-segmentation-2026/decision-ea7f0b6368070c3af655/packages-final",
+      "prompt_sha256": {
+        "ambig": "6d72410b181389cc367e2eed86f6faaedefd2e80a0fde765bb6423a44d0a78b1",
+        "A": "a934b9d8b4b5f300f3799a75beb29a24cd0665db48626cf45709c4b43a529a95",
+        "B": "cd1b317990239c5245f0f6d2784316181d1cdf1473f00d8caaff40985d2a82f4"
+      },
+      "public_file_count": 71,
+      "copied_public_text_files": 6,
+      "source_materials": {
+        "original_entries": 60,
+        "source_inputs": [
+          {
+            "path": "Ambig-DS-v3/RQ1/dataset/filament-segmentation-2026/decision-ea7f0b6368070c3af655/sources/evidence.json",
+            "sha256": "33ae657f0876c8ed52bf7102b6ffba2f20522bfd9fdd6bb0b318423c23148fdf"
+          },
+          {
+            "path": "Ambig-DS-v3/RQ1/dataset/filament-segmentation-2026/decision-ea7f0b6368070c3af655/sources/raw-pages.json",
+            "sha256": "486c57b7ba877396ae1e7fc01bd21e7984d52e480dd8932c53947f19f0713449"
+          },
+          {
+            "path": "Ambig-DS-v3/RQ1/dataset/filament-segmentation-2026/decision-ea7f0b6368070c3af655/sources/raw-thread-724492-000001.json",
+            "sha256": "d0fa70f3a584eabf940dd78a30c44ac9ab7edf9735ab4565287432e6c65d734b"
+          },
+          {
+            "path": "Ambig-DS-v3/RQ1/dataset/filament-segmentation-2026/decision-ea7f0b6368070c3af655/sources/raw-thread-727186-000001.json",
+            "sha256": "b303b0170465e64288d4bcf9be73e9ba64e50cff35cad35a077862d682a1d447"
+          },
+          {
+            "path": "Ambig-DS-v3/RQ1/dataset/filament-segmentation-2026/decision-ea7f0b6368070c3af655/sources/raw-thread-729809-000001.json",
+            "sha256": "3d155a5b13de5fab3e1fb308679f41c92bd67c1201ed17be7aff414a18a6abda"
+          }
+        ],
+        "supplements": []
+      }
+    },
+    {
+      "review_id": "case_003",
+      "case_id": 4,
+      "task_id": "filament-segmentation-2026::decision-10cd430272ebb855a251",
+      "case_name": "Solar missed-instance",
+      "hf_package": "filament-segmentation-2026/decision-10cd430272ebb855a251/packages-final",
+      "prompt_sha256": {
+        "ambig": "bab2d8541f77591b3ee2f777e77437643219c7ba642a58fa100f6f242673f44b",
+        "A": "7b1e51b23a819bcb4db292fb13e46a7fc8ed3165aa37123d4ca12aba3ad67d31",
+        "B": "e1a148b7fed1f1579d6bbe3027ab2f87c73fee51c5f18a79f51fdeac3d67a25f"
+      },
+      "public_file_count": 71,
+      "copied_public_text_files": 6,
+      "source_materials": {
+        "original_entries": 75,
+        "source_inputs": [
+          {
+            "path": "Ambig-DS-v3/RQ1/dataset/filament-segmentation-2026/decision-10cd430272ebb855a251/sources/evidence.json",
+            "sha256": "a423398e99c7d928468ca18c94c6334fe95c2d385a4f67960cb3f9dccb9e4f36"
+          },
+          {
+            "path": "Ambig-DS-v3/RQ1/dataset/filament-segmentation-2026/decision-10cd430272ebb855a251/sources/raw-pages.json",
+            "sha256": "486c57b7ba877396ae1e7fc01bd21e7984d52e480dd8932c53947f19f0713449"
+          },
+          {
+            "path": "Ambig-DS-v3/RQ1/dataset/filament-segmentation-2026/decision-10cd430272ebb855a251/sources/raw-thread-727186-000001.json",
+            "sha256": "b303b0170465e64288d4bcf9be73e9ba64e50cff35cad35a077862d682a1d447"
+          },
+          {
+            "path": "Ambig-DS-v3/RQ1/dataset/filament-segmentation-2026/decision-10cd430272ebb855a251/sources/raw-thread-728474-000001.json",
+            "sha256": "787cb0272f7b80f22467aad8e7f559402d984dd606c1d16811379fc447e95437"
+          },
+          {
+            "path": "Ambig-DS-v3/RQ1/dataset/filament-segmentation-2026/decision-10cd430272ebb855a251/sources/raw-thread-729809-000001.json",
+            "sha256": "3d155a5b13de5fab3e1fb308679f41c92bd67c1201ed17be7aff414a18a6abda"
+          }
+        ],
+        "supplements": []
+      }
+    },
+    {
+      "review_id": "case_004",
+      "case_id": 6,
+      "task_id": "WiDSWorldWide_GlobalDathon26::decision-f7dc753322f0555a703a",
+      "case_name": "WiDS",
+      "hf_package": "WiDSWorldWide_GlobalDathon26/decision-f7dc753322f0555a703a/packages-final",
+      "prompt_sha256": {
+        "ambig": "8bbfecc6fca801f2f7a3832b43772acbb3e121b94f1f4b50c2a6407dd5a3950c",
+        "A": "130fb7f836aeb4be17e317fad28cb7f62112fab9a3a36d4bbf395def6a75dbc0",
+        "B": "208569c90d3335b86635414a00b4dab098f5ee89f791574eff0151b717c011c7"
+      },
+      "public_file_count": 5,
+      "copied_public_text_files": 5,
+      "source_materials": {
+        "original_entries": 29,
+        "source_inputs": [
+          {
+            "path": "Ambig-DS-v3/RQ1/dataset/WiDSWorldWide_GlobalDathon26/decision-f7dc753322f0555a703a/sources/screening/stage2/competitions/WiDSWorldWide_GlobalDathon26/evidence/decision-f7dc753322f0555a703a.json",
+            "sha256": "9126161ca289a576381670ac7a8e48c51684986eb3e4ebea8b81d3db7e045727"
+          }
+        ],
+        "supplements": []
+      }
+    },
+    {
+      "review_id": "case_005",
+      "case_id": 7,
+      "task_id": "harmonizing-the-data-of-your-data::decision-532f9ff99ead99d324fd",
+      "case_name": "Proteomics",
+      "hf_package": "harmonizing-the-data-of-your-data/decision-532f9ff99ead99d324fd/packages-final",
+      "prompt_sha256": {
+        "ambig": "bf1ba88576cdf98483d8f72e749bff6bda580b5bd5c205b1e45ad29708952c0c",
+        "A": "139eb6c9ac80eed03cd64c895ff3ebc9ee116ade62f4200d249613a89056f252",
+        "B": "c1e45f8dd70e70b6cb70c98bb464e6fe1af7b3cf3b2789fb35a566358790abee"
+      },
+      "public_file_count": 107,
+      "copied_public_text_files": 106,
+      "source_materials": {
+        "original_entries": 30,
+        "source_inputs": [
+          {
+            "path": "Ambig-DS-v3/RQ1/dataset/harmonizing-the-data-of-your-data/decision-532f9ff99ead99d324fd/sources/merged-evidence.json",
+            "sha256": "1ee1a1a9d3a3645d064dddb451765b8bc70c959ea0c52a159e5144b5bb24f2e0"
+          }
+        ],
+        "supplements": []
+      }
+    },
+    {
+      "review_id": "case_006",
+      "case_id": 9,
+      "task_id": "barista-bench::decision-10ff4d2e255da3ae4e03",
+      "case_name": "Barista",
+      "hf_package": "barista-bench/decision-10ff4d2e255da3ae4e03/packages-final",
+      "prompt_sha256": {
+        "ambig": "d76ad1b7c82a8b3e43ec9b50fc2d4b1e2bbb2f1ae87a4ef4d86c7b85f92af8c4",
+        "A": "cb809657ff1fecfb79337018995ebebfb5f9dcf3bbd7ed744c06027bde726fb0",
+        "B": "6620801fc5d5bb2bf2671ab547e4380326bc781d5a5f76531d8a55444ceecfb7"
+      },
+      "public_file_count": 5,
+      "copied_public_text_files": 5,
+      "source_materials": {
+        "original_entries": 15,
+        "source_inputs": [
+          {
+            "path": "Ambig-DS-v3/RQ1/dataset/barista-bench/decision-10ff4d2e255da3ae4e03/sources/screening/stage2/competitions/barista-bench/evidence/decision-10ff4d2e255da3ae4e03.json",
+            "sha256": "6d3ce2e90182499b915a1797778b55c13cb96950ad404e869638d1dfe3fc6c67"
+          }
+        ],
+        "supplements": []
+      }
+    },
+    {
+      "review_id": "case_007",
+      "case_id": 12,
+      "task_id": "cyrillic-morphological-induction-grand-challenge::decision-a4b6b23c702351af4cb6",
+      "case_name": "Cyrillic",
+      "hf_package": "cyrillic-morphological-induction-grand-challenge/decision-a4b6b23c702351af4cb6/packages-final",
+      "prompt_sha256": {
+        "ambig": "b34e5361819285d2eeffccea816f6d2b7dff0a0744558ac6b8fc1f77c1dc9fe6",
+        "A": "dec3ad586181ee14ef27f23392d4547fb33877e3f770cde2278e699580594545",
+        "B": "2d2e8e61a086a2a076d5818d08e6842911da4557823adb927084d137d3e1e303"
+      },
+      "public_file_count": 5,
+      "copied_public_text_files": 1,
+      "source_materials": {
+        "original_entries": 10,
+        "source_inputs": [
+          {
+            "path": "Ambig-DS-v3/RQ1/dataset/cyrillic-morphological-induction-grand-challenge/decision-a4b6b23c702351af4cb6/sources/evidence.json",
+            "sha256": "6a8ac31dc09684ec3fe8faf3e74a7c6d763da9d27861e98157ed9e0d9f6ee592"
+          }
+        ],
+        "supplements": []
+      }
+    },
+    {
+      "review_id": "case_008",
+      "case_id": 10,
+      "task_id": "filament-segmentation-2026::decision-a3adfa137c441044f4f4",
+      "case_name": "Solar merge/separate",
+      "hf_package": "filament-segmentation-2026/decision-a3adfa137c441044f4f4/packages-final",
+      "prompt_sha256": {
+        "ambig": "49a5c2044e9611ff627db62ad5bf3a0031f5fdfefbef0631dab6ef485332c9f6",
+        "A": "bbeae6bf42c4839e0c8e13e5f11e59b4df08b4509b36cf17889d0276605eca5c",
+        "B": "e496d1632bd82f47f2d01205a43d367a3eef3356019f5bbd7027ac6b9d099f11"
+      },
+      "public_file_count": 81,
+      "copied_public_text_files": 8,
+      "source_materials": {
+        "original_entries": 38,
+        "source_inputs": [
+          {
+            "path": "Ambig-DS-v3/RQ1/dataset/filament-segmentation-2026/decision-a3adfa137c441044f4f4/sources/prior-original-bundle.json",
+            "sha256": "acb17785d8107f4daf940ce4c64030cdf258b2eabef0f3253a1eb6f6895462f3"
+          }
+        ],
+        "supplements": []
+      }
+    },
+    {
+      "review_id": "case_009",
+      "case_id": 11,
+      "task_id": "filament-segmentation-2026::decision-2165c973b1dd77439471",
+      "case_name": "Solar union/majority",
+      "hf_package": "filament-segmentation-2026/decision-2165c973b1dd77439471/packages-final",
+      "prompt_sha256": {
+        "ambig": "3c3dfe735457e249478a8fc575af4d1ed8cf6d5109c56323717cbc51036beb22",
+        "A": "f59e30f043a6548b60a77f204b28f29efd3a33d591e1d3f7d61c4088222f904d",
+        "B": "7627d92a5c0b6aaac41409a4e59766ae5b57c051053459251ef0a3eeff69e8fc"
+      },
+      "public_file_count": 81,
+      "copied_public_text_files": 8,
+      "source_materials": {
+        "original_entries": 38,
+        "source_inputs": [
+          {
+            "path": "Ambig-DS-v3/RQ1/dataset/filament-segmentation-2026/decision-2165c973b1dd77439471/sources/prior-original-bundle.json",
+            "sha256": "acb17785d8107f4daf940ce4c64030cdf258b2eabef0f3253a1eb6f6895462f3"
+          }
+        ],
+        "supplements": []
+      }
+    },
+    {
+      "review_id": "case_010",
+      "case_id": 16,
+      "task_id": "detecting-reversal-points-in-us-equities::decision-2bf72047e28cf208cdb4",
+      "case_name": "US equities",
+      "hf_package": "detecting-reversal-points-in-us-equities/decision-2bf72047e28cf208cdb4/packages-final",
+      "prompt_sha256": {
+        "ambig": "d50ffe4cc9cba42bd9fd0cc41b915f3d8f46bb6390c068badb1739220a99842d",
+        "A": "58e1ced02d5dff6ce8d524237a49eba68e63fc0a68d11d4cf9a01d95d726de02",
+        "B": "3efd223351eec1c466e0927f7c42b53bd922cf51cfcb80de4119810518a3c579"
+      },
+      "public_file_count": 9,
+      "copied_public_text_files": 5,
+      "source_materials": {
+        "original_entries": 25,
+        "source_inputs": [
+          {
+            "path": "Ambig-DS-v3/RQ1/dataset/detecting-reversal-points-in-us-equities/decision-2bf72047e28cf208cdb4/sources/decision-2bf72047e28cf208cdb4-evidence.json",
+            "sha256": "5a729dbdda01252f63e866c85df051a299cf7434789a5d05fe198169767293bb"
+          }
+        ],
+        "supplements": []
+      }
+    },
+    {
+      "review_id": "case_011",
+      "case_id": 17,
+      "task_id": "drw-crypto-market-prediction::decision-d2551a7ed3964d715c43",
+      "case_name": "DRW crypto",
+      "hf_package": "drw-crypto-market-prediction/decision-d2551a7ed3964d715c43/packages-final",
+      "prompt_sha256": {
+        "ambig": "3e5438001591fefde94f0230b4b98604c9ac4bf4860e9aca544de49c4b2b0c2c",
+        "A": "1e5ae33a69ea8396b5161021345007e098cbe6d47dfedecd0dc1ecc991aed3ba",
+        "B": "b44d4a0f4d94cbf3a553f5997a48797f5f979b03d56291647148ed7e82c787cd"
+      },
+      "public_file_count": 6,
+      "copied_public_text_files": 1,
+      "source_materials": {
+        "original_entries": 50,
+        "source_inputs": [
+          {
+            "path": "Ambig-DS-v3/RQ1/dataset/drw-crypto-market-prediction/decision-d2551a7ed3964d715c43/sources/evidence.json",
+            "sha256": "4ec7b0a8eb13b112c6f273f4b073ac8608098b4bf95697075e22ef4ceed12eda"
+          },
+          {
+            "path": "Ambig-DS-v3/RQ1/results/community-2025-new-after-first-748-20261017T094245Z/stage3/competitions/drw-crypto-market-prediction/decision-d2551a7ed3964d715c43/versions/58e1c5528a6277ce012a5978bd56d0de4d20485d743d3cafb005e4cb022069b4/input.json",
+            "sha256": "4ec7b0a8eb13b112c6f273f4b073ac8608098b4bf95697075e22ef4ceed12eda"
+          }
+        ],
+        "supplements": []
+      }
+    },
+    {
+      "review_id": "case_012",
+      "case_id": 18,
+      "task_id": "acm-icaif-25-ai-agentic-retrieval-grand-challenge::decision-9ba0b405cac5726df15e",
+      "case_name": "ICAIF retrieval",
+      "hf_package": "acm-icaif-25-ai-agentic-retrieval-grand-challenge/decision-9ba0b405cac5726df15e/packages-final",
+      "prompt_sha256": {
+        "ambig": "fcc2c6b88542e3a1736ae3ef237afa2a7d1cd5fd6ad8331f922ff114a025274b",
+        "A": "19e075d3cef88f8fafeee08eaea870561c9c20e354acaf4c7038b4b573213a5c",
+        "B": "b93b6cf3f3a862b6637b9e357575c6132635f0c7e5a6156eb544cb300d471be7"
+      },
+      "public_file_count": 1959,
+      "copied_public_text_files": 5,
+      "source_materials": {
+        "original_entries": 20,
+        "source_inputs": [
+          {
+            "path": "Ambig-DS-v3/RQ1/results/community-2025-new-after-first-748-20261017T094245Z/stage3/competitions/acm-icaif-25-ai-agentic-retrieval-grand-challenge/decision-9ba0b405cac5726df15e/versions/fa78bf2dc2393e062486e80585a800b73954d85454e849c49756f6754cc047db/input.json",
+            "sha256": "03faeec3820e5b8cfb86db689693905c9de40bfa39a5c89318fd72cd9efef6b4"
+          }
+        ],
+        "supplements": []
+      }
+    },
+    {
+      "review_id": "case_013",
+      "case_id": 19,
+      "task_id": "aeroclub-recsys-2025::decision-59503b87fad6790b4ab4",
+      "case_name": "Aeroclub",
+      "hf_package": "aeroclub-recsys-2025/decision-59503b87fad6790b4ab4/packages-final",
+      "prompt_sha256": {
+        "ambig": "964d3dbe7f1bde8d833e6d5423f8e6dc520648baed139a1307c276475a7ac3b7",
+        "A": "1b815440b8764aab892cdeac5ebf361adcd57e02eeae45a606a526931302735c",
+        "B": "937bbf74dcedc6c06ae1704d418358d6e90ea60550125a1a834075147ea781c2"
+      },
+      "public_file_count": 6,
+      "copied_public_text_files": 2,
+      "source_materials": {
+        "original_entries": 55,
+        "source_inputs": [
+          {
+            "path": "Ambig-DS-v3/RQ1/results/community-2025-new-after-first-748-20261017T094245Z/stage3/competitions/aeroclub-recsys-2025/decision-59503b87fad6790b4ab4/versions/bcd9cadb248889136bd03724d63725e1cb780a319951debd1408396f4d06b92e/input.json",
+            "sha256": "6e798511bdf48c2d8759475f26eb28164e838218d4d14ff0df4f695dae48e733"
+          }
+        ],
+        "supplements": []
+      }
+    },
+    {
+      "review_id": "case_014",
+      "case_id": 20,
+      "task_id": "prediction-interval-competition-ii-house-price::decision-cfe370d7e692b823cc23",
+      "case_name": "House-price intervals",
+      "hf_package": "prediction-interval-competition-ii-house-price/decision-cfe370d7e692b823cc23/packages-final",
+      "prompt_sha256": {
+        "ambig": "7db6d1e4f1c20073cc117b74a1953d29e676efe2ec873b238ad69a1fa45d47d4",
+        "A": "430c3742c5142a899c482fc40164dc73568f0f2e74d42b77ad339b42d680d39b",
+        "B": "bdb7d55a80f98e8264030626847882232bbd49d920ada3cf96b2934b431b7b50"
+      },
+      "public_file_count": 6,
+      "copied_public_text_files": 2,
+      "source_materials": {
+        "original_entries": 28,
+        "source_inputs": [
+          {
+            "path": "Ambig-DS-v3/RQ1/dataset/prediction-interval-competition-ii-house-price/decision-cfe370d7e692b823cc23/sources/evidence.json",
+            "sha256": "6ed5eb5fad89d5d79ac2d2f0177eafd934a7a67da17d77a00f28b66f3f24b86a"
+          },
+          {
+            "path": "Ambig-DS-v3/RQ1/results/community-2025-new-after-first-748-20261017T094245Z/stage3/competitions/prediction-interval-competition-ii-house-price/decision-cfe370d7e692b823cc23/versions/7f874e78db15e889292d4751f77c02f3a9b95d48698aac5c4ef43e298e2653a7/input.json",
+            "sha256": "6ed5eb5fad89d5d79ac2d2f0177eafd934a7a67da17d77a00f28b66f3f24b86a"
+          }
+        ],
+        "supplements": []
+      }
+    },
+    {
+      "review_id": "case_015",
+      "case_id": 22,
+      "task_id": "widsdatathon2025::decision-fba72f551270ea6611b5",
+      "case_name": "WiDS 2025 row weighting",
+      "hf_package": "widsdatathon2025/decision-fba72f551270ea6611b5/packages-final",
+      "prompt_sha256": {
+        "ambig": "333bcf1b892bbac0b89b7bbaaedb4b9748a90048c9cd33387db2148ec6b758b8",
+        "A": "9c865148c0b93bbb90ce76f11a7a06c512a8bbe78fdc811ce31b74117f3b6925",
+        "B": "c5e15b0ae7d72422575a24865e0f0e5095abca936d6fc7b5e00378b836f1fdc3"
+      },
+      "public_file_count": 9,
+      "copied_public_text_files": 5,
+      "source_materials": {
+        "original_entries": 22,
+        "source_inputs": [
+          {
+            "path": "Ambig-DS-v3/RQ1/dataset/widsdatathon2025/decision-fba72f551270ea6611b5/sources/evidence.json",
+            "sha256": "084c1b88e1a689a67b09b4ca48f90edca661f683018318515658e013362df28e"
+          },
+          {
+            "path": "Ambig-DS-v3/RQ1/results/community-2025-new-after-first-748-20261017T094245Z-final-catchup/stage3/competitions/widsdatathon2025/decision-fba72f551270ea6611b5/versions/f5408fbe607d32d4a05815c36c78f1328aaa49ed9b807ab04bb62763ba367813/input.json",
+            "sha256": "084c1b88e1a689a67b09b4ca48f90edca661f683018318515658e013362df28e"
+          }
+        ],
+        "supplements": []
+      }
+    },
+    {
+      "review_id": "case_016",
+      "case_id": 23,
+      "task_id": "animal-clef-2025::decision-3dc8ae373309360801d6",
+      "case_name": "AnimalCLEF aggregation",
+      "hf_package": "animal-clef-2025/decision-3dc8ae373309360801d6/packages-final",
+      "prompt_sha256": {
+        "ambig": "be6e0292603653c4a88d8cc0b03fd7f78f87b30012c6a6ca43b195727a8e1075",
+        "A": "8a988db0a179bae9f301aaa416b9471806bda9696811aa12feefeb76dbe7eec2",
+        "B": "9ef69f3c492c528d02906486cd5a3f8f1bebd73b8b734084afd587fb21d66fe4"
+      },
+      "public_file_count": 790,
+      "copied_public_text_files": 5,
+      "source_materials": {
+        "original_entries": 35,
+        "source_inputs": [
+          {
+            "path": "Ambig-DS-v3/RQ1/dataset/animal-clef-2025/decision-3dc8ae373309360801d6/sources/evidence.json",
+            "sha256": "1d29467b20e3cb5618535cdab35c2de1a0103512e5e630f21ca0fbe43306dfbc"
+          },
+          {
+            "path": "Ambig-DS-v3/RQ1/results/community-2025-new-after-first-748-20261017T094245Z-final-catchup/stage3/competitions/animal-clef-2025/decision-3dc8ae373309360801d6/versions/00397eb2891b3a64c9b553d5f578a1371114b10275f5a2288255abebc158f9f4/input.json",
+            "sha256": "1d29467b20e3cb5618535cdab35c2de1a0103512e5e630f21ca0fbe43306dfbc"
+          }
+        ],
+        "supplements": []
+      }
+    },
+    {
+      "review_id": "case_017",
+      "case_id": 24,
+      "task_id": "widsdatathon2025::decision-64861831f0b474a4cd4b",
+      "case_name": "WiDS 2025 class averaging",
+      "hf_package": "widsdatathon2025/decision-64861831f0b474a4cd4b/packages-final",
+      "prompt_sha256": {
+        "ambig": "96a445f7e5da266c64c9a659881d7ed850b9ad436fdd3a4b2017de57024615d8",
+        "A": "278bdc5ea537390a259809ac56bab2e8d6547076965a6d9941ac7c60945fa37c",
+        "B": "9c5ce54b376a55f56c3c99e9135a95379ed7f673f9f4439b16720028f7487ae9"
+      },
+      "public_file_count": 9,
+      "copied_public_text_files": 5,
+      "source_materials": {
+        "original_entries": 30,
+        "source_inputs": [
+          {
+            "path": "Ambig-DS-v3/RQ1/dataset/widsdatathon2025/decision-64861831f0b474a4cd4b/sources/evidence.json",
+            "sha256": "9ca5e3800b256660397a6788944d3a1a5551ffc2e2c6944f640c200e2ddfece7"
+          },
+          {
+            "path": "Ambig-DS-v3/RQ1/results/community-2025-new-after-first-748-20261017T094245Z-final-catchup/stage3/competitions/widsdatathon2025/decision-64861831f0b474a4cd4b/versions/72ad481494329d433dbc8608127aced834973f9b1b7274b97fc276fa979d064b/input.json",
+            "sha256": "9ca5e3800b256660397a6788944d3a1a5551ffc2e2c6944f640c200e2ddfece7"
+          }
+        ],
+        "supplements": []
+      }
+    },
+    {
+      "review_id": "case_018",
+      "case_id": 25,
+      "task_id": "harmonizing-the-data-of-your-data::decision-d2dc346e1676fb92ae1d",
+      "case_name": "Proteomics numeric credit",
+      "hf_package": "harmonizing-the-data-of-your-data/decision-d2dc346e1676fb92ae1d/packages-final",
+      "prompt_sha256": {
+        "ambig": "982fc8a30c2000ad7d2aad54ea751478d6387ea525e99162d9446d86ff708770",
+        "A": "2a586184fc414a88f626d39f3774670fb552a05b64dfe266710446ed90e3513e",
+        "B": "66ce5c430d5dfa835b43625b700c4306e7dc0615c3a0eb1b4771ccd64ec073d5"
+      },
+      "public_file_count": 111,
+      "copied_public_text_files": 111,
+      "source_materials": {
+        "original_entries": 25,
+        "source_inputs": [
+          {
+            "path": "Ambig-DS-v3/RQ1/results/community-2026-batch-05/stage3/competitions/harmonizing-the-data-of-your-data/decision-d2dc346e1676fb92ae1d/versions/2161d6da399c6b4de3d2d69d895711f69022831d076461175363d28ef91b52f7/input.json",
+            "sha256": "fdd1fe905d5e9bbf3f6a2f81f73bf0d68a51bb2f8953d26e68604c2b4af92d84"
+          }
+        ],
+        "supplements": []
+      }
+    },
+    {
+      "review_id": "case_019",
+      "case_id": 26,
+      "task_id": "prediction-interval-competition-ii-house-price::decision-7cabbc7788cd7aa0f6fa",
+      "case_name": "House prices: scoring population",
+      "hf_package": "prediction-interval-competition-ii-house-price/decision-7cabbc7788cd7aa0f6fa/packages-final",
+      "prompt_sha256": {
+        "ambig": "9f4b175b78da3e246f7504387001007ca50ae12c17a0ec906d1e076326ae19aa",
+        "A": "75d409b26bfc9b0970618c304bc93975c595b32cbac6ea92d5796e9a463ae590",
+        "B": "ab23920553cdc3db5f9dece8c2cb5255080e48fd591c72ff4673e8f13ce5e6b4"
+      },
+      "public_file_count": 5,
+      "copied_public_text_files": 2,
+      "source_materials": {
+        "original_entries": 44,
+        "source_inputs": [
+          {
+            "path": "Ambig-DS-v3/RQ1/results/community-2025-new-after-first-748-20261017T094245Z/stage3/competitions/prediction-interval-competition-ii-house-price/decision-7cabbc7788cd7aa0f6fa/versions/5f1f219d1827d878912df80ee61b75890e2b9d9be62209653edd6a9e6b2858b9/input.json",
+            "sha256": "27800a1ee08bba9bda372556a0b9ab4cdfd83d2546e0a3ec5012a8fa7405fc76"
+          }
+        ],
+        "supplements": []
+      }
+    },
+    {
+      "review_id": "case_020",
+      "case_id": 27,
+      "task_id": "fathomnet-2025::decision-607fbb1a3d289eca9a46",
+      "case_name": "FathomNet ancestors",
+      "hf_package": "fathomnet-2025/decision-607fbb1a3d289eca9a46/packages-final",
+      "prompt_sha256": {
+        "ambig": "a429267c9d1172a91e38120ce41c0ad6abfcf80ed37501cdbecfbc2e9924b159",
+        "A": "ae9d81ee31a3e63aa48d5f8446f7243792004c69684e1b45d84f878eea6316dd",
+        "B": "ecbf1568c2b725676b467f82dc0ced7ff63e2ff5e53571c25e1660b1f80cc303"
+      },
+      "public_file_count": 1353,
+      "copied_public_text_files": 7,
+      "source_materials": {
+        "original_entries": 21,
+        "source_inputs": [
+          {
+            "path": "Ambig-DS-v3/RQ1/dataset/fathomnet-2025/decision-607fbb1a3d289eca9a46/sources/run/stage2/competitions/fathomnet-2025/evidence/decision-607fbb1a3d289eca9a46.json",
+            "sha256": "8a6f55020078ec057abc43bf2010de8bc7c1076f6fbb57a6723b087dd82cf33b"
+          }
+        ],
+        "supplements": []
+      }
+    },
+    {
+      "review_id": "case_021",
+      "case_id": 28,
+      "task_id": "you-are-bot::decision-e4c9047d6a77b63180e0",
+      "case_name": "You Are Bot",
+      "hf_package": "you-are-bot/decision-e4c9047d6a77b63180e0/packages-final",
+      "prompt_sha256": {
+        "ambig": "149ed742f4d4e2ef9fc52d27754077b5589838c14b263ac0cc89359c2707d2fa",
+        "A": "d88a235531ec18aa2d9ea1b050e9b0101c6a07b2cb6f9eebf6236806e2d8797c",
+        "B": "b5cca37cfaf84c8b773ada0557b9986d896503aa5a4a1eb300baeff96cd7cf6d"
+      },
+      "public_file_count": 8,
+      "copied_public_text_files": 7,
+      "source_materials": {
+        "original_entries": 15,
+        "source_inputs": [
+          {
+            "path": "Ambig-DS-v3/RQ1/dataset/you-are-bot/decision-e4c9047d6a77b63180e0/sources/screening-evidence.json",
+            "sha256": "0fb59ffe09e0432ac9b034446806c003e1d2679cf30a06fed78fcfc3f944e760"
+          }
+        ],
+        "supplements": []
+      }
+    },
+    {
+      "review_id": "case_022",
+      "case_id": 29,
+      "task_id": "ml-gen-x-bioreasoning-challenge-track-c::decision-4d708c1a0044e413d98d",
+      "case_name": "BioReasoning Track C",
+      "hf_package": "ml-gen-x-bioreasoning-challenge-track-c/decision-4d708c1a0044e413d98d/packages-final",
+      "prompt_sha256": {
+        "ambig": "95ce8a7636d145b3a67c5328879fc1b45c7e4ba23f253428677263f0581533b1",
+        "A": "9c39840461862489f12880ad34e17acecc7101eab279e580441175a8ea535290",
+        "B": "4533e6b578d881746c89f891c7e0c2941643467bd984162a98ab0e9f878c78d8"
+      },
+      "public_file_count": 5,
+      "copied_public_text_files": 5,
+      "source_materials": {
+        "original_entries": 19,
+        "source_inputs": [
+          {
+            "path": "Ambig-DS-v3/RQ1/dataset/ml-gen-x-bioreasoning-challenge-track-c/decision-4d708c1a0044e413d98d/sources/screening-evidence.json",
+            "sha256": "7888cb32fd3a416e58b70c6ef7819db04d6a2f48da97e8d6ebcf0cdfd3150c67"
+          }
+        ],
+        "supplements": []
+      }
+    },
+    {
+      "review_id": "case_023",
+      "case_id": 30,
+      "task_id": "china-real-estate-demand-prediction::decision-b81506ba031e1fc17e1c",
+      "case_name": "China real-estate demand",
+      "hf_package": "china-real-estate-demand-prediction/decision-b81506ba031e1fc17e1c/packages-final",
+      "prompt_sha256": {
+        "ambig": "75a2ee3cb7392b0ca744ec6a18f520d2244b200a44f72a6b3aff09143f6e62b9",
+        "A": "764e89695dfaf64133c2b4e1da3fe0fa3a7b319cb0784b579564a90882aa1835",
+        "B": "94e8e8d61722297a5a50a2d97b53c78d19149e3cb5afb9313cec74b65cfd4bce"
+      },
+      "public_file_count": 5,
+      "copied_public_text_files": 5,
+      "source_materials": {
+        "original_entries": 31,
+        "source_inputs": [
+          {
+            "path": "Ambig-DS-v3/RQ1/dataset/china-real-estate-demand-prediction/decision-b81506ba031e1fc17e1c/sources/screening-evidence.json",
+            "sha256": "5897724c933d78e8b011ea6e2b70505ec46a2898c393af6e3704d24db5464d91"
+          }
+        ],
+        "supplements": []
+      }
+    },
+    {
+      "review_id": "case_024",
+      "case_id": 31,
+      "task_id": "llm-agentic-legal-information-retrieval::decision-8625f7f5837fb93c1dad",
+      "case_name": "Legal information retrieval",
+      "hf_package": "llm-agentic-legal-information-retrieval/decision-8625f7f5837fb93c1dad/packages-final",
+      "prompt_sha256": {
+        "ambig": "d856ea80f351ac8486bc653d33e96c997981940e006e7438d1ee80dcdd4b790d",
+        "A": "a83b0f5040c95178761bab2ad8cf58358fb55cc75e437a7c89b1fd91a2bd96f6",
+        "B": "8caa92be3726c2bd6ae07b06826017e13934726210e428af79d4de7941e256e2"
+      },
+      "public_file_count": 7,
+      "copied_public_text_files": 3,
+      "source_materials": {
+        "original_entries": 25,
+        "source_inputs": [
+          {
+            "path": "Ambig-DS-v3/RQ1/dataset/llm-agentic-legal-information-retrieval/decision-8625f7f5837fb93c1dad/sources/evidence.json",
+            "sha256": "0f0989997ddc3c531521707a0f213df3ebfbd3b198b258c8a010185ef689ee87"
+          }
+        ],
+        "supplements": []
+      }
+    },
+    {
+      "review_id": "case_025",
+      "case_id": 34,
+      "task_id": "multi-view-pig-posture-recognition::decision-e175c2f0b298e99da93e",
+      "case_name": "Pig posture",
+      "hf_package": "multi-view-pig-posture-recognition/decision-e175c2f0b298e99da93e/packages-final",
+      "prompt_sha256": {
+        "ambig": "6c8b1f1bb7f8b623ba82e0044787e284fda5fc1c97aac016577a10aad602bee7",
+        "A": "13bcb22fa256a0a55308247d496d221ac6537d274090bd7347afae91af812c8c",
+        "B": "775128576f22dac7eecadf1d54d6bfb09ac068cbdc8fa5344146cbf401fcb424"
+      },
+      "public_file_count": 5857,
+      "copied_public_text_files": 7,
+      "source_materials": {
+        "original_entries": 30,
+        "source_inputs": [
+          {
+            "path": "Ambig-DS-v3/RQ1/dataset/multi-view-pig-posture-recognition/decision-e175c2f0b298e99da93e/sources/evidence.json",
+            "sha256": "4555742aac92b8fc952f7383895677cf0a9c9b21cdf9badeb7734c1a904f3c31"
+          }
+        ],
+        "supplements": []
+      }
+    },
+    {
+      "review_id": "case_026",
+      "case_id": 35,
+      "task_id": "3d-reconstruction-from-monocular-multi-food-images::decision-c7a8352719952d31de71",
+      "case_name": "Multi-food 3D",
+      "hf_package": "3d-reconstruction-from-monocular-multi-food-images/decision-c7a8352719952d31de71/packages-final",
+      "prompt_sha256": {
+        "ambig": "67ce508ae09ba6fe121df1119bfc21f8708790726b5940937fbe02bbc84ff341",
+        "A": "4aced108a02a8303f6c0cce64010f4dff422a857b07068550d7a49bd2dca1efc",
+        "B": "6132c255dec074f960940a2c05038da989858a57ad36774da7bb9d1cda701900"
+      },
+      "public_file_count": 72,
+      "copied_public_text_files": 8,
+      "source_materials": {
+        "original_entries": 23,
+        "source_inputs": [
+          {
+            "path": "Ambig-DS-v3/RQ1/dataset/3d-reconstruction-from-monocular-multi-food-images/decision-c7a8352719952d31de71/sources/evidence.json",
+            "sha256": "c9301c411bb2a567ed8ae08df02a58dd83628fd0772140a0ef72a798954e977a"
+          }
+        ],
+        "supplements": []
+      }
+    },
+    {
+      "review_id": "case_027",
+      "case_id": "2024-financial",
+      "task_id": "financial-performance-prediction::research-financial-nine-r2-wape-20261022-v2",
+      "case_name": "Financial",
+      "hf_package": "financial-performance-prediction/research-financial-nine-r2-wape-20261022-v2/packages-ready",
+      "prompt_sha256": {
+        "ambig": "68a3bbfbf53f11500837883e97d335b78fef6ca148bd80ccd1655b442bad161e",
+        "A": "ab99baa7220c3da5dea190c8d22ce6b40dac5700d5096f9a3b2cd30fb4c3e637",
+        "B": "d1ebc3182d869c95d17342190aac0463ab5a416dc2854efba649117a6cf9a5c0"
+      },
+      "public_file_count": 9,
+      "copied_public_text_files": 5,
+      "source_materials": {
+        "original_entries": 6,
+        "source_inputs": [
+          {
+            "path": "Ambig-DS-v3/RQ1/data/community-2024-corpus-20261020T075607Z/normalized/financial-performance-prediction/task.json",
+            "sha256": "bfda6a31c489d1979a0669a281eb1a30190e5cd166e7065d196efcf291729fd1"
+          }
+        ],
+        "supplements": []
+      }
+    },
+    {
+      "review_id": "case_028",
+      "case_id": "2024-icdar",
+      "task_id": "icdar-2025-ColiE_Task2::construction-timeline-components-20261022-564104",
+      "case_name": "ICDAR",
+      "hf_package": "icdar-2025-ColiE_Task2/construction-timeline-components-20261022-564104/packages-final",
+      "prompt_sha256": {
+        "ambig": "ead965c9911e0e31dcc2d8fb9c4d88046960da35f8e3510f45c07b855dbcf2a3",
+        "A": "fa356e54ccc7d80d627cd4857e9d2f7d8cdf48dd5624d06a43d30017b6ec10fe",
+        "B": "292f9c11186cf58b7f21354cc0bfd748f5a73c18efeeffd21cb140cb3ce9f202"
+      },
+      "public_file_count": 6,
+      "copied_public_text_files": 1,
+      "source_materials": {
+        "original_entries": 6,
+        "source_inputs": [
+          {
+            "path": "Ambig-DS-v3/RQ1/data/community-2024-corpus-20261020T075607Z/normalized/icdar-2025-ColiE_Task2/task.json",
+            "sha256": "93c5aee3faf114e6414413abfe072ff95b9a2e2880f0d674a6f2f6ef10c22cc8"
+          }
+        ],
+        "supplements": []
+      }
+    },
+    {
+      "review_id": "case_029",
+      "case_id": "2024-flares",
+      "task_id": "copy-of-flares-identification::document-flares-partial-credit-20261022",
+      "case_name": "Flares",
+      "hf_package": "copy-of-flares-identification/document-flares-partial-credit-20261022/organizer-release-v3-articles/packages-final",
+      "prompt_sha256": {
+        "ambig": "e99db58007dc5fc498e2c5f9848566b9f724d1d8a496168c3b143ceb97c50068",
+        "A": "5ccf35428a66949331c568ef1bb1f73173affe14513a6b8560cba460e7a46c65",
+        "B": "8ed3010cbb48559685d848f9a92ea3dddadd5789c2a1fdcaab297c19389a378d"
+      },
+      "public_file_count": 6,
+      "copied_public_text_files": 5,
+      "source_materials": {
+        "original_entries": 5,
+        "source_inputs": [
+          {
+            "path": "Ambig-DS-v3/RQ1/data/community-2024-corpus-20261020T075607Z/normalized/copy-of-flares-identification/task.json",
+            "sha256": "e073f01a86edee7ae3192a43df28a37b03846c280f04695d27253bdc0aa790e7"
+          }
+        ],
+        "supplements": [
+          {
+            "file": "supplement_01.py",
+            "archive_path": "Ambig-DS-v3/downloads/flares-organizer-20261022T181124Z/evaluation_metric_template_kaggle_subtask_1.py",
+            "archive_sha256": "832b53c27ffa430fbf6c2abd807eb5dc14b9c336c08386727a660691bb19a340",
+            "handout_sha256": "832b53c27ffa430fbf6c2abd807eb5dc14b9c336c08386727a660691bb19a340"
+          }
+        ]
+      }
+    },
+    {
+      "review_id": "case_030",
+      "case_id": "2024-car-price",
+      "task_id": "car-price-prediction-x::research-car-price-mae-mse-20261022-v3",
+      "case_name": "Car-price",
+      "hf_package": "car-price-prediction-x/research-car-price-mae-mse-20261022-v3/packages-final",
+      "prompt_sha256": {
+        "ambig": "8d48796cd1a72edb78e5b4ea0c79b8397b2bc1825567f009ddc43baaeed0d4be",
+        "A": "3e1e86b71cc492ba4b010f84d6d1150ee912a5fc2de0c7e4f6ecf550a7a12eaa",
+        "B": "7527721ff811d4ae16255f2b472d4bafdb0443868e0e2d6b5cfc864e0de821b3"
+      },
+      "public_file_count": 5,
+      "copied_public_text_files": 5,
+      "source_materials": {
+        "original_entries": 5,
+        "source_inputs": [
+          {
+            "path": "Ambig-DS-v3/RQ1/data/community-2024-corpus-20261020T075607Z/normalized/car-price-prediction-x/task.json",
+            "sha256": "0617a0316df65f551ff8bdb58ccf1908dede280c86e477a76304b399aba9b37b"
+          }
+        ],
+        "supplements": []
+      }
+    },
+    {
+      "review_id": "case_031",
+      "case_id": "2024-altscore",
+      "task_id": "alt-score-data-science-competition::research-altscore-rmse-mae-20261022-v2",
+      "case_name": "AltScore",
+      "hf_package": "alt-score-data-science-competition/research-altscore-rmse-mae-20261022-v2/packages-ready-20261022-v2",
+      "prompt_sha256": {
+        "ambig": "d37f316a9de3f6ebae24e1c1e7116b953495336373c131cd96720d2499ce58d7",
+        "A": "7d647a677c8d43966c1171a19a53c7ec13d8518674db6c02bf5d390f43ebff5c",
+        "B": "86113ecf8d173706fbdad8d281414a87397df325b8b36297d30a0fb304f937da"
+      },
+      "public_file_count": 10,
+      "copied_public_text_files": 9,
+      "source_materials": {
+        "original_entries": 4,
+        "source_inputs": [
+          {
+            "path": "Ambig-DS-v3/RQ1/data/community-2024-corpus-20261020T075607Z/normalized/alt-score-data-science-competition/task.json",
+            "sha256": "98b29f6a191010ad9c80807aad285a62fe905c12bdd9fdd2d4c64edb2473f56e"
+          }
+        ],
+        "supplements": []
+      }
+    },
+    {
+      "review_id": "case_032",
+      "case_id": "2024-education",
+      "task_id": "education-leaving-uncertain-future::research-education-accuracy-f1-20261022-v2",
+      "case_name": "Education",
+      "hf_package": "education-leaving-uncertain-future/research-education-accuracy-f1-20261022-v2/packages-final",
+      "prompt_sha256": {
+        "ambig": "b67b3bbcd859dfd5793f34a45fa4d14026880166571a8c237caac5986c654862",
+        "A": "641bcb6313268ebcf4c24ef58c301ba163eec6855ff2961d14204383687dfd9d",
+        "B": "19b3e811a6aba3fbf32759211a65c94883d3f50c2259c0c5ba78ba2d7c3f7bbb"
+      },
+      "public_file_count": 6,
+      "copied_public_text_files": 6,
+      "source_materials": {
+        "original_entries": 6,
+        "source_inputs": [
+          {
+            "path": "Ambig-DS-v3/RQ1/data/community-2024-corpus-20261020T075607Z/normalized/education-leaving-uncertain-future/task.json",
+            "sha256": "07d1e2acde0e87a352a70151339ca46258e6afc7d29908a4b4de79ee854fdbd9"
+          }
+        ],
+        "supplements": []
+      }
+    },
+    {
+      "review_id": "case_033",
+      "case_id": "2024-eye-tracking",
+      "task_id": "event-based-eye-tracking-ais2024::researcher-64d637fc5be570e2163e",
+      "case_name": "Eye Tracking",
+      "hf_package": "event-based-eye-tracking-ais2024/researcher-64d637fc5be570e2163e/packages-final",
+      "prompt_sha256": {
+        "ambig": "b18b0e2fb596dc37cbf128cb0bfc506ae1f3e4a22617ab2fe1e87f5fb9f60533",
+        "A": "0d1df808056eaeefa30593449091d6b39e169b6e2b1c3cda25e5ffdc372e05c1",
+        "B": "b47eb8ed1843a4536a4e0435e98ddaec1e3be63847b70a0d9ac2bf7760d62478"
+      },
+      "public_file_count": 115,
+      "copied_public_text_files": 34,
+      "source_materials": {
+        "original_entries": 5,
+        "source_inputs": [
+          {
+            "path": "Ambig-DS-v3/RQ1/data/community-2024-corpus-20261020T075607Z/normalized/event-based-eye-tracking-ais2024/task.json",
+            "sha256": "190e59c28a8dc8c68d6f9f04c9313fb9fe035124fa40e9a19e3af8fc7bbfc588"
+          }
+        ],
+        "supplements": [
+          {
+            "file": "supplement_01.md",
+            "archive_path": "Ambig-DS-v3/RQ1/dataset/event-based-eye-tracking-ais2024/researcher-64d637fc5be570e2163e/sources/web_sources_10.txt",
+            "archive_sha256": "0f0581b1749498ba1966cd30cf53e711637dcb83a864ea40297eb8d38ade41e4",
+            "handout_sha256": "14ef8f67ff42301c0da85a9f707b3b6b2a3bb0bb5ca586ed2e4ef6123ae64fa7"
+          },
+          {
+            "file": "supplement_02.md",
+            "archive_path": "Ambig-DS-v3/RQ1/dataset/event-based-eye-tracking-ais2024/researcher-64d637fc5be570e2163e/sources/web_sources_2.txt",
+            "archive_sha256": "8ca23c4a73b7bce9691d724dcf59e85e35949fa6c22360bc3fff4069039a5932",
+            "handout_sha256": "73eadc30acd73283945af1cd3eb4146f8bd7172347c7f60a3814381c676cb907"
+          },
+          {
+            "file": "supplement_03.md",
+            "archive_path": "Ambig-DS-v3/RQ1/dataset/event-based-eye-tracking-ais2024/researcher-64d637fc5be570e2163e/sources/web_sources_3.txt",
+            "archive_sha256": "238112b873532b3f7844f4dd7105b69db76704efc586c9abf48a746630745c70",
+            "handout_sha256": "a78ca3da66685261832d1ceed78b6da4acb220f4ada08ae0505109428b520047"
+          },
+          {
+            "file": "supplement_04.md",
+            "archive_path": "Ambig-DS-v3/RQ1/dataset/event-based-eye-tracking-ais2024/researcher-64d637fc5be570e2163e/sources/web_sources_4.txt",
+            "archive_sha256": "7f97decd6e31fa32f74c7d1a1a10a67fe11f51f474221ca6cd57e33ac29b84bb",
+            "handout_sha256": "f1facb2e21c1b131f40a7733284d0b75029020f77e20c1082a0602687873fc55"
+          },
+          {
+            "file": "supplement_05.md",
+            "archive_path": "Ambig-DS-v3/RQ1/dataset/event-based-eye-tracking-ais2024/researcher-64d637fc5be570e2163e/sources/web_sources_5.txt",
+            "archive_sha256": "0ad26ca50f1cdcac9931375369d417128cb8419385b77ca0b8cb664259f70ed7",
+            "handout_sha256": "cb12d67984042711a03d094dcdfef0fbf6b2dec4c4b5c0c2647c576dfdd8343f"
+          },
+          {
+            "file": "supplement_06.md",
+            "archive_path": "Ambig-DS-v3/RQ1/dataset/event-based-eye-tracking-ais2024/researcher-64d637fc5be570e2163e/sources/web_sources_6.txt",
+            "archive_sha256": "204a0bf01bcdfca2bf5da9294517f5847ff541c60988dee1abf48f7fad0e27f1",
+            "handout_sha256": "c9aa3afbaf5276d5ed20d8f0d1cab28ceb72135863a3ed4108d0a85815d6a500"
+          },
+          {
+            "file": "supplement_07.md",
+            "archive_path": "Ambig-DS-v3/RQ1/dataset/event-based-eye-tracking-ais2024/researcher-64d637fc5be570e2163e/sources/web_sources_7.txt",
+            "archive_sha256": "d0384b848ef8924bc9d6c54bb50b75654cbdb8c90ebb9aff0b2f9fc6ee09a1d2",
+            "handout_sha256": "50c3b0a2b0c870b78226565e1a4419a8d89d8b90ada712d086ad52b09fbc3ac8"
+          },
+          {
+            "file": "supplement_08.md",
+            "archive_path": "Ambig-DS-v3/RQ1/dataset/event-based-eye-tracking-ais2024/researcher-64d637fc5be570e2163e/sources/web_sources_8.txt",
+            "archive_sha256": "1d8b7f654d20624874eb2f2be361f427dc4b72f5184eec433019decf1c03d980",
+            "handout_sha256": "ffaef6018021bf28897452d223f999ce0168958ab807f8479b303f93dda5bb15"
+          },
+          {
+            "file": "supplement_09.md",
+            "archive_path": "Ambig-DS-v3/RQ1/dataset/event-based-eye-tracking-ais2024/researcher-64d637fc5be570e2163e/sources/web_sources_9.txt",
+            "archive_sha256": "8b55e14c6e225c1769bd695c38ea3a3d1c040fee213dc4f52da7dc6ac8c804dc",
+            "handout_sha256": "fe15dd8fb38d06ea26f1a4e192f6fd3c53a648cfde9cdba0212cb33aa529892e"
+          }
+        ]
+      }
+    },
+    {
+      "review_id": "case_034",
+      "case_id": "2024-flame",
+      "task_id": "2024-flame-ai-challenge/decision-e75eff49c67e40ed65d3",
+      "case_name": "FLAME",
+      "hf_package": "2024-flame-ai-challenge/decision-e75eff49c67e40ed65d3/temporary/offline-tmpdir-repair-20261022T104659Z/packages-final",
+      "prompt_sha256": {
+        "ambig": "0696224a403c741acb5b1d6b71643b144a95e023e8d44332db90141e46452785",
+        "A": "f55cb1ff2fef6ac242e6055e9556369d46bad4da0730c2c2499861205d25ba55",
+        "B": "4f652c50ce007afa7efda84f794118e8a4d4825d50621bbf22c2d64b243e081d"
+      },
+      "public_file_count": 15,
+      "copied_public_text_files": 5,
+      "source_materials": {
+        "original_entries": 52,
+        "source_inputs": [
+          {
+            "path": "Ambig-DS-v3/RQ1/data/community-2024-corpus-20261020T075607Z/normalized/2024-flame-ai-challenge/task.json",
+            "sha256": "5e37160f086ec9334743a6536bd683c23834321e9ad242ef26fa167a2a8be119"
+          },
+          {
+            "path": "Ambig-DS-v3/RQ1/data/community-2024-corpus-20261020T075607Z/normalized/2024-flame-ai-challenge/threads/539685.json",
+            "sha256": "8e4afa742e9c288f590ee96b3d7d317568ae306b58fdc4709af06828c1bae447"
+          },
+          {
+            "path": "Ambig-DS-v3/RQ1/dataset/2024-flame-ai-challenge/decision-e75eff49c67e40ed65d3/sources/evidence.json",
+            "sha256": "f4072942213bcd1c399566ac18b1c408c28faa88bf969b775e274a7518b4d362"
+          }
+        ],
+        "supplements": []
+      }
+    },
+    {
+      "review_id": "case_035",
+      "case_id": "2024-metafood",
+      "task_id": "cvpr-metafood-3d-food-reconstruction-challenge::decision-4096bca8c7bd8895dde9",
+      "case_name": "Metafood",
+      "hf_package": "cvpr-metafood-3d-food-reconstruction-challenge/decision-4096bca8c7bd8895dde9/packages-ready-20261022-v2",
+      "prompt_sha256": {
+        "ambig": "874e1cd38237c80f37d6cc437683a9e4e367366fc00fadd7edf3f9806df34bce",
+        "A": "8393e1e332e9647a49385472cfa2f69cdb83d05d5f4f5a331d85404eec54c123",
+        "B": "91df3dc592003ba55ef1de9986ad47f361baf7e34fb53eae668c7e7f7c8203ae"
+      },
+      "public_file_count": 30,
+      "copied_public_text_files": 10,
+      "source_materials": {
+        "original_entries": 7,
+        "source_inputs": [
+          {
+            "path": "Ambig-DS-v3/RQ1/data/community-2024-corpus-20261020T075607Z/normalized/cvpr-metafood-3d-food-reconstruction-challenge/task.json",
+            "sha256": "e5596ed1695594d74dd28b9f27d8cc13eb058824ca4feb90ea59fcc15369eee4"
+          },
+          {
+            "path": "Ambig-DS-v3/RQ1/data/community-2024-corpus-20261020T075607Z/normalized/cvpr-metafood-3d-food-reconstruction-challenge/threads/509899.json",
+            "sha256": "e4fe904a6c00eb8d24a330c0cca250f928bf23acc2915f1774446757197fa0c9"
+          }
+        ],
+        "supplements": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+--- Ambiguous
++++ Full A
+@@ -38,3 +38,8 @@
+ smallest column-major pixel index. Original annotator instance masks are obtained
+ by the same COCO polygon rasterization, and stored annotation files stay
+ unchanged in every scenario.
++
++Reference aggregation: union before scoring.
++For each physical image, union all original annotator instance masks and derive
++4-connected reference components as specified above. Score the submitted instance
++set once against this merged reference. Average PQ equally over physical images.
+
+--- Ambiguous
++++ Full B
+@@ -38,3 +38,9 @@
+ smallest column-major pixel index. Original annotator instance masks are obtained
+ by the same COCO polygon rasterization, and stored annotation files stay
+ unchanged in every scenario.
++
++Reference aggregation: score annotators separately.
++For each physical image, score the same submitted instance set independently
++against every annotator's original instance set. Average these PQ scores equally
++over annotators within that image, then equally over physical images. Do not
++merge annotator masks or split their original instances into components.
+

@@ -1,0 +1,22 @@
+--- Ambiguous
++++ Full A
+@@ -2,6 +2,6 @@
+ 
+ Write /workspace/_submission.csv with exactly the header and nine target columns in data/sample_submission.csv and exactly the requested Id set, one row per Id. The raw target values, original signs, units and currencies are unchanged. Negative forecasts are allowed. All nine forecasts must be finite scalars; no clipping, conversion, missing-value filling or company/target removal is applied by the grader. Missing, additional, duplicate, padded or changed IDs, malformed columns or nonfinite values invalidate the artifact. UTF-8 with optional BOM and arbitrary row order are accepted. Each original row has equal weight; duplicate-looking companies are retained. Do not predict data/official_test.csv instead of the requested test cohort.
+ 
+-
++Maximize the arithmetic mean of nine per-target R2 scores. For each target j compute R2_j = 1 - sum_i((prediction_ij-reference_ij)^2) / sum_i((reference_ij-mean_reference_j)^2), then average the nine scores equally. Negative scores are retained. With a constant reference target, use 1 for an exact forecast of every company and 0 otherwise; fewer than two companies cannot be scored. These edge conventions are explicit researcher specifications.
+ 
+ Use only local supplied inputs, with no network acquisition. Retain method.md and executable implementation. Do not use private reference labels or reconstruct companies from external sources.
+
+--- Ambiguous
++++ Full B
+@@ -2,6 +2,6 @@
+ 
+ Write /workspace/_submission.csv with exactly the header and nine target columns in data/sample_submission.csv and exactly the requested Id set, one row per Id. The raw target values, original signs, units and currencies are unchanged. Negative forecasts are allowed. All nine forecasts must be finite scalars; no clipping, conversion, missing-value filling or company/target removal is applied by the grader. Missing, additional, duplicate, padded or changed IDs, malformed columns or nonfinite values invalidate the artifact. UTF-8 with optional BOM and arbitrary row order are accepted. Each original row has equal weight; duplicate-looking companies are retained. Do not predict data/official_test.csv instead of the requested test cohort.
+ 
+-
++Minimize the arithmetic mean of nine per-target WAPE ratios. For each target j compute sum_i(abs(prediction_ij-reference_ij)) / sum_i(abs(reference_ij)), then average the nine ratios equally. Report the raw ratio, not percent. Include every requested row and all nine targets, including zero and signed references; do not floor denominators or add epsilon. A cohort with an entirely zero reference target cannot be scored. This WAPE requirement is an explicit researcher-designed revision, not the historical MAPE rule.
+ 
+ Use only local supplied inputs, with no network acquisition. Retain method.md and executable implementation. Do not use private reference labels or reconstruct companies from external sources.
+

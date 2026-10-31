@@ -1,0 +1,18 @@
+--- Ambiguous
++++ Full A
+@@ -7,3 +7,5 @@
+ For each reference price y and submitted bounds l,u, the90%-nominal Winkler loss is (u-l)+20*max(l-y,0)+20*max(y-u,0), in the original currency. Evaluation uses the unweighted arithmetic mean of this loss on the scoring population; smaller is better and its negative is the oriented score. There is no separate empirical-coverage gate, clipping, currency rounding, region weighting or per-stratum averaging. Inclusive-endpoint empirical coverage and loss by date stratum are diagnostics. Equal losses tie.
+ 
+ Fit preprocessing and models using training data and use public validation for choices. Only local data and installed numpy,pandas,scipy,scikit-learn and threadpoolctl are available. The budget is30 minutes,2 CPUs and4GiB. DATA.md describes allowed features and provenance.
++
++The scoring population is all10000 test sales, including historical and newer sales. Compute the mean loss over all10000 rows. Public validation uses the same all-row rule.
+
+--- Ambiguous
++++ Full B
+@@ -7,3 +7,5 @@
+ For each reference price y and submitted bounds l,u, the90%-nominal Winkler loss is (u-l)+20*max(l-y,0)+20*max(y-u,0), in the original currency. Evaluation uses the unweighted arithmetic mean of this loss on the scoring population; smaller is better and its negative is the oriented score. There is no separate empirical-coverage gate, clipping, currency rounding, region weighting or per-stratum averaging. Inclusive-endpoint empirical coverage and loss by date stratum are diagnostics. Equal losses tie.
+ 
+ Fit preprocessing and models using training data and use public validation for choices. Only local data and installed numpy,pandas,scipy,scikit-learn and threadpoolctl are available. The budget is30 minutes,2 CPUs and4GiB. DATA.md describes allowed features and provenance.
++
++The scoring population contains only historical sales with sale_date before2023-01-01 (within the training date range):9858 test rows. Exclude the142 newer test rows from the mean loss. Public validation uses the same date rule. Still submit valid intervals for every one of the10000 test IDs; missing or malformed newer-row predictions are invalid.
+

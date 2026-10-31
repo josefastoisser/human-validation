@@ -1,0 +1,24 @@
+--- Ambiguous
++++ Full A
+@@ -2,7 +2,7 @@
+ 
+ The evaluation reports p10 accuracy (the fraction with Euclidean error strictly less than 10 pixels) and mean Euclidean pupil-center error in pixels.
+ 
+-
++The score to optimize is p10 accuracy; maximize it. Mean Euclidean error is reported as a diagnostic and does not break ties.
+ 
+ Use the same 20 Hz frames and coordinates throughout. Read data/DATA.md for event timestamps, frame alignment, train/validation inputs, coordinate transforms, and blink conventions. Every test frame is scored, including blinks and incomplete final intervals. Pool all frames equally across recordings and activity types; do not average per-recording or per-activity scores. Predictions are scored as supplied, without clipping, interpolation, coordinate rescaling or reordering. Missing, extra, duplicate, reordered or nonfinite rows fail validation. Finite coordinates outside the image are accepted without clipping. Training and public validation labels are provided; test reference coordinates are withheld.
+ 
+
+--- Ambiguous
++++ Full B
+@@ -2,7 +2,7 @@
+ 
+ The evaluation reports p10 accuracy (the fraction with Euclidean error strictly less than 10 pixels) and mean Euclidean pupil-center error in pixels.
+ 
+-
++The score to optimize is mean Euclidean error; minimize it. P10 accuracy is reported as a diagnostic and does not break ties.
+ 
+ Use the same 20 Hz frames and coordinates throughout. Read data/DATA.md for event timestamps, frame alignment, train/validation inputs, coordinate transforms, and blink conventions. Every test frame is scored, including blinks and incomplete final intervals. Pool all frames equally across recordings and activity types; do not average per-recording or per-activity scores. Predictions are scored as supplied, without clipping, interpolation, coordinate rescaling or reordering. Missing, extra, duplicate, reordered or nonfinite rows fail validation. Finite coordinates outside the image are accepted without clipping. Training and public validation labels are provided; test reference coordinates are withheld.
+ 
+

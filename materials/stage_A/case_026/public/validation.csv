@@ -1,0 +1,5 @@
+object_id,food_name,scene_ids,image_paths,rgb_paths,mesh_path
+26,roast_chicken_leg,11,photographs/scene-11.jpg,rgb/scene-11.npy,meshes/validation/26.obj
+27,biscuit,11,photographs/scene-11.jpg,rgb/scene-11.npy,meshes/validation/27.obj
+28,sandwich,12,photographs/scene-12.jpg,rgb/scene-12.npy,meshes/validation/28.obj
+29,cookie,12,photographs/scene-12.jpg,rgb/scene-12.npy,meshes/validation/29.obj

@@ -1,0 +1,80 @@
+[
+  {
+    "source_id": "icdar-2025-ColiE_Task2:page:0:data-description",
+    "page_name": "data-description",
+    "url": "https://www.kaggle.com/competitions/icdar-2025-ColiE_Task2/overview/data-description",
+    "published_at": null,
+    "version_at": null,
+    "retrieved_at": "2026-10-20T08:00:52.259508+00:00",
+    "text": "##  Dataset description\n\nThe participants of this competition are provided with the BookSCE dataset. \n\nThe dataset comprises around 11K book chunks accompanied by labels for subtasks 1.1 and 1.2. \n\n\n## Ground truth\n\nTo train the models, the participants are provided with training and validation sets consisting of books in the \"txt\" format and the corresponding ground truth files in the \"csv\" format. The ground truth includes the chunk IDs and the corresponding labels.\n\n\n\n**Task 2.1: Identifying the century of origin for a given text (century_label)**\n\n- 1  - 17th century\n- 2 - 18th century\n- 3 - 19th century\n- 4 - 20th century\n- 5 - 21st century\n\n**Task 2.2: Pinpointing the specific decade within that century in which the text was composed (century_label)**\n\nThe decades in each century are encoded by one of ten labels:\n1, 2, 3, 4, 5, 6, 7, 8, 9, 10\n\n## Input and output formats\nThe classifier's input is a book chunk in text format, and its output is a single value (corresponding label). \nThe training and validation sets are released at the beginning of the competition. The test set will be released (without labels) a week before the deadline.\n\nThe submission.csv file should have three columns:\n`id` - unique identifier for each text chunk (e.g., \"text10.txt\", \"text11.txt\", etc.)\n`century_label` - Century label prediction (one of five classes described in sub-task 2.1)\n`decade_label` -  Label prediction for the decade within a century (one of the ten classes described in sub-task 2.2)\n\n** *As an example of the submission format, we provide 'sample_submission.csv' file*.\n\n## Ranking\nThe results will be evaluated and ranked based on *Mean Absolute Error (MAE)*, which is defined as follows:\n\n$$\n\\text{Final Rank} = \\frac{1}{N} \\sum_{i=1}^{N} \\left| (GT_{2.1}^{(i)} \\cdot 10 + GT_{2.2}^{(i)}) - (Pred_{2.1}^{(i)} \\cdot 10 + Pred_{2.2}^{(i)}) \\right|\n$$\nwhere:\n$$ GT_{2.1}^{(i)} \\text{ is the ground truth century label for chunk } i $$\n$$ GT_{2.2}^{(i)} \\text{ is the ground truth decade label for chunk } i $$\n$$ Pred_{2.1}^{(i)} \\text{ is the predicted century label for chunk } i $$\n$$ Pred_{2.2}^{(i)} \\text{ is the predicted decade label for chunk } i $$\n$$ N \\text{ is the total number of chunks} $$ \n\nThis metric directly measures the average temporal distance between ground truth and predictions on a linear timeline where each century spans 10 decades. For each chunk, we:\n\nCalculate the ground truth position: $$ (GT_{2.1}^{(i)} \\cdot 10 + GT_{2.2}^{(i)}) $$\nCalculate the predicted position: $$ (Pred_{2.1}^{(i)} \\cdot 10 + Pred_{2.2}^{(i)}) $$\n\nThe *final rank* is the arithmetic mean of these differences across all chunks, \n\nLower scores indicate better performance, with 0 being the perfect prediction.\n## Files\n\n*   **train.zip** - the training set files \n*   **train.csv** - the training set labels\n*   **valid.zip** - the validation set files\n*   **valid.csv** - the validation set labels\n*   **test.zip** - the test set files (to be released on April 1, 2025)\n*   **sample_submission.csv** - a sample submission file in the correct format\n\n**All the files are given in the form of 1000-word chunks.**\n\n## Columns\n\n*   **`id`** - id of a book\n*   **`century_label`** -century label prediction ( `1`, `2`, `3`, `4`, `5`)\n*   **`decade_label`** - label prediction for the decade within a century (`1`,  `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`,`10` )\n\n",
+    "archive_path": "Ambig-DS-v3/RQ1/data/community-2024-corpus-20261020T075607Z/normalized/icdar-2025-ColiE_Task2/task.json",
+    "archive_locator": "/task_documents/0/text",
+    "archive_sha256": "93c5aee3faf114e6414413abfe072ff95b9a2e2880f0d674a6f2f6ef10c22cc8",
+    "review_source_id": "S001"
+  },
+  {
+    "source_id": "icdar-2025-ColiE_Task2:page:1:Description",
+    "page_name": "Description",
+    "url": "https://www.kaggle.com/competitions/icdar-2025-ColiE_Task2/overview/Description",
+    "published_at": null,
+    "version_at": null,
+    "retrieved_at": "2026-10-20T08:00:52.259508+00:00",
+    "text": "This competition is organized in conjunction with the International Conference on Document Analysis and Recognition(ICDAR 2025).\n\nThe ICDAR 2025 Competition on Automatic Classification of Literary Epochs (CoLiE) [https://www.icdar2025.com] aims to advance the field of temporal text analysis by challenging participants to develop automated methods for dating literary texts, that is, automatically predicting the time in which the text was written.\n\n\n\n###This competition presents two main tasks: **TASK 1: Literary Epochs Classification** and  **TASK 2: ChronoText Classification.** Each participant can participate in both or only one of them.  Here,  you are competing in TASK 2. To register and compete in [TASK 1](https://www.kaggle.com/competitions/icdar-2025-ColiE_Task1), follow this[ link](https://www.kaggle.com/competitions/icdar-2025-ColiE_Task1).\n\n<mark><b style=\"font-size: 1.2em;\">To join the competition, click the \"Join Competition\" button at the top right corner. In addition, please fill in the [registration form](https://forms.gle/TDJ9PHZYDo3mdQUJ9)</b></mark>.\n________________________________________________________________________________________\n###TASK 2 includes the following subtasks\n**Sub-task 2.1:** Identifying the century of origin for a given text 1 (the 17th, 18th, 19th, 20th, and 21st centuries).\n**Sub-task 2.2:** Pinpointing the specific decade within that century in which the text was composed.\n\n\nWe believe this shared task will help advance the field of information retrieval and natural language processing and contribute to a deeper understanding of literary history.\n\nThis competition is open to anyone passionate about information retrieval, machine learning, and natural language processing. Whether you are a seasoned expert or a newcomer to the field, we welcome you to participate and extend the boundaries of automated text analysis!\n",
+    "archive_path": "Ambig-DS-v3/RQ1/data/community-2024-corpus-20261020T075607Z/normalized/icdar-2025-ColiE_Task2/task.json",
+    "archive_locator": "/task_documents/1/text",
+    "archive_sha256": "93c5aee3faf114e6414413abfe072ff95b9a2e2880f0d674a6f2f6ef10c22cc8",
+    "review_source_id": "S002"
+  },
+  {
+    "source_id": "icdar-2025-ColiE_Task2:page:2:Evaluation Metrics",
+    "page_name": "Evaluation Metrics",
+    "url": "https://www.kaggle.com/competitions/icdar-2025-ColiE_Task2/overview/Evaluation Metrics",
+    "published_at": null,
+    "version_at": null,
+    "retrieved_at": "2026-10-20T08:00:52.259508+00:00",
+    "text": "### The evaluation of TASK2 is based on *Mean Absolute Error (MAE)* which is defined as follows:\n\n$$\nMAE = \\frac{1}{n} \\sum_{i=1}^{n} \\left| y_i - \\hat{y}_i \\right|, \\text{where:} \\newline \\newline\nn = \\text{number of samples,} \\newline\ny_i = \\text{True value,} \\newline\n\\hat{y}_i = \\text{Predicted value.}\n$$\n\nThe *final rank* is calculated as a Harmonic Mean of normalized mean absolute errors across Sub-task 2.1 and Sub-task 2.2. :\n\n$$\n\\text{Final Rank} = \\frac{2 \\cdot \\hat{MAE_{2.1}} \\cdot \\hat{MAE_{2.2}}}{\\hat{MAE_{2.1}} + \\hat{MAE_{2.2}}},  \\text{where}  \\newline\n\\hat{MAE_{2.1}} =  \\frac{MAE_{2.1}}{4} \\text{is a normalized MAE for Sub-task 2.1}, \\newline\n\\hat{MAE_{2.2}} = \\frac{MAE_{2.2}}{9} \\text{is a normalized MAE for Sub-task 2.2}. \\newline\n\\text{*Normalization scales MAE values to the range [0, 1].}\n $$\n\n**In addition, each participant is required to provide a short description of the method.**\n\n\n## Input and output format specifications\nThe classifier's input is a chunk (an excerpt) of a book in text format, and its output is a single value (label).  Each chunk is provided as a separate text file with a unique identifier.\nFurther details are specified in the \"Data\" tab. \n\n",
+    "archive_path": "Ambig-DS-v3/RQ1/data/community-2024-corpus-20261020T075607Z/normalized/icdar-2025-ColiE_Task2/task.json",
+    "archive_locator": "/task_documents/2/text",
+    "archive_sha256": "93c5aee3faf114e6414413abfe072ff95b9a2e2880f0d674a6f2f6ef10c22cc8",
+    "review_source_id": "S003"
+  },
+  {
+    "source_id": "icdar-2025-ColiE_Task2:page:3:rules",
+    "page_name": "rules",
+    "url": "https://www.kaggle.com/competitions/icdar-2025-ColiE_Task2/overview/rules",
+    "published_at": null,
+    "version_at": null,
+    "retrieved_at": "2026-10-20T08:00:52.259508+00:00",
+    "text": "### Participation\n1. To join the competition, click the \"Join Competition\" button. **In addition, please fill in the**  [ registration form](https://forms.gle/TDJ9PHZYDo3mdQUJ9).\n\n2.  Each participant is required to upload the ’solution.csv’ with labels predictions generated by their model.\n2. To ensure the fairness of the competition,  the participants will be required to share their models so that the results can be verified. In addition, the participants will be required to generate confusion matrices and\nprovide a short description of their methods.\n3. An article about this contest will be published in the [IСDAR'25](https://www.icdar2025.com/) proceedings.\n4. The first- and second-place winners of this competition will be announced at a special session at the [ICDAR'25](https://www.icdar2025.com/) conference.\n\n###  One account per participant\nParticipants cannot sign up to Kaggle from multiple accounts and, therefore, cannot submit from multiple accounts.\n\n### Only automatic prediction methods are allowed to compete.  \n\n### Merging input files is not allowed.\n\n### No private sharing outside teams\n\nPrivately sharing code or data outside of teams is not permitted. It's okay to share code if made available to all participants on the forums.\n\n### Team Limits\nThere is no maximum team size.\n\n### Submission Limits\nParticipants may submit a maximum of 5 entries per day.\n\n### The use of the competition data is not permitted for commercial purposes.\nThe use of the competition data is permitted for research purposes with the condition of properly citing the competition.\n\n\n\n\n\n\n\n",
+    "archive_path": "Ambig-DS-v3/RQ1/data/community-2024-corpus-20261020T075607Z/normalized/icdar-2025-ColiE_Task2/task.json",
+    "archive_locator": "/task_documents/3/text",
+    "archive_sha256": "93c5aee3faf114e6414413abfe072ff95b9a2e2880f0d674a6f2f6ef10c22cc8",
+    "review_source_id": "S004"
+  },
+  {
+    "source_id": "icdar-2025-ColiE_Task2:page:4:Competition Timeline",
+    "page_name": "Competition Timeline",
+    "url": "https://www.kaggle.com/competitions/icdar-2025-ColiE_Task2/overview/Competition Timeline",
+    "published_at": null,
+    "version_at": null,
+    "retrieved_at": "2026-10-20T08:00:52.259508+00:00",
+    "text": "- December 17, 2024: Call for participation.\n- December 17, 2024: The competition website is live and open to participants. Training and validation sets, together with their labels, are available. \n-  April 1, 2025: Test dataset available.\n-  April 8, 2025: Deadline for competition participants.\n-  April 20, 2025: Submission of methods descriptions.\n-  June 30, 2025: Communicate winners to chairs.\n-  September 17-21, 2025: Presentation of results at the special session at the ICDAR conference.",
+    "archive_path": "Ambig-DS-v3/RQ1/data/community-2024-corpus-20261020T075607Z/normalized/icdar-2025-ColiE_Task2/task.json",
+    "archive_locator": "/task_documents/4/text",
+    "archive_sha256": "93c5aee3faf114e6414413abfe072ff95b9a2e2880f0d674a6f2f6ef10c22cc8",
+    "review_source_id": "S005"
+  },
+  {
+    "source_id": "icdar-2025-ColiE_Task2:page:5:Organizing Team",
+    "page_name": "Organizing Team",
+    "url": "https://www.kaggle.com/competitions/icdar-2025-ColiE_Task2/overview/Organizing Team",
+    "published_at": null,
+    "version_at": null,
+    "retrieved_at": "2026-10-20T08:00:52.259508+00:00",
+    "text": "The competition is organized by:\n- **Marina Litvak** (marinal@ac.sce.ac.il),\nSoftware Engineering Department,\nShamoon College of Engineering, Beer Sheva,\n84100, Israel\n-  **Irina Rabaev** (irinar@ac.sce.ac.il),\nSoftware Engineering Department,\nShamoon College of Engineering, Beer Sheva,\n84100, Israel\n- **Ricardo Campos** (ricardo.campos@ipt.pt),\nCi2 - Smart Cities Research Center,  Polytechnic Institute of Tomar\nINESC TEC, Porto\nPorto, Portugal\n- **Alípio Jorge** (amjorge@fc.up.pt)\nUniversity of Porto and INESC TEC\nPorto, Portugal\n- **Adam Jatowt** (adam.jatowt@uibk.ac.at)\nUniversity of Innsbruck, \nInnsbruck, Austria\n- **Roza Bass** (rozzaba@ac.sce.ac.il),\nSoftware Engineering Department,\nShamoon College of Engineering, Beer Sheva,\n84100, Israel\n- **Hugo Sousa** (hugo.sousa@fc.up.pt),\nUniversity of Porto and INESC TEC\nPorto, Portugal",
+    "archive_path": "Ambig-DS-v3/RQ1/data/community-2024-corpus-20261020T075607Z/normalized/icdar-2025-ColiE_Task2/task.json",
+    "archive_locator": "/task_documents/5/text",
+    "archive_sha256": "93c5aee3faf114e6414413abfe072ff95b9a2e2880f0d674a6f2f6ef10c22cc8",
+    "review_source_id": "S006"
+  }
+]

@@ -1,0 +1,713 @@
+{
+  "Ophiuroidea": {
+    "Kingdom": "Animalia",
+    "Phylum": "Echinodermata",
+    "Class": "Ophiuroidea",
+    "Order": null,
+    "Family": null,
+    "Genus": null,
+    "Species": null
+  },
+  "Funiculina": {
+    "Kingdom": "Animalia",
+    "Phylum": "Cnidaria",
+    "Class": "Octocorallia",
+    "Order": "Scleralcyonacea",
+    "Family": "Funiculinidae",
+    "Genus": "Funiculina",
+    "Species": null
+  },
+  "Umbellula": {
+    "Kingdom": "Animalia",
+    "Phylum": "Cnidaria",
+    "Class": "Octocorallia",
+    "Order": "Scleralcyonacea",
+    "Family": "Umbellulidae",
+    "Genus": "Umbellula",
+    "Species": null
+  },
+  "Sebastolobus": {
+    "Kingdom": "Animalia",
+    "Phylum": "Chordata",
+    "Class": "Teleostei",
+    "Order": "Perciformes",
+    "Family": "Sebastidae",
+    "Genus": "Sebastolobus",
+    "Species": null
+  },
+  "Isosicyonis": {
+    "Kingdom": "Animalia",
+    "Phylum": "Cnidaria",
+    "Class": "Hexacorallia",
+    "Order": "Actiniaria",
+    "Family": "Actiniidae",
+    "Genus": "Isosicyonis",
+    "Species": null
+  },
+  "Paralomis multispina": {
+    "Kingdom": "Animalia",
+    "Phylum": "Arthropoda",
+    "Class": "Malacostraca",
+    "Order": "Decapoda",
+    "Family": "Lithodidae",
+    "Genus": "Paralomis",
+    "Species": "Paralomis multispina"
+  },
+  "Munnopsidae": {
+    "Kingdom": "Animalia",
+    "Phylum": "Arthropoda",
+    "Class": "Malacostraca",
+    "Order": "Isopoda",
+    "Family": "Munnopsidae",
+    "Genus": null,
+    "Species": null
+  },
+  "Gastropoda": {
+    "Kingdom": "Animalia",
+    "Phylum": "Mollusca",
+    "Class": "Gastropoda",
+    "Order": null,
+    "Family": null,
+    "Genus": null,
+    "Species": null
+  },
+  "Ceriantharia": {
+    "Kingdom": "Animalia",
+    "Phylum": "Cnidaria",
+    "Class": "Hexacorallia",
+    "Order": "Ceriantharia",
+    "Family": null,
+    "Genus": null,
+    "Species": null
+  },
+  "Psathyrometra fragilis": {
+    "Kingdom": "Animalia",
+    "Phylum": "Echinodermata",
+    "Class": "Crinoidea",
+    "Order": "Comatulida",
+    "Family": "Zenometridae",
+    "Genus": "Psathyrometra",
+    "Species": "Psathyrometra fragilis"
+  },
+  "Porifera": {
+    "Kingdom": "Animalia",
+    "Phylum": "Porifera",
+    "Class": null,
+    "Order": null,
+    "Family": null,
+    "Genus": null,
+    "Species": null
+  },
+  "Caridea": {
+    "Kingdom": "Animalia",
+    "Phylum": "Arthropoda",
+    "Class": "Malacostraca",
+    "Order": "Decapoda",
+    "Family": null,
+    "Genus": null,
+    "Species": null
+  },
+  "Liponema brevicorne": {
+    "Kingdom": "Animalia",
+    "Phylum": "Cnidaria",
+    "Class": "Hexacorallia",
+    "Order": "Actiniaria",
+    "Family": "Liponematidae",
+    "Genus": "Liponema",
+    "Species": "Liponema brevicorne"
+  },
+  "Lithodidae": {
+    "Kingdom": "Animalia",
+    "Phylum": "Arthropoda",
+    "Class": "Malacostraca",
+    "Order": "Decapoda",
+    "Family": "Lithodidae",
+    "Genus": null,
+    "Species": null
+  },
+  "Farrea": {
+    "Kingdom": "Animalia",
+    "Phylum": "Porifera",
+    "Class": "Hexactinellida",
+    "Order": "Sceptrulophora",
+    "Family": "Farreidae",
+    "Genus": "Farrea",
+    "Species": null
+  },
+  "Psolus squamatus": {
+    "Kingdom": "Animalia",
+    "Phylum": "Echinodermata",
+    "Class": "Holothuroidea",
+    "Order": "Dendrochirotida",
+    "Family": "Psolidae",
+    "Genus": "Psolus",
+    "Species": "Psolus squamatus"
+  },
+  "Heterochone calyx": {
+    "Kingdom": "Animalia",
+    "Phylum": "Porifera",
+    "Class": "Hexactinellida",
+    "Order": "Sceptrulophora",
+    "Family": "Aphrocallistidae",
+    "Genus": "Heterochone",
+    "Species": "Heterochone calyx"
+  },
+  "Strongylocentrotus fragilis": {
+    "Kingdom": "Animalia",
+    "Phylum": "Echinodermata",
+    "Class": "Echinoidea",
+    "Order": "Camarodonta",
+    "Family": "Strongylocentrotidae",
+    "Genus": "Strongylocentrotus",
+    "Species": "Strongylocentrotus fragilis"
+  },
+  "Heteropolypus ritteri": {
+    "Kingdom": "Animalia",
+    "Phylum": "Cnidaria",
+    "Class": "Octocorallia",
+    "Order": "Scleralcyonacea",
+    "Family": "Coralliidae",
+    "Genus": "Heteropolypus",
+    "Species": "Heteropolypus ritteri"
+  },
+  "Acanthascinae": {
+    "Kingdom": "Animalia",
+    "Phylum": "Porifera",
+    "Class": "Hexactinellida",
+    "Order": "Lyssacinosida",
+    "Family": "Rossellidae",
+    "Genus": null,
+    "Species": null
+  },
+  "Staurocalyptus": {
+    "Kingdom": "Animalia",
+    "Phylum": "Porifera",
+    "Class": "Hexactinellida",
+    "Order": "Lyssacinosida",
+    "Family": "Rossellidae",
+    "Genus": "Staurocalyptus",
+    "Species": null
+  },
+  "Peniagone": {
+    "Kingdom": "Animalia",
+    "Phylum": "Echinodermata",
+    "Class": "Holothuroidea",
+    "Order": "Elasipodida",
+    "Family": "Elpidiidae",
+    "Genus": "Peniagone",
+    "Species": null
+  },
+  "Benthocodon pedunculata": {
+    "Kingdom": "Animalia",
+    "Phylum": "Cnidaria",
+    "Class": "Hydrozoa",
+    "Order": "Trachymedusae",
+    "Family": "Rhopalonematidae",
+    "Genus": "Benthocodon",
+    "Species": "Benthocodon pedunculata"
+  },
+  "Scotoplanes globosa": {
+    "Kingdom": "Animalia",
+    "Phylum": "Echinodermata",
+    "Class": "Holothuroidea",
+    "Order": "Elasipodida",
+    "Family": "Elpidiidae",
+    "Genus": "Scotoplanes",
+    "Species": "Scotoplanes globosa"
+  },
+  "Actiniaria": {
+    "Kingdom": "Animalia",
+    "Phylum": "Cnidaria",
+    "Class": "Hexacorallia",
+    "Order": "Actiniaria",
+    "Family": null,
+    "Genus": null,
+    "Species": null
+  },
+  "Scleractinia": {
+    "Kingdom": "Animalia",
+    "Phylum": "Cnidaria",
+    "Class": "Hexacorallia",
+    "Order": "Scleractinia",
+    "Family": null,
+    "Genus": null,
+    "Species": null
+  },
+  "Paragorgia": {
+    "Kingdom": "Animalia",
+    "Phylum": "Cnidaria",
+    "Class": "Octocorallia",
+    "Order": "Scleralcyonacea",
+    "Family": "Coralliidae",
+    "Genus": "Paragorgia",
+    "Species": null
+  },
+  "Asbestopluma monticola": {
+    "Kingdom": "Animalia",
+    "Phylum": "Porifera",
+    "Class": "Demospongiae",
+    "Order": "Poecilosclerida",
+    "Family": "Cladorhizidae",
+    "Genus": "Asbestopluma",
+    "Species": "Asbestopluma monticola"
+  },
+  "Elpidia": {
+    "Kingdom": "Animalia",
+    "Phylum": "Echinodermata",
+    "Class": "Holothuroidea",
+    "Order": "Elasipodida",
+    "Family": "Elpidiidae",
+    "Genus": "Elpidia",
+    "Species": null
+  },
+  "Abyssocucumis abyssorum": {
+    "Kingdom": "Animalia",
+    "Phylum": "Echinodermata",
+    "Class": "Holothuroidea",
+    "Order": "Dendrochirotida",
+    "Family": "Cucumariidae",
+    "Genus": "Abyssocucumis",
+    "Species": "Abyssocucumis abyssorum"
+  },
+  "Brisingida": {
+    "Kingdom": "Animalia",
+    "Phylum": "Echinodermata",
+    "Class": "Asteroidea",
+    "Order": "Brisingida",
+    "Family": null,
+    "Genus": null,
+    "Species": null
+  },
+  "Hexactinellida": {
+    "Kingdom": "Animalia",
+    "Phylum": "Porifera",
+    "Class": "Hexactinellida",
+    "Order": null,
+    "Family": null,
+    "Genus": null,
+    "Species": null
+  },
+  "Isididae": {
+    "Kingdom": "Animalia",
+    "Phylum": "Cnidaria",
+    "Class": "Octocorallia",
+    "Order": "Malacalcyonacea",
+    "Family": "Isididae",
+    "Genus": null,
+    "Species": null
+  },
+  "Asteroidea": {
+    "Kingdom": "Animalia",
+    "Phylum": "Echinodermata",
+    "Class": "Asteroidea",
+    "Order": null,
+    "Family": null,
+    "Genus": null,
+    "Species": null
+  },
+  "Paelopatides confundens": {
+    "Kingdom": "Animalia",
+    "Phylum": "Echinodermata",
+    "Class": "Holothuroidea",
+    "Order": "Synallactida",
+    "Family": "Synallactidae",
+    "Genus": "Paelopatides",
+    "Species": "Paelopatides confundens"
+  },
+  "Microstomus pacificus": {
+    "Kingdom": "Animalia",
+    "Phylum": "Chordata",
+    "Class": "Teleostei",
+    "Order": "Pleuronectiformes",
+    "Family": "Pleuronectidae",
+    "Genus": "Microstomus",
+    "Species": "Microstomus pacificus"
+  },
+  "Holothuroidea": {
+    "Kingdom": "Animalia",
+    "Phylum": "Echinodermata",
+    "Class": "Holothuroidea",
+    "Order": null,
+    "Family": null,
+    "Genus": null,
+    "Species": null
+  },
+  "Hormathiidae": {
+    "Kingdom": "Animalia",
+    "Phylum": "Cnidaria",
+    "Class": "Hexacorallia",
+    "Order": "Actiniaria",
+    "Family": "Hormathiidae",
+    "Genus": null,
+    "Species": null
+  },
+  "Chionoecetes tanneri": {
+    "Kingdom": "Animalia",
+    "Phylum": "Arthropoda",
+    "Class": "Malacostraca",
+    "Order": "Decapoda",
+    "Family": "Oregoniidae",
+    "Genus": "Chionoecetes",
+    "Species": "Chionoecetes tanneri"
+  },
+  "Keratoisis": {
+    "Kingdom": "Animalia",
+    "Phylum": "Cnidaria",
+    "Class": "Octocorallia",
+    "Order": "Scleralcyonacea",
+    "Family": "Keratoisididae",
+    "Genus": "Keratoisis",
+    "Species": null
+  },
+  "Hippasteria": {
+    "Kingdom": "Animalia",
+    "Phylum": "Echinodermata",
+    "Class": "Asteroidea",
+    "Order": "Valvatida",
+    "Family": "Goniasteridae",
+    "Genus": "Hippasteria",
+    "Species": null
+  },
+  "Paragorgia arborea": {
+    "Kingdom": "Animalia",
+    "Phylum": "Cnidaria",
+    "Class": "Octocorallia",
+    "Order": "Scleralcyonacea",
+    "Family": "Coralliidae",
+    "Genus": "Paragorgia",
+    "Species": "Paragorgia arborea"
+  },
+  "Octopus rubescens": {
+    "Kingdom": "Animalia",
+    "Phylum": "Mollusca",
+    "Class": "Cephalopoda",
+    "Order": "Octopoda",
+    "Family": "Octopodidae",
+    "Genus": "Octopus",
+    "Species": "Octopus rubescens"
+  },
+  "Isidella tentaculum": {
+    "Kingdom": "Animalia",
+    "Phylum": "Cnidaria",
+    "Class": "Octocorallia",
+    "Order": "Scleralcyonacea",
+    "Family": "Keratoisididae",
+    "Genus": "Isidella",
+    "Species": "Isidella tentaculum"
+  },
+  "Pannychia moseleyi": {
+    "Kingdom": "Animalia",
+    "Phylum": "Echinodermata",
+    "Class": "Holothuroidea",
+    "Order": "Elasipodida",
+    "Family": "Laetmogonidae",
+    "Genus": "Pannychia",
+    "Species": "Pannychia moseleyi"
+  },
+  "Actinopterygii": {
+    "Kingdom": "Animalia",
+    "Phylum": "Chordata",
+    "Class": null,
+    "Order": null,
+    "Family": null,
+    "Genus": null,
+    "Species": null
+  },
+  "Asbestopluma": {
+    "Kingdom": "Animalia",
+    "Phylum": "Porifera",
+    "Class": "Demospongiae",
+    "Order": "Poecilosclerida",
+    "Family": "Cladorhizidae",
+    "Genus": "Asbestopluma",
+    "Species": null
+  },
+  "Ophiacanthidae": {
+    "Kingdom": "Animalia",
+    "Phylum": "Echinodermata",
+    "Class": "Ophiuroidea",
+    "Order": "Ophiacanthida",
+    "Family": "Ophiacanthidae",
+    "Genus": null,
+    "Species": null
+  },
+  "Corallimorphus pilatus": {
+    "Kingdom": "Animalia",
+    "Phylum": "Cnidaria",
+    "Class": "Hexacorallia",
+    "Order": "Corallimorpharia",
+    "Family": "Corallimorphidae",
+    "Genus": "Corallimorphus",
+    "Species": "Corallimorphus pilatus"
+  },
+  "Heterocarpus": {
+    "Kingdom": "Animalia",
+    "Phylum": "Arthropoda",
+    "Class": "Malacostraca",
+    "Order": "Decapoda",
+    "Family": "Pandalidae",
+    "Genus": "Heterocarpus",
+    "Species": null
+  },
+  "Munidopsis": {
+    "Kingdom": "Animalia",
+    "Phylum": "Arthropoda",
+    "Class": "Malacostraca",
+    "Order": "Decapoda",
+    "Family": "Munidopsidae",
+    "Genus": "Munidopsis",
+    "Species": null
+  },
+  "Serpulidae": {
+    "Kingdom": "Animalia",
+    "Phylum": "Annelida",
+    "Class": "Polychaeta",
+    "Order": "Sabellida",
+    "Family": "Serpulidae",
+    "Genus": null,
+    "Species": null
+  },
+  "Actinernus": {
+    "Kingdom": "Animalia",
+    "Phylum": "Cnidaria",
+    "Class": "Hexacorallia",
+    "Order": "Actiniaria",
+    "Family": "Actinernidae",
+    "Genus": "Actinernus",
+    "Species": null
+  },
+  "Scotoplanes": {
+    "Kingdom": "Animalia",
+    "Phylum": "Echinodermata",
+    "Class": "Holothuroidea",
+    "Order": "Elasipodida",
+    "Family": "Elpidiidae",
+    "Genus": "Scotoplanes",
+    "Species": null
+  },
+  "Florometra serratissima": {
+    "Kingdom": "Animalia",
+    "Phylum": "Echinodermata",
+    "Class": "Crinoidea",
+    "Order": "Comatulida",
+    "Family": "Antedonidae",
+    "Genus": "Florometra",
+    "Species": "Florometra serratissima"
+  },
+  "Sebastes": {
+    "Kingdom": "Animalia",
+    "Phylum": "Chordata",
+    "Class": "Teleostei",
+    "Order": "Perciformes",
+    "Family": "Sebastidae",
+    "Genus": "Sebastes",
+    "Species": null
+  },
+  "Rathbunaster californicus": {
+    "Kingdom": "Animalia",
+    "Phylum": "Echinodermata",
+    "Class": "Asteroidea",
+    "Order": "Forcipulatida",
+    "Family": "Asteriidae",
+    "Genus": "Rathbunaster",
+    "Species": "Rathbunaster californicus"
+  },
+  "Sebastes diploproa": {
+    "Kingdom": "Animalia",
+    "Phylum": "Chordata",
+    "Class": "Teleostei",
+    "Order": "Perciformes",
+    "Family": "Sebastidae",
+    "Genus": "Sebastes",
+    "Species": "Sebastes diploproa"
+  },
+  "Acanthoptilum": {
+    "Kingdom": "Animalia",
+    "Phylum": "Cnidaria",
+    "Class": "Octocorallia",
+    "Order": "Scleralcyonacea",
+    "Family": "Virgulariidae",
+    "Genus": "Acanthoptilum",
+    "Species": null
+  },
+  "Metridium farcimen": {
+    "Kingdom": "Animalia",
+    "Phylum": "Cnidaria",
+    "Class": "Hexacorallia",
+    "Order": "Actiniaria",
+    "Family": "Metridiidae",
+    "Genus": "Metridium",
+    "Species": "Metridium farcimen"
+  },
+  "Terebellidae": {
+    "Kingdom": "Animalia",
+    "Phylum": "Annelida",
+    "Class": "Polychaeta",
+    "Order": "Terebellida",
+    "Family": "Terebellidae",
+    "Genus": null,
+    "Species": null
+  },
+  "Zoantharia": {
+    "Kingdom": "Animalia",
+    "Phylum": "Cnidaria",
+    "Class": "Hexacorallia",
+    "Order": null,
+    "Family": null,
+    "Genus": null,
+    "Species": null
+  },
+  "Mediaster aequalis": {
+    "Kingdom": "Animalia",
+    "Phylum": "Echinodermata",
+    "Class": "Asteroidea",
+    "Order": "Valvatida",
+    "Family": "Goniasteridae",
+    "Genus": "Mediaster",
+    "Species": "Mediaster aequalis"
+  },
+  "Pandalus amplus": {
+    "Kingdom": "Animalia",
+    "Phylum": "Arthropoda",
+    "Class": "Malacostraca",
+    "Order": "Decapoda",
+    "Family": "Pandalidae",
+    "Genus": "Pandalus",
+    "Species": "Pandalus amplus"
+  },
+  "Tunicata": {
+    "Kingdom": "Animalia",
+    "Phylum": "Chordata",
+    "Class": null,
+    "Order": null,
+    "Family": null,
+    "Genus": null,
+    "Species": null
+  },
+  "Chorilia longipes": {
+    "Kingdom": "Animalia",
+    "Phylum": "Arthropoda",
+    "Class": "Malacostraca",
+    "Order": "Decapoda",
+    "Family": "Epialtidae",
+    "Genus": "Chorilia",
+    "Species": "Chorilia longipes"
+  },
+  "Crinoidea": {
+    "Kingdom": "Animalia",
+    "Phylum": "Echinodermata",
+    "Class": "Crinoidea",
+    "Order": null,
+    "Family": null,
+    "Genus": null,
+    "Species": null
+  },
+  "Amphipoda": {
+    "Kingdom": "Animalia",
+    "Phylum": "Arthropoda",
+    "Class": "Malacostraca",
+    "Order": "Amphipoda",
+    "Family": null,
+    "Genus": null,
+    "Species": null
+  },
+  "Vesicomyidae": {
+    "Kingdom": "Animalia",
+    "Phylum": "Mollusca",
+    "Class": "Bivalvia",
+    "Order": "Venerida",
+    "Family": "Vesicomyidae",
+    "Genus": null,
+    "Species": null
+  },
+  "Pyrosoma atlanticum": {
+    "Kingdom": "Animalia",
+    "Phylum": "Chordata",
+    "Class": "Thaliacea",
+    "Order": "Pyrosomatida",
+    "Family": "Pyrosomatidae",
+    "Genus": "Pyrosoma",
+    "Species": "Pyrosoma atlanticum"
+  },
+  "Pennatula phosphorea": {
+    "Kingdom": "Animalia",
+    "Phylum": "Cnidaria",
+    "Class": "Octocorallia",
+    "Order": "Scleralcyonacea",
+    "Family": "Pennatulidae",
+    "Genus": "Pennatula",
+    "Species": "Pennatula phosphorea"
+  },
+  "Pandalus platyceros": {
+    "Kingdom": "Animalia",
+    "Phylum": "Arthropoda",
+    "Class": "Malacostraca",
+    "Order": "Decapoda",
+    "Family": "Pandalidae",
+    "Genus": "Pandalus",
+    "Species": "Pandalus platyceros"
+  },
+  "Parastenella": {
+    "Kingdom": "Animalia",
+    "Phylum": "Cnidaria",
+    "Class": "Octocorallia",
+    "Order": "Scleralcyonacea",
+    "Family": "Primnoidae",
+    "Genus": "Parastenella",
+    "Species": null
+  },
+  "Apostichopus leukothele": {
+    "Kingdom": "Animalia",
+    "Phylum": "Echinodermata",
+    "Class": "Holothuroidea",
+    "Order": "Synallactida",
+    "Family": "Stichopodidae",
+    "Genus": "Apostichopus",
+    "Species": "Apostichopus leukothele"
+  },
+  "Gersemia juliepackardae": {
+    "Kingdom": "Animalia",
+    "Phylum": "Cnidaria",
+    "Class": "Octocorallia",
+    "Order": "Malacalcyonacea",
+    "Family": "Alcyoniidae",
+    "Genus": "Gersemia",
+    "Species": "Gersemia juliepackardae"
+  },
+  "Ptychogastria polaris": {
+    "Kingdom": "Animalia",
+    "Phylum": "Cnidaria",
+    "Class": "Hydrozoa",
+    "Order": "Trachymedusae",
+    "Family": "Ptychogastriidae",
+    "Genus": "Ptychogastria",
+    "Species": "Ptychogastria polaris"
+  },
+  "Delectopecten": {
+    "Kingdom": "Animalia",
+    "Phylum": "Mollusca",
+    "Class": "Bivalvia",
+    "Order": "Pectinida",
+    "Family": "Pectinidae",
+    "Genus": "Delectopecten",
+    "Species": null
+  },
+  "Merluccius productus": {
+    "Kingdom": "Animalia",
+    "Phylum": "Chordata",
+    "Class": "Teleostei",
+    "Order": "Gadiformes",
+    "Family": "Merlucciidae",
+    "Genus": "Merluccius",
+    "Species": "Merluccius productus"
+  },
+  "Mycale": {
+    "Kingdom": "Animalia",
+    "Phylum": "Porifera",
+    "Class": "Demospongiae",
+    "Order": "Poecilosclerida",
+    "Family": "Mycalidae",
+    "Genus": "Mycale",
+    "Species": null
+  }
+}

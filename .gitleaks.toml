@@ -1,0 +1,9 @@
+[extend]
+useDefault = true
+
+[[allowlists]]
+description = "Public CSV corpus IDs following the question text 'key markets'"
+condition = "AND"
+paths = ['''(^|/)materials/stage_A/case_012/public/test\.csv$''']
+regexTarget = "match"
+regexes = ['''^key markets,(b6417af4592ed5d88a5adc7f005730c015774ff8e69fb81558d0a4d428ef1143|e5d887ee64b5ce3b4b0f26acce0160202d975c59b6fea62982b18515bfca030a|ead7dee7497c477f6dade25092c084b7676363b7ea6dedc5abb45e254c35a2ac|0aec8caa04052c60ad88a67bd2866e0d53fb874a27c2634a7ef4867388907a51)$''']

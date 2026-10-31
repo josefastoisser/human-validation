@@ -1,0 +1,18 @@
+--- Ambiguous
++++ Full A
+@@ -5,3 +5,5 @@
+ Use the shared age_parser.py and PARSER.md. Canonicalize whitespace/case, remove missing-age sentinels, and deduplicate. Fully explicit nonnegative Y/year(s), M/month(s), W/week(s), D/day(s) ages parse as exact rational intervals in years. Compact sums and ordered ranges are supported. Bare numerals and unsupported text remain opaque strings, matching exactly only; do not guess units, average ranges, or interpret tumor-stage/accession digits as ages. Negative, nonfinite and reversed parsed ages are invalid.
+ 
+ Compare the predicted and reference canonical sets using maximum-weight one-to-one matching mass M. Per-study F1 is 2*M/(n_pred+n_ref); both empty gives1 and exactly one empty gives0. Average equally over all test studies, including empty references. Scores range0..1, larger is better, with no intermediate rounding and equal scores tied. You have30 minutes,2 CPUs and4GiB using local dependencies and supplied articles.
++
++Matching is binary: each exactly equal canonical age interval or opaque string earns weight1; every other pair earns0. Numerical closeness earns no partial credit.
+
+--- Ambiguous
++++ Full B
+@@ -5,3 +5,5 @@
+ Use the shared age_parser.py and PARSER.md. Canonicalize whitespace/case, remove missing-age sentinels, and deduplicate. Fully explicit nonnegative Y/year(s), M/month(s), W/week(s), D/day(s) ages parse as exact rational intervals in years. Compact sums and ordered ranges are supported. Bare numerals and unsupported text remain opaque strings, matching exactly only; do not guess units, average ranges, or interpret tumor-stage/accession digits as ages. Negative, nonfinite and reversed parsed ages are invalid.
+ 
+ Compare the predicted and reference canonical sets using maximum-weight one-to-one matching mass M. Per-study F1 is 2*M/(n_pred+n_ref); both empty gives1 and exactly one empty gives0. Average equally over all test studies, including empty references. Scores range0..1, larger is better, with no intermediate rounding and equal scores tied. You have30 minutes,2 CPUs and4GiB using local dependencies and supplied articles.
++
++Matching has fractional numerical credit. For parsed intervals [l,u] and [v,w], weight=(h(l,v)+h(u,w))/2, where h(x,y)=min(x,y)/max(x,y) for max>0 and h(0,0)=1. Exact matches earn1. Unequal opaque strings and parsed-versus-opaque pairs earn0. Use maximum-weight one-to-one matching; do not reuse a reference for several predictions.
+

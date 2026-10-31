@@ -1,0 +1,28 @@
+--- Ambiguous
++++ Full A
+@@ -25,6 +25,10 @@
+ 
+ The objective measures citation-set overlap with fixed reference sets, averaged
+ equally across test queries, maximized on [0,1].
++For each query, TP=|P intersect G|, FP=|P minus G|, FN=|G minus P|.
++The score is 2TP/(2TP+FP+FN). Unmatched predictions count as false positives.
++Both sets empty scores 1; empty gold with nonempty predictions scores 0;
++empty predictions with nonempty gold scores 0. Average per-query scores equally.
+ 
+ Budget: 30 minutes, 2 CPUs, 4 GiB RAM. Use local data and installed libraries;
+ no external data or model-weight downloads are needed.
+
+--- Ambiguous
++++ Full B
+@@ -25,6 +25,10 @@
+ 
+ The objective measures citation-set overlap with fixed reference sets, averaged
+ equally across test queries, maximized on [0,1].
++For each query, TP=|P intersect G| and FN=|G minus P|.
++The score is 2TP/(2TP+FN). Unmatched predictions are ignored in scoring.
++Empty gold scores 1 regardless of predictions; empty predictions with nonempty
++gold scores 0. Average per-query scores equally.
+ 
+ Budget: 30 minutes, 2 CPUs, 4 GiB RAM. Use local data and installed libraries;
+ no external data or model-weight downloads are needed.
+

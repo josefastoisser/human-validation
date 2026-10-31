@@ -1,0 +1,16 @@
+--- Ambiguous
++++ Full A
+@@ -3,3 +3,4 @@
+ Write /workspace/_submission.csv with exactly the ordered header id,leaving and exactly one row per requested test ID. IDs are join keys only, not predictors. Each leaving value must be the literal integer string0 or1; probabilities and float spellings are invalid. IDs must be the exact canonical nonnegative decimal strings supplied. Missing, additional, duplicate or padded IDs, ragged/blank rows, extra columns and nonbinary labels are invalid. Row order is immaterial; UTF-8 with optional BOM is accepted. Every record has equal scoring weight.
+ 
+ Use only the supplied local inputs, with no network or external-label lookup. data/official_test.csv is the original unlabeled48-record source test, not the requested evaluation cohort. Keep method.md and reproducible implementation files. See data/DATA.md for feature meanings and timing limitations.
++The primary score to optimize is overall record accuracy: the fraction of requested records whose predicted leaving label matches the reference. Maximize this score; every record has equal weight.
+
+--- Ambiguous
++++ Full B
+@@ -3,3 +3,4 @@
+ Write /workspace/_submission.csv with exactly the ordered header id,leaving and exactly one row per requested test ID. IDs are join keys only, not predictors. Each leaving value must be the literal integer string0 or1; probabilities and float spellings are invalid. IDs must be the exact canonical nonnegative decimal strings supplied. Missing, additional, duplicate or padded IDs, ragged/blank rows, extra columns and nonbinary labels are invalid. Row order is immaterial; UTF-8 with optional BOM is accepted. Every record has equal scoring weight.
+ 
+ Use only the supplied local inputs, with no network or external-label lookup. data/official_test.csv is the original unlabeled48-record source test, not the requested evaluation cohort. Keep method.md and reproducible implementation files. See data/DATA.md for feature meanings and timing limitations.
++The primary score to optimize is positive-class binary F1 for leaving=1:2TP/(2TP+FP+FN). Maximize this score. If2TP+FP+FN=0 the score is0. Count TP,FP,FN globally over the same requested records.
+

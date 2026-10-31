@@ -1,0 +1,16 @@
+--- Ambiguous
++++ Full A
+@@ -6,3 +6,4 @@
+ 
+ You have 30 minutes, 2 CPUs and 4 GiB memory. Provide executable modeling code alongside the submission.
+ 
++Evaluation objective: minimize pixel mean squared error against the xi references. For each frame average (prediction-reference)^2 over all 113*32 pixels, then average the 20 frame errors and then cases equally. Lower is better; a perfect forecast has MSE 0.
+
+--- Ambiguous
++++ Full B
+@@ -6,3 +6,4 @@
+ 
+ You have 30 minutes, 2 CPUs and 4 GiB memory. Provide executable modeling code alongside the submission.
+ 
++Evaluation objective: maximize spatial structural similarity (SSIM) against the same xi references. For each forecast frame use uniform 7x7 spatial windows, data_range=1, population variance and covariance (divide by 49), C1=0.01^2 and C2=0.03^2. For each window the score is ((2*mu_ref*mu_pred+C1)*(2*cov_ref_pred+C2))/((mu_ref^2+mu_pred^2+C1)*(var_ref+var_pred+C2)). Use only valid window centers, x=3,...,109 and y=3,...,28, without padding. Average the 107*26 window scores, then the 20 forecast frames, then cases equally. Higher is better; identical arrays have SSIM 1, including all-background pairs. Negative scores are retained. A constant or empty frame uses the same formula and constants.
+

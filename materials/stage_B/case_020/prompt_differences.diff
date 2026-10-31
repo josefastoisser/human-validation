@@ -1,0 +1,18 @@
+--- Ambiguous
++++ Full A
+@@ -5,3 +5,5 @@
+ For eligible known names, hierarchical distance sums seven ranks Kingdom,Phylum,Class,Order,Family,Genus,Species:0 for equal values including two nulls,1 for exactly one null,2 for unequal non-null values. If predicted and reference names differ, add1 when the prediction is one of Caridea,Acanthascinae,Actinopterygii,Zoantharia,Tunicata and add1 when the reference is in that set. Mean distance over all test regions is minimized, with no intermediate rounding; equal losses tie. All common taxonomy and exception conventions are fixed. No external synonyms or taxonomy completion are applied.
+ 
+ Use training data to fit models and public validation to make choices. You have30 minutes,2 CPUs and4GiB, and locally installed Python packages including Pillow,numpy,pandas,scipy,scikit-learn and threadpoolctl. See DATA.md for file contents and image attribution.
++
++Only the 79 original target names in taxonomy.json are eligible for hierarchical distance. Every other prediction has loss12, including a correct ancestor appearing only in taxonomy-extended.json.
+
+--- Ambiguous
++++ Full B
+@@ -5,3 +5,5 @@
+ For eligible known names, hierarchical distance sums seven ranks Kingdom,Phylum,Class,Order,Family,Genus,Species:0 for equal values including two nulls,1 for exactly one null,2 for unequal non-null values. If predicted and reference names differ, add1 when the prediction is one of Caridea,Acanthascinae,Actinopterygii,Zoantharia,Tunicata and add1 when the reference is in that set. Mean distance over all test regions is minimized, with no intermediate rounding; equal losses tie. All common taxonomy and exception conventions are fixed. No external synonyms or taxonomy completion are applied.
+ 
+ Use training data to fit models and public validation to make choices. You have30 minutes,2 CPUs and4GiB, and locally installed Python packages including Pillow,numpy,pandas,scipy,scikit-learn and threadpoolctl. See DATA.md for file contents and image attribution.
++
++All 192 frozen target and ancestor names in taxonomy-extended.json are eligible for the identical hierarchical distance. Every other prediction has loss12.
+

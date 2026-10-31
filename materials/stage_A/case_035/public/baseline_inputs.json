@@ -1,0 +1,786 @@
+{
+  "arrays_sha256": "4d74ca950cc79d1df7d45de202af18815db63bfb0f3702dd5baa24f156d38043",
+  "calibration_documents": [
+    {
+      "bytes": 17894,
+      "member": "calibration/Checkerboard.pdf",
+      "sha256": "98a2289b6b9abf19d86d74e6b09d922378eac99e054c93e10985b371f2dd148d",
+      "used_fact": "Printed square side1.2cm=0.012m; no reference mesh dimension used."
+    }
+  ],
+  "contains": "Public RGB, hue-encoded depth RGB, and thresholded public segmentation annotations only; no withheld 3D target geometry or target-derived model outputs",
+  "decoder": "macOS native ImageIO/CoreGraphics RGBA decoder via ctypes",
+  "decoder_host": {
+    "platform": "darwin",
+    "python": "3.12.10"
+  },
+  "ids": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "13",
+    "14",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20"
+  ],
+  "normalization": "Deterministic nearest-pixel stride to maximum dimension480; mask threshold127; source member bytes/hashes retained inrecords.",
+  "records": [
+    {
+      "id": "1",
+      "missing_mask_assumption": null,
+      "pixel_stride": 4,
+      "reduced_rgb_shape": [
+        480,
+        360,
+        3
+      ],
+      "selected_frame": "images/1/Original/frame_0000_original.jpg",
+      "source_mask_present": true,
+      "used_members": [
+        {
+          "bytes": 371902,
+          "decoded_shape": [
+            1920,
+            1440,
+            3
+          ],
+          "member": "images/1/Original/frame_0000_original.jpg",
+          "sha256": "b62ec78fc3deb4806a18ff251c05ea331ef9ca6d00513e9c81479ca772fa78ba"
+        },
+        {
+          "bytes": 49884,
+          "decoded_shape": [
+            1920,
+            1440,
+            3
+          ],
+          "member": "images/1/Depth/frame_0000_depth.jpg",
+          "sha256": "82343bba489d28809e8d6f8b398b5c4d09fce1521a269dd3bfdd56e2813696f9"
+        },
+        {
+          "bytes": 37109,
+          "decoded_shape": [
+            1920,
+            1440,
+            3
+          ],
+          "member": "images/1/Mask/frame_0000_original_segmented_mask.jpg",
+          "sha256": "d9a4bf7139fba82d0008013c3dfc181fef548db056ac30c46f267193780a09a7"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "missing_mask_assumption": null,
+      "pixel_stride": 4,
+      "reduced_rgb_shape": [
+        480,
+        360,
+        3
+      ],
+      "selected_frame": "images/2/Original/frame_0000_original.jpg",
+      "source_mask_present": true,
+      "used_members": [
+        {
+          "bytes": 266948,
+          "decoded_shape": [
+            1920,
+            1440,
+            3
+          ],
+          "member": "images/2/Original/frame_0000_original.jpg",
+          "sha256": "4228a62c2e2fbafb6e275a0bad7492de78f41f2d2db18020e6300ef9f4ed0cfc"
+        },
+        {
+          "bytes": 61171,
+          "decoded_shape": [
+            1920,
+            1440,
+            3
+          ],
+          "member": "images/2/Depth/frame_0000_depth.jpg",
+          "sha256": "e491acf04550e221452bc77fb43eeb10fd56d6d565b3baa6d5ed7798c4409629"
+        },
+        {
+          "bytes": 37296,
+          "decoded_shape": [
+            1920,
+            1440,
+            3
+          ],
+          "member": "images/2/Mask/frame_0000_original_segmented_mask.jpg",
+          "sha256": "ecf86b0f76dfca0a7be29f3a320c114b429ca9f0e15fa8451da5086ce844dd54"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "missing_mask_assumption": null,
+      "pixel_stride": 4,
+      "reduced_rgb_shape": [
+        480,
+        360,
+        3
+      ],
+      "selected_frame": "images/3/Original/frame_0000_original.jpg",
+      "source_mask_present": true,
+      "used_members": [
+        {
+          "bytes": 364283,
+          "decoded_shape": [
+            1920,
+            1440,
+            3
+          ],
+          "member": "images/3/Original/frame_0000_original.jpg",
+          "sha256": "eaf68009a4d8de4410f3d019657a6b4218a82abad0f2dd00c230b830d82cbbad"
+        },
+        {
+          "bytes": 53276,
+          "decoded_shape": [
+            1920,
+            1440,
+            3
+          ],
+          "member": "images/3/Depth/frame_0000_depth.jpg",
+          "sha256": "05a9ecb5e8eacfe2de38b554c013a7dab712dfd657383e914379631fd8f7c2b2"
+        },
+        {
+          "bytes": 41571,
+          "decoded_shape": [
+            1920,
+            1440,
+            3
+          ],
+          "member": "images/3/Mask/frame_0000_original_segmented_mask.jpg",
+          "sha256": "c5bd954af222171c81e6ab5157833478baf5473ccd494e9d574017a1be41b6b5"
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "missing_mask_assumption": null,
+      "pixel_stride": 4,
+      "reduced_rgb_shape": [
+        480,
+        360,
+        3
+      ],
+      "selected_frame": "images/4/Original/frame_0000_original.jpg",
+      "source_mask_present": true,
+      "used_members": [
+        {
+          "bytes": 268863,
+          "decoded_shape": [
+            1920,
+            1440,
+            3
+          ],
+          "member": "images/4/Original/frame_0000_original.jpg",
+          "sha256": "2aee83fa352a2b9c7476e02f0c100d2b5171525d6a01f2c81898d470d9a64506"
+        },
+        {
+          "bytes": 67342,
+          "decoded_shape": [
+            1920,
+            1440,
+            3
+          ],
+          "member": "images/4/Depth/frame_0000_depth.jpg",
+          "sha256": "c3dbe59389641ef56df17f912cef077d4e25e2b33fc1e785b989a5d395006319"
+        },
+        {
+          "bytes": 44035,
+          "decoded_shape": [
+            1920,
+            1440,
+            3
+          ],
+          "member": "images/4/Mask/frame_0000_original_segmented_mask.jpg",
+          "sha256": "0b2febd278fe6b69938b5c65dce2cc9b66dd3c9368d77d43e05b507a666a021b"
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "missing_mask_assumption": null,
+      "pixel_stride": 4,
+      "reduced_rgb_shape": [
+        480,
+        360,
+        3
+      ],
+      "selected_frame": "images/5/Original/frame_0000_original.jpg",
+      "source_mask_present": true,
+      "used_members": [
+        {
+          "bytes": 287850,
+          "decoded_shape": [
+            1920,
+            1440,
+            3
+          ],
+          "member": "images/5/Original/frame_0000_original.jpg",
+          "sha256": "c247989085a6a0436b6111fbd3e8afcf2952df35ef0d0e40ad01b0f5cbd31281"
+        },
+        {
+          "bytes": 63535,
+          "decoded_shape": [
+            1920,
+            1440,
+            3
+          ],
+          "member": "images/5/Depth/frame_0000_depth.jpg",
+          "sha256": "86e9afbdd0ddb7fcf205a440d43a7ed9439c11869050889124da2336ee6947f2"
+        },
+        {
+          "bytes": 39714,
+          "decoded_shape": [
+            1920,
+            1440,
+            3
+          ],
+          "member": "images/5/Mask/frame_0000_original_segmented_mask.jpg",
+          "sha256": "10dda9737c0e76d89256cdac86e0099b9e1f92a5898abedca9e4e8ceed0868fc"
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "missing_mask_assumption": null,
+      "pixel_stride": 4,
+      "reduced_rgb_shape": [
+        480,
+        360,
+        3
+      ],
+      "selected_frame": "images/6/Original/frame_0000_original.jpg",
+      "source_mask_present": true,
+      "used_members": [
+        {
+          "bytes": 271192,
+          "decoded_shape": [
+            1920,
+            1440,
+            3
+          ],
+          "member": "images/6/Original/frame_0000_original.jpg",
+          "sha256": "12244a497fc547d5a261098a3873335188f8168afaeef70fc8a00b3233563314"
+        },
+        {
+          "bytes": 65109,
+          "decoded_shape": [
+            1920,
+            1440,
+            3
+          ],
+          "member": "images/6/Depth/frame_0000_depth.jpg",
+          "sha256": "62e2f8be4b051a169aa24f3737f3d20e5dda2f3e36e05813965d6926f7f2a6f4"
+        },
+        {
+          "bytes": 37830,
+          "decoded_shape": [
+            1920,
+            1440,
+            3
+          ],
+          "member": "images/6/Mask/frame_0000_original_segmented_mask.jpg",
+          "sha256": "97c0929b36fd141bbf37b8a6db65d1f61c983392ea3a246ec7d9d21e76bc6181"
+        }
+      ]
+    },
+    {
+      "id": "7",
+      "missing_mask_assumption": null,
+      "pixel_stride": 4,
+      "reduced_rgb_shape": [
+        480,
+        360,
+        3
+      ],
+      "selected_frame": "images/7/Original/frame_0000_original.jpg",
+      "source_mask_present": true,
+      "used_members": [
+        {
+          "bytes": 269122,
+          "decoded_shape": [
+            1920,
+            1440,
+            3
+          ],
+          "member": "images/7/Original/frame_0000_original.jpg",
+          "sha256": "fb342f7ee3e758d65c52f87207bca9f2740be996599c985cf20282e90d0e57b2"
+        },
+        {
+          "bytes": 65786,
+          "decoded_shape": [
+            1920,
+            1440,
+            3
+          ],
+          "member": "images/7/Depth/frame_0000_depth.jpg",
+          "sha256": "d4429ce955e9bd4afe97526191ed6550a3596885fedddec0f9d53221f5e5724e"
+        },
+        {
+          "bytes": 38584,
+          "decoded_shape": [
+            1920,
+            1440,
+            3
+          ],
+          "member": "images/7/Mask/frame_0000_original_segmented_mask.jpg",
+          "sha256": "9bf32efa38a7d4319a5815d9b38cf288e6315646c5138c39c1ed93d0027ab881"
+        }
+      ]
+    },
+    {
+      "id": "8",
+      "missing_mask_assumption": null,
+      "pixel_stride": 4,
+      "reduced_rgb_shape": [
+        480,
+        360,
+        3
+      ],
+      "selected_frame": "images/8/Original/frame_0000_original.jpg",
+      "source_mask_present": true,
+      "used_members": [
+        {
+          "bytes": 340330,
+          "decoded_shape": [
+            1920,
+            1440,
+            3
+          ],
+          "member": "images/8/Original/frame_0000_original.jpg",
+          "sha256": "c3bee3af57dc577f5998c467091a3ea62f58f0dc05b63492bd8f126db9afebd1"
+        },
+        {
+          "bytes": 56336,
+          "decoded_shape": [
+            1920,
+            1440,
+            3
+          ],
+          "member": "images/8/Depth/frame_0000_depth.jpg",
+          "sha256": "1e3ba0456ebba868e8fb2a9bdddadc0923cff516747c345a41ff33f4c7922c88"
+        },
+        {
+          "bytes": 37597,
+          "decoded_shape": [
+            1920,
+            1440,
+            3
+          ],
+          "member": "images/8/Mask/frame_0000_original_segmented_mask.jpg",
+          "sha256": "f909eb7eebb9529fadfb11f1b81855a9dffa7c855b328538784f5946364864ce"
+        }
+      ]
+    },
+    {
+      "id": "9",
+      "missing_mask_assumption": null,
+      "pixel_stride": 4,
+      "reduced_rgb_shape": [
+        480,
+        360,
+        3
+      ],
+      "selected_frame": "images/9/Original/frame_0000_original.jpg",
+      "source_mask_present": true,
+      "used_members": [
+        {
+          "bytes": 316350,
+          "decoded_shape": [
+            1920,
+            1440,
+            3
+          ],
+          "member": "images/9/Original/frame_0000_original.jpg",
+          "sha256": "fa47d3a649aa820b71d130ceea153a4288111506d933fdba5aa6297846e2d2ec"
+        },
+        {
+          "bytes": 58974,
+          "decoded_shape": [
+            1920,
+            1440,
+            3
+          ],
+          "member": "images/9/Depth/frame_0000_depth.jpg",
+          "sha256": "42c8dd7023d5b9203e2181b00c6a6aec07b45a7818be48dfb74cddfcebbd5bcd"
+        },
+        {
+          "bytes": 38502,
+          "decoded_shape": [
+            1920,
+            1440,
+            3
+          ],
+          "member": "images/9/Mask/frame_0000_original_segmented_mask.jpg",
+          "sha256": "3de09e59f691b76d4c62c6ad6970ca43b5b4d5852f17f5048062a72269698a50"
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "missing_mask_assumption": null,
+      "pixel_stride": 4,
+      "reduced_rgb_shape": [
+        480,
+        360,
+        3
+      ],
+      "selected_frame": "images/10/Original/frame_0000_original.jpg",
+      "source_mask_present": true,
+      "used_members": [
+        {
+          "bytes": 243235,
+          "decoded_shape": [
+            1920,
+            1440,
+            3
+          ],
+          "member": "images/10/Original/frame_0000_original.jpg",
+          "sha256": "f3bf270c8970b1f64b3de8d11b58dc74e177c1bc81020c085ce8677c56bc63a8"
+        },
+        {
+          "bytes": 50163,
+          "decoded_shape": [
+            1920,
+            1440,
+            3
+          ],
+          "member": "images/10/Depth/frame_0000_depth.jpg",
+          "sha256": "0c77f2b2b2970ef21b07077c32444e1131ebdb220478c086ca9a60b5a304755f"
+        },
+        {
+          "bytes": 41798,
+          "decoded_shape": [
+            1920,
+            1440,
+            3
+          ],
+          "member": "images/10/Mask/frame_0000_original_segmented_mask.jpg",
+          "sha256": "cdf523dc17120350cd4fbd7040465d46057ddaef4d36d0f53897d84a9356a4e6"
+        }
+      ]
+    },
+    {
+      "id": "11",
+      "missing_mask_assumption": null,
+      "pixel_stride": 4,
+      "reduced_rgb_shape": [
+        480,
+        360,
+        3
+      ],
+      "selected_frame": "images/11/Original/frame_0000_original.jpg",
+      "source_mask_present": true,
+      "used_members": [
+        {
+          "bytes": 316362,
+          "decoded_shape": [
+            1920,
+            1440,
+            3
+          ],
+          "member": "images/11/Original/frame_0000_original.jpg",
+          "sha256": "99bf221d5fe9cc44814c3c5fc0986960f8be75f63a1f58ab74766e367bb9ca03"
+        },
+        {
+          "bytes": 54765,
+          "decoded_shape": [
+            1920,
+            1440,
+            3
+          ],
+          "member": "images/11/Depth/frame_0000_depth.jpg",
+          "sha256": "8df47920ec33baaef98cf3f22b34cff3dba7b989b87d107037b62f081dddc6f6"
+        },
+        {
+          "bytes": 35962,
+          "decoded_shape": [
+            1920,
+            1440,
+            3
+          ],
+          "member": "images/11/Mask/frame_0000_original_segmented_mask.jpg",
+          "sha256": "0937ad47289b6ca52e0019180e487f3e9e7d589cbeb3d8bede0f96c37f8861cb"
+        }
+      ]
+    },
+    {
+      "id": "13",
+      "missing_mask_assumption": null,
+      "pixel_stride": 4,
+      "reduced_rgb_shape": [
+        480,
+        360,
+        3
+      ],
+      "selected_frame": "images/13/Original/frame_0000_original.jpg",
+      "source_mask_present": true,
+      "used_members": [
+        {
+          "bytes": 349577,
+          "decoded_shape": [
+            1920,
+            1440,
+            3
+          ],
+          "member": "images/13/Original/frame_0000_original.jpg",
+          "sha256": "40661b02bdb6f4b21839ff67517479844326737143bbe17b796d33db4599b781"
+        },
+        {
+          "bytes": 53692,
+          "decoded_shape": [
+            1920,
+            1440,
+            3
+          ],
+          "member": "images/13/Depth/frame_0000_depth.jpg",
+          "sha256": "583169bf0dfc4417ba1ae3e61119c62163a9eb0689750bcf61f22d1d9e793b21"
+        },
+        {
+          "bytes": 44216,
+          "decoded_shape": [
+            1920,
+            1440,
+            3
+          ],
+          "member": "images/13/Mask/frame_0000_original_segmented_mask.jpg",
+          "sha256": "fc9f9af20787279721629121b321943be07191d8e0481ad6e9b4d5ceeba93c71"
+        }
+      ]
+    },
+    {
+      "id": "14",
+      "missing_mask_assumption": null,
+      "pixel_stride": 4,
+      "reduced_rgb_shape": [
+        480,
+        360,
+        3
+      ],
+      "selected_frame": "images/14/Original/frame_0000_original.jpg",
+      "source_mask_present": true,
+      "used_members": [
+        {
+          "bytes": 275526,
+          "decoded_shape": [
+            1920,
+            1440,
+            3
+          ],
+          "member": "images/14/Original/frame_0000_original.jpg",
+          "sha256": "760eae2b09cc9504eb2b60da522bacfba9b57a265fe7c76c0746554cb10ac430"
+        },
+        {
+          "bytes": 65058,
+          "decoded_shape": [
+            1920,
+            1440,
+            3
+          ],
+          "member": "images/14/Depth/frame_0000_depth.jpg",
+          "sha256": "aed4b1469289f79c92150431efac2d85d4753a676513acb36b2c3d1435dde7ef"
+        },
+        {
+          "bytes": 57079,
+          "decoded_shape": [
+            1920,
+            1440,
+            3
+          ],
+          "member": "images/14/Mask/frame_0000_original_segmented_mask.jpg",
+          "sha256": "67548e86dfb9082f4f609eed033b6e0aca7764cfdc0c9ffa4a2f3b5418bab58d"
+        }
+      ]
+    },
+    {
+      "id": "16",
+      "missing_mask_assumption": "Largest connected RGB region above a saturation threshold estimated from border pixels (at least0.35), after fixed closing/opening; large internal holes retained. Used only when a public source mask is missing.",
+      "pixel_stride": 4,
+      "reduced_rgb_shape": [
+        480,
+        360,
+        3
+      ],
+      "selected_frame": "images/16/Original/monocular.jpg",
+      "source_mask_present": false,
+      "used_members": [
+        {
+          "bytes": 421940,
+          "decoded_shape": [
+            1920,
+            1440,
+            3
+          ],
+          "member": "images/16/Original/monocular.jpg",
+          "sha256": "1c0b35820ab3181960de78415bb191eedf4818ddc77cd2e94e9d0deedd3d29a7"
+        },
+        {
+          "bytes": 46836,
+          "decoded_shape": [
+            1920,
+            1440,
+            3
+          ],
+          "member": "images/16/Depth/depth.jpg",
+          "sha256": "b414fc66ef1ef03c39512b52ff85dd03ed5ea6dafb8fd2e635a8336f532c997d"
+        }
+      ]
+    },
+    {
+      "id": "17",
+      "missing_mask_assumption": "Largest connected RGB region above a saturation threshold estimated from border pixels (at least0.35), after fixed closing/opening; large internal holes retained. Used only when a public source mask is missing.",
+      "pixel_stride": 4,
+      "reduced_rgb_shape": [
+        480,
+        360,
+        3
+      ],
+      "selected_frame": "images/17/Original/monocular.jpg",
+      "source_mask_present": false,
+      "used_members": [
+        {
+          "bytes": 436531,
+          "decoded_shape": [
+            1920,
+            1440,
+            3
+          ],
+          "member": "images/17/Original/monocular.jpg",
+          "sha256": "fe27839951d5cbd6445fb62e55c5fa00a81b8399d841573ac4386667d2836c22"
+        },
+        {
+          "bytes": 45534,
+          "decoded_shape": [
+            1920,
+            1440,
+            3
+          ],
+          "member": "images/17/Depth/depth.jpg",
+          "sha256": "9699362439f4cf987a85c0584c16ef7e539d071806c30a1997fb0daf3eb8414d"
+        }
+      ]
+    },
+    {
+      "id": "18",
+      "missing_mask_assumption": "Largest connected RGB region above a saturation threshold estimated from border pixels (at least0.35), after fixed closing/opening; large internal holes retained. Used only when a public source mask is missing.",
+      "pixel_stride": 4,
+      "reduced_rgb_shape": [
+        480,
+        360,
+        3
+      ],
+      "selected_frame": "images/18/Original/frame_0006_original.jpg",
+      "source_mask_present": false,
+      "used_members": [
+        {
+          "bytes": 270979,
+          "decoded_shape": [
+            1920,
+            1440,
+            3
+          ],
+          "member": "images/18/Original/frame_0006_original.jpg",
+          "sha256": "0534e800207f4bc263e3714a079b2bf50f548c45c7a127fa10a8db0e7377c02a"
+        },
+        {
+          "bytes": 46736,
+          "decoded_shape": [
+            1920,
+            1440,
+            3
+          ],
+          "member": "images/18/Depth/depth.jpg",
+          "sha256": "e814004b6d8e36172f5206e26e3752dd5204ace861f95ea65491ba9b31598081"
+        }
+      ]
+    },
+    {
+      "id": "19",
+      "missing_mask_assumption": "Largest connected RGB region above a saturation threshold estimated from border pixels (at least0.35), after fixed closing/opening; large internal holes retained. Used only when a public source mask is missing.",
+      "pixel_stride": 4,
+      "reduced_rgb_shape": [
+        480,
+        360,
+        3
+      ],
+      "selected_frame": "images/19/Original/monocular.jpg",
+      "source_mask_present": false,
+      "used_members": [
+        {
+          "bytes": 365370,
+          "decoded_shape": [
+            1920,
+            1440,
+            3
+          ],
+          "member": "images/19/Original/monocular.jpg",
+          "sha256": "c653319d68a755dbaeba199bdd2d20203032af7cce1b1dbb22e2d0f2438471d0"
+        },
+        {
+          "bytes": 46748,
+          "decoded_shape": [
+            1920,
+            1440,
+            3
+          ],
+          "member": "images/19/Depth/depth.jpg",
+          "sha256": "0ca7055e44f3d98c38be3bced94c098ca34b3ab54f0c4f74be68ca7653ffbcbe"
+        }
+      ]
+    },
+    {
+      "id": "20",
+      "missing_mask_assumption": "Largest connected RGB region above a saturation threshold estimated from border pixels (at least0.35), after fixed closing/opening; large internal holes retained. Used only when a public source mask is missing.",
+      "pixel_stride": 4,
+      "reduced_rgb_shape": [
+        480,
+        360,
+        3
+      ],
+      "selected_frame": "images/20/Original/monocular.jpg",
+      "source_mask_present": false,
+      "used_members": [
+        {
+          "bytes": 344896,
+          "decoded_shape": [
+            1920,
+            1440,
+            3
+          ],
+          "member": "images/20/Original/monocular.jpg",
+          "sha256": "57f8b6b4c372cfc569d53716f7a49ef47b5bc40c7dd041bcbd3e5d97a9061e1e"
+        },
+        {
+          "bytes": 46296,
+          "decoded_shape": [
+            1920,
+            1440,
+            3
+          ],
+          "member": "images/20/Depth/depth.jpg",
+          "sha256": "b4cc485a00e2bf7db169ec01405486dc8a0fb873f081019d0a9a1b5cb17a3dbd"
+        }
+      ]
+    }
+  ],
+  "source": {
+    "inputs_zip_sha256": "f1ad1171595ed65bbc6b187703c6bfa75a751ac3aaf62ef9b3dd1eadd1a55c30",
+    "test_csv_sha256": "12746e1b3c7c8478e3cf32e358e60fd5949aff1842c8089d0721c72dac193cbf"
+  }
+}

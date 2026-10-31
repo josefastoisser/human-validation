@@ -1,0 +1,155 @@
+image_id,identity,path,date,orientation,species,dataset,new_identity
+img_01ebb899100e71c4d3bc,LynxID2025_lynx_04,images/img_01ebb899100e71c4d3bc.jpg,,left,lynx,LynxID2025,True
+img_01fed845f4789768165e,SalamanderID2025_600,images/img_01fed845f4789768165e.jpg,2024-08-18,right,,SalamanderID2025,True
+img_07b544acd65708470155,LynxID2025_lynx_37,images/img_07b544acd65708470155.jpg,,left,lynx,LynxID2025,True
+img_0c0a97262900f5baccc8,LynxID2025_lynx_72,images/img_0c0a97262900f5baccc8.jpg,,left,lynx,LynxID2025,True
+img_0c18bef4387268ffe270,SeaTurtleID2022_t002,images/img_0c18bef4387268ffe270.jpg,2010-07-05,topleft,loggerhead turtle,SeaTurtleID2022,True
+img_0feaefed2b72a42fe67b,SalamanderID2025_164,images/img_0feaefed2b72a42fe67b.jpg,2019-09-16,top,,SalamanderID2025,True
+img_1242d666b9fa9d666cea,LynxID2025_lynx_72,images/img_1242d666b9fa9d666cea.jpg,,left,lynx,LynxID2025,True
+img_138a591fe1601f822b4b,LynxID2025_lynx_04,images/img_138a591fe1601f822b4b.jpg,,unknown,lynx,LynxID2025,True
+img_14f1f42c61ffa7fb00de,SeaTurtleID2022_t023,images/img_14f1f42c61ffa7fb00de.jpg,2022-07-04,right,loggerhead turtle,SeaTurtleID2022,False
+img_16ad0b52f01bcfbb606a,LynxID2025_lynx_24,images/img_16ad0b52f01bcfbb606a.jpg,,right,lynx,LynxID2025,False
+img_193601ea8e0540a5a050,SalamanderID2025_516,images/img_193601ea8e0540a5a050.jpg,2024-05-17,right,,SalamanderID2025,False
+img_1aaa6b7d276a59fdc1d4,SeaTurtleID2022_t143,images/img_1aaa6b7d276a59fdc1d4.jpg,2015-06-26,left,loggerhead turtle,SeaTurtleID2022,True
+img_1ba6bb88bf869c7c770f,LynxID2025_lynx_26,images/img_1ba6bb88bf869c7c770f.jpg,,front,lynx,LynxID2025,True
+img_1cc5e68235db18d01ccb,SeaTurtleID2022_t283,images/img_1cc5e68235db18d01ccb.jpg,2022-06-14,right,loggerhead turtle,SeaTurtleID2022,False
+img_1eef7690e9488884b4a9,SalamanderID2025_195,images/img_1eef7690e9488884b4a9.jpg,2024-09-16,top,,SalamanderID2025,False
+img_21264ee9f861dc60ee57,SeaTurtleID2022_t423,images/img_21264ee9f861dc60ee57.jpg,2022-06-21,topleft,loggerhead turtle,SeaTurtleID2022,False
+img_22a595217ae1d1dbbb09,LynxID2025_lynx_33,images/img_22a595217ae1d1dbbb09.jpg,,right,lynx,LynxID2025,True
+img_26add5fe8454f458f5b4,SalamanderID2025_86,images/img_26add5fe8454f458f5b4.jpg,2024-08-18,right,,SalamanderID2025,False
+img_2ebee90fc8a7cd6d0334,SalamanderID2025_386,images/img_2ebee90fc8a7cd6d0334.jpg,2022-05-09,top,,SalamanderID2025,True
+img_2efb8a6b75ebae032991,LynxID2025_lynx_41,images/img_2efb8a6b75ebae032991.jpg,,left,lynx,LynxID2025,True
+img_2f9d41befd1c9db169a7,SeaTurtleID2022_t023,images/img_2f9d41befd1c9db169a7.jpg,2022-07-04,right,loggerhead turtle,SeaTurtleID2022,False
+img_30a082b61df563629585,LynxID2025_lynx_18,images/img_30a082b61df563629585.jpg,,left,lynx,LynxID2025,False
+img_315a1213ea8af13dc070,SeaTurtleID2022_t018,images/img_315a1213ea8af13dc070.jpg,2011-07-28,topright,loggerhead turtle,SeaTurtleID2022,False
+img_337157ea54c2e53ae101,SalamanderID2025_142,images/img_337157ea54c2e53ae101.jpg,2019-05-07,top,,SalamanderID2025,True
+img_349a0fe1dd55190fb8d3,LynxID2025_lynx_31,images/img_349a0fe1dd55190fb8d3.jpg,,right,lynx,LynxID2025,True
+img_34e833ec7eca034b413d,LynxID2025_lynx_31,images/img_34e833ec7eca034b413d.jpg,,left,lynx,LynxID2025,True
+img_365956ea4fc2207c891f,LynxID2025_lynx_28,images/img_365956ea4fc2207c891f.jpg,,right,lynx,LynxID2025,True
+img_374f4b271a25566da89e,LynxID2025_lynx_09,images/img_374f4b271a25566da89e.jpg,,left,lynx,LynxID2025,False
+img_38a028cc0bdc7a942bd9,SalamanderID2025_290,images/img_38a028cc0bdc7a942bd9.jpg,2023-11-03,right,,SalamanderID2025,False
+img_3960887c4609459be944,SalamanderID2025_407,images/img_3960887c4609459be944.jpg,2024-09-27,top,,SalamanderID2025,False
+img_3aa12503e6ac50723ea1,LynxID2025_lynx_86,images/img_3aa12503e6ac50723ea1.jpg,,right,lynx,LynxID2025,False
+img_40742ec2702953c58d52,SeaTurtleID2022_t165,images/img_40742ec2702953c58d52.jpg,2015-07-01,top,loggerhead turtle,SeaTurtleID2022,False
+img_41bbb17b6738da8c6009,SeaTurtleID2022_t222,images/img_41bbb17b6738da8c6009.jpg,2015-08-08,right,loggerhead turtle,SeaTurtleID2022,True
+img_43d244f4f504bb7477d2,SeaTurtleID2022_t184,images/img_43d244f4f504bb7477d2.jpg,2019-06-15,topright,loggerhead turtle,SeaTurtleID2022,False
+img_44b3dc4c4aa08d67cbf4,SeaTurtleID2022_t142,images/img_44b3dc4c4aa08d67cbf4.jpg,2020-06-26,topright,loggerhead turtle,SeaTurtleID2022,False
+img_462d5fa83f07e62dd117,SeaTurtleID2022_t302,images/img_462d5fa83f07e62dd117.jpg,2022-06-14,left,loggerhead turtle,SeaTurtleID2022,False
+img_4c94322f6f13e5f9ec41,SeaTurtleID2022_t302,images/img_4c94322f6f13e5f9ec41.jpg,2022-06-14,left,loggerhead turtle,SeaTurtleID2022,False
+img_4e374b247b27e94f5524,SeaTurtleID2022_t219,images/img_4e374b247b27e94f5524.jpg,2015-07-25,topleft,loggerhead turtle,SeaTurtleID2022,True
+img_4fee38d98a0ee9f35f0d,SeaTurtleID2022_t208,images/img_4fee38d98a0ee9f35f0d.jpg,2015-07-09,left,loggerhead turtle,SeaTurtleID2022,True
+img_505232045fe5fc40b704,SeaTurtleID2022_t207,images/img_505232045fe5fc40b704.jpg,2015-07-09,top,loggerhead turtle,SeaTurtleID2022,True
+img_5072e53234fc2e34a21f,LynxID2025_lynx_85,images/img_5072e53234fc2e34a21f.jpg,,left,lynx,LynxID2025,False
+img_522395934d1413f02c0d,SeaTurtleID2022_t329,images/img_522395934d1413f02c0d.jpg,2017-07-17,top,loggerhead turtle,SeaTurtleID2022,False
+img_529df3498b3944dfba9f,SeaTurtleID2022_t423,images/img_529df3498b3944dfba9f.jpg,2022-06-21,topright,loggerhead turtle,SeaTurtleID2022,False
+img_53f9ddd0d525b73ea592,SeaTurtleID2022_t008,images/img_53f9ddd0d525b73ea592.jpg,2020-07-12,left,loggerhead turtle,SeaTurtleID2022,False
+img_55e861adf9e4cbc466b4,SeaTurtleID2022_t308,images/img_55e861adf9e4cbc466b4.jpg,2016-07-06,topleft,loggerhead turtle,SeaTurtleID2022,True
+img_59d9c04089b420a93ed4,SalamanderID2025_266,images/img_59d9c04089b420a93ed4.jpg,2024-05-17,right,,SalamanderID2025,False
+img_5bac47a0cade935b5795,SeaTurtleID2022_t335,images/img_5bac47a0cade935b5795.jpg,2021-06-23,right,loggerhead turtle,SeaTurtleID2022,False
+img_601b39860cba1eb673e8,LynxID2025_lynx_02,images/img_601b39860cba1eb673e8.jpg,,right,lynx,LynxID2025,True
+img_60d10c03262fd3117b43,SeaTurtleID2022_t008,images/img_60d10c03262fd3117b43.jpg,2020-07-12,topleft,loggerhead turtle,SeaTurtleID2022,False
+img_639feb9bc3502f845e1d,SeaTurtleID2022_t071,images/img_639feb9bc3502f845e1d.jpg,2013-08-01,right,loggerhead turtle,SeaTurtleID2022,True
+img_652f0470bbb6084d7915,LynxID2025_lynx_73,images/img_652f0470bbb6084d7915.jpg,,left,lynx,LynxID2025,False
+img_653a4edba62a7a4446c8,SeaTurtleID2022_t335,images/img_653a4edba62a7a4446c8.jpg,2021-06-23,top,loggerhead turtle,SeaTurtleID2022,False
+img_660aa001efda861de618,LynxID2025_lynx_28,images/img_660aa001efda861de618.jpg,,left,lynx,LynxID2025,True
+img_68cc5b7476a14a8f0620,SalamanderID2025_305,images/img_68cc5b7476a14a8f0620.jpg,2020-09-25,top,,SalamanderID2025,True
+img_6f3d4499760d7800b42d,LynxID2025_lynx_37,images/img_6f3d4499760d7800b42d.jpg,,right,lynx,LynxID2025,True
+img_706023738634d4775500,LynxID2025_lynx_28,images/img_706023738634d4775500.jpg,,right,lynx,LynxID2025,True
+img_708f55e4a31a3e4fc55b,LynxID2025_lynx_37,images/img_708f55e4a31a3e4fc55b.jpg,,front,lynx,LynxID2025,True
+img_732dab3b692ec657b68a,SeaTurtleID2022_t018,images/img_732dab3b692ec657b68a.jpg,2011-07-28,topleft,loggerhead turtle,SeaTurtleID2022,False
+img_7496d9c24c46739b2f1f,SalamanderID2025_49,images/img_7496d9c24c46739b2f1f.jpg,2018-05-16,top,,SalamanderID2025,True
+img_7628d43bd6af46b15d0b,SeaTurtleID2022_t350,images/img_7628d43bd6af46b15d0b.jpg,2022-06-16,right,loggerhead turtle,SeaTurtleID2022,False
+img_779ff9630221e81e7f5a,SeaTurtleID2022_t165,images/img_779ff9630221e81e7f5a.jpg,2015-07-01,topleft,loggerhead turtle,SeaTurtleID2022,False
+img_790c1dfc9701bcbe05ff,SeaTurtleID2022_t184,images/img_790c1dfc9701bcbe05ff.jpg,2019-06-15,topright,loggerhead turtle,SeaTurtleID2022,False
+img_7a105e51ae538538fdf8,SeaTurtleID2022_t329,images/img_7a105e51ae538538fdf8.jpg,2017-07-17,topright,loggerhead turtle,SeaTurtleID2022,False
+img_7a7a9e5c5f738062b3cb,SeaTurtleID2022_t329,images/img_7a7a9e5c5f738062b3cb.jpg,2017-07-17,left,loggerhead turtle,SeaTurtleID2022,False
+img_7cfa0319eb363b7a5c13,SalamanderID2025_308,images/img_7cfa0319eb363b7a5c13.jpg,2024-10-14,right,,SalamanderID2025,False
+img_7dd4f684b81b500409c9,SalamanderID2025_594,images/img_7dd4f684b81b500409c9.jpg,2024-05-30,right,,SalamanderID2025,True
+img_7fbde425ca87c8228763,LynxID2025_lynx_08,images/img_7fbde425ca87c8228763.jpg,,left,lynx,LynxID2025,True
+img_81a81de92c0a7d07d74c,LynxID2025_lynx_32,images/img_81a81de92c0a7d07d74c.jpg,,left,lynx,LynxID2025,False
+img_8252e317c905de17baed,SeaTurtleID2022_t157,images/img_8252e317c905de17baed.jpg,2021-06-24,right,loggerhead turtle,SeaTurtleID2022,False
+img_84c0db681ac6abc8007a,SeaTurtleID2022_t121,images/img_84c0db681ac6abc8007a.jpg,2019-06-17,down,loggerhead turtle,SeaTurtleID2022,False
+img_85f329ab5570617e7364,SeaTurtleID2022_t123,images/img_85f329ab5570617e7364.jpg,2015-05-06,right,loggerhead turtle,SeaTurtleID2022,True
+img_8606a1881b0d369f5dbd,LynxID2025_lynx_13,images/img_8606a1881b0d369f5dbd.jpg,,right,lynx,LynxID2025,False
+img_883926ad42f0d976f169,SeaTurtleID2022_t023,images/img_883926ad42f0d976f169.jpg,2022-07-04,left,loggerhead turtle,SeaTurtleID2022,False
+img_8dd01c98c2be51e845ac,SeaTurtleID2022_t197,images/img_8dd01c98c2be51e845ac.jpg,2019-06-18,left,loggerhead turtle,SeaTurtleID2022,True
+img_8e490b8bcf9c6ed92552,SeaTurtleID2022_t020,images/img_8e490b8bcf9c6ed92552.jpg,2015-07-11,right,loggerhead turtle,SeaTurtleID2022,False
+img_8eba695c39639c098d75,SalamanderID2025_267,images/img_8eba695c39639c098d75.jpg,2024-09-09,right,,SalamanderID2025,False
+img_8f44aaa81b9714e06a74,SalamanderID2025_605,images/img_8f44aaa81b9714e06a74.jpg,2024-09-09,top,,SalamanderID2025,True
+img_90d497d1549de9f41562,SeaTurtleID2022_t320,images/img_90d497d1549de9f41562.jpg,2016-07-11,topright,loggerhead turtle,SeaTurtleID2022,True
+img_934b72c558d6c6fa80df,SeaTurtleID2022_t121,images/img_934b72c558d6c6fa80df.jpg,2019-06-17,right,loggerhead turtle,SeaTurtleID2022,False
+img_94ba95defb06d4877790,SeaTurtleID2022_t023,images/img_94ba95defb06d4877790.jpg,2022-07-04,topleft,loggerhead turtle,SeaTurtleID2022,False
+img_94f53068d6174ad6c776,LynxID2025_lynx_11,images/img_94f53068d6174ad6c776.jpg,,left,lynx,LynxID2025,False
+img_953a5a4a57a2cb2055a5,SeaTurtleID2022_t020,images/img_953a5a4a57a2cb2055a5.jpg,2015-07-11,topright,loggerhead turtle,SeaTurtleID2022,False
+img_9e2067d3e52c4514e68f,LynxID2025_lynx_94,images/img_9e2067d3e52c4514e68f.jpg,,right,lynx,LynxID2025,False
+img_9ee143a0a51911858852,SalamanderID2025_471,images/img_9ee143a0a51911858852.jpg,2023-04-14,top,,SalamanderID2025,True
+img_9f783d92910175b1c054,SeaTurtleID2022_t020,images/img_9f783d92910175b1c054.jpg,2015-07-11,left,loggerhead turtle,SeaTurtleID2022,False
+img_9faafc5d2180264fc1c8,SeaTurtleID2022_t302,images/img_9faafc5d2180264fc1c8.jpg,2022-06-14,left,loggerhead turtle,SeaTurtleID2022,False
+img_a031f432cfb044f652c5,SeaTurtleID2022_t294,images/img_a031f432cfb044f652c5.jpg,2019-06-20,right,loggerhead turtle,SeaTurtleID2022,False
+img_a09287b29a527319cc26,LynxID2025_lynx_31,images/img_a09287b29a527319cc26.jpg,,left,lynx,LynxID2025,True
+img_a340ac4a923f8dfd9a2c,SeaTurtleID2022_t294,images/img_a340ac4a923f8dfd9a2c.jpg,2019-06-20,left,loggerhead turtle,SeaTurtleID2022,False
+img_a48a48dea7ad76e6aa78,LynxID2025_lynx_33,images/img_a48a48dea7ad76e6aa78.jpg,,right,lynx,LynxID2025,True
+img_a71d2110723581156294,SeaTurtleID2022_t283,images/img_a71d2110723581156294.jpg,2022-06-14,right,loggerhead turtle,SeaTurtleID2022,False
+img_aa5857a395c881917ea5,SeaTurtleID2022_t197,images/img_aa5857a395c881917ea5.jpg,2015-07-04,topleft,loggerhead turtle,SeaTurtleID2022,True
+img_aa72701c39c7a91b02a4,LynxID2025_lynx_28,images/img_aa72701c39c7a91b02a4.jpg,,right,lynx,LynxID2025,True
+img_b0755b948a61701a732d,SeaTurtleID2022_t423,images/img_b0755b948a61701a732d.jpg,2022-06-21,left,loggerhead turtle,SeaTurtleID2022,False
+img_b1c44f0292d454a2cfa0,LynxID2025_lynx_41,images/img_b1c44f0292d454a2cfa0.jpg,,back,lynx,LynxID2025,True
+img_b2478c6f74e9c1f489af,SeaTurtleID2022_t335,images/img_b2478c6f74e9c1f489af.jpg,2021-06-23,top,loggerhead turtle,SeaTurtleID2022,False
+img_b2aa3aec0c88cc2b94f0,LynxID2025_lynx_78,images/img_b2aa3aec0c88cc2b94f0.jpg,,right,lynx,LynxID2025,True
+img_b2dd5493eac25653aa27,LynxID2025_lynx_72,images/img_b2dd5493eac25653aa27.jpg,,left,lynx,LynxID2025,True
+img_b4eb4dff59da95f28263,SalamanderID2025_454,images/img_b4eb4dff59da95f28263.jpg,2023-03-15,top,,SalamanderID2025,True
+img_b581874056ae2da2984d,LynxID2025_lynx_47,images/img_b581874056ae2da2984d.jpg,,left,lynx,LynxID2025,True
+img_b7fc3f4918d9695b983f,SeaTurtleID2022_t294,images/img_b7fc3f4918d9695b983f.jpg,2019-06-20,left,loggerhead turtle,SeaTurtleID2022,False
+img_b8958ecb82b006313181,SeaTurtleID2022_t350,images/img_b8958ecb82b006313181.jpg,2022-06-16,right,loggerhead turtle,SeaTurtleID2022,False
+img_b8d7422fcde77e3c72e9,LynxID2025_lynx_74,images/img_b8d7422fcde77e3c72e9.jpg,,left,lynx,LynxID2025,False
+img_b909a5fd0eaf50f6a73f,LynxID2025_lynx_63,images/img_b909a5fd0eaf50f6a73f.jpg,,right,lynx,LynxID2025,False
+img_b9b9923ccc27b03b1064,SalamanderID2025_544,images/img_b9b9923ccc27b03b1064.jpg,2023-11-13,right,,SalamanderID2025,True
+img_b9bab9b880ccefbabfa1,SeaTurtleID2022_t423,images/img_b9bab9b880ccefbabfa1.jpg,2022-06-21,right,loggerhead turtle,SeaTurtleID2022,False
+img_ba1861117d7a3b058f3a,SeaTurtleID2022_t165,images/img_ba1861117d7a3b058f3a.jpg,2015-07-01,left,loggerhead turtle,SeaTurtleID2022,False
+img_bae95a647b4bf8bc3d10,LynxID2025_lynx_97,images/img_bae95a647b4bf8bc3d10.jpg,,back,lynx,LynxID2025,False
+img_bd2c68fd300b1fe4fa3e,LynxID2025_lynx_33,images/img_bd2c68fd300b1fe4fa3e.jpg,,right,lynx,LynxID2025,True
+img_bd5f5c9144390c448556,SeaTurtleID2022_t184,images/img_bd5f5c9144390c448556.jpg,2019-06-15,left,loggerhead turtle,SeaTurtleID2022,False
+img_bdf0202627bb62d14579,SeaTurtleID2022_t142,images/img_bdf0202627bb62d14579.jpg,2020-06-26,topleft,loggerhead turtle,SeaTurtleID2022,False
+img_befd9bb24c541bb92136,SeaTurtleID2022_t157,images/img_befd9bb24c541bb92136.jpg,2021-06-24,topleft,loggerhead turtle,SeaTurtleID2022,False
+img_bfa25235bf5aca33a34a,SeaTurtleID2022_t121,images/img_bfa25235bf5aca33a34a.jpg,2019-06-17,left,loggerhead turtle,SeaTurtleID2022,False
+img_c120dfb96f75c9ff7482,SeaTurtleID2022_t020,images/img_c120dfb96f75c9ff7482.jpg,2015-07-11,right,loggerhead turtle,SeaTurtleID2022,False
+img_c27c81c7a50095d369fe,LynxID2025_lynx_41,images/img_c27c81c7a50095d369fe.jpg,,right,lynx,LynxID2025,True
+img_c300c7c4e2ba179b3de8,SeaTurtleID2022_t142,images/img_c300c7c4e2ba179b3de8.jpg,2020-06-26,right,loggerhead turtle,SeaTurtleID2022,False
+img_c3b0084dda138a013704,SeaTurtleID2022_t335,images/img_c3b0084dda138a013704.jpg,2021-06-23,topright,loggerhead turtle,SeaTurtleID2022,False
+img_c4a12b205f3132d8d2d3,SalamanderID2025_178,images/img_c4a12b205f3132d8d2d3.jpg,2023-10-09,right,,SalamanderID2025,False
+img_c4ac63e5fc801282e0b5,LynxID2025_lynx_41,images/img_c4ac63e5fc801282e0b5.jpg,,left,lynx,LynxID2025,True
+img_c6317aca7456e9b8524f,SeaTurtleID2022_t302,images/img_c6317aca7456e9b8524f.jpg,2022-06-14,left,loggerhead turtle,SeaTurtleID2022,False
+img_c9c6a97fb0c4f5943e84,SeaTurtleID2022_t008,images/img_c9c6a97fb0c4f5943e84.jpg,2020-07-12,left,loggerhead turtle,SeaTurtleID2022,False
+img_c9d8092cac91335185d7,SeaTurtleID2022_t244,images/img_c9d8092cac91335185d7.jpg,2016-06-24,left,loggerhead turtle,SeaTurtleID2022,True
+img_cf6efb23e894fb3b4b00,LynxID2025_lynx_47,images/img_cf6efb23e894fb3b4b00.jpg,,left,lynx,LynxID2025,True
+img_d06711180880923f9b75,SeaTurtleID2022_t283,images/img_d06711180880923f9b75.jpg,2022-06-14,left,loggerhead turtle,SeaTurtleID2022,False
+img_d39fe468c34d1980cf54,SalamanderID2025_133,images/img_d39fe468c34d1980cf54.jpg,2023-09-18,right,,SalamanderID2025,False
+img_d45103f1434528680f84,SeaTurtleID2022_t018,images/img_d45103f1434528680f84.jpg,2011-07-28,topleft,loggerhead turtle,SeaTurtleID2022,False
+img_d4f8a2d70b44aee17b45,SeaTurtleID2022_t350,images/img_d4f8a2d70b44aee17b45.jpg,2022-06-16,left,loggerhead turtle,SeaTurtleID2022,False
+img_d730f2c8a3f7551aa70d,SalamanderID2025_534,images/img_d730f2c8a3f7551aa70d.jpg,2024-09-16,right,,SalamanderID2025,False
+img_d760ada05b772747aeb5,SeaTurtleID2022_t283,images/img_d760ada05b772747aeb5.jpg,2022-06-14,left,loggerhead turtle,SeaTurtleID2022,False
+img_da4019ddf9433454b912,LynxID2025_lynx_03,images/img_da4019ddf9433454b912.jpg,,right,lynx,LynxID2025,False
+img_dabc5a51b5113f1acab4,SalamanderID2025_329,images/img_dabc5a51b5113f1acab4.jpg,2024-04-04,right,,SalamanderID2025,False
+img_dca3ec2bd999f4a523a2,LynxID2025_lynx_72,images/img_dca3ec2bd999f4a523a2.jpg,,unknown,lynx,LynxID2025,True
+img_dccfe10f099c131fce52,LynxID2025_lynx_35,images/img_dccfe10f099c131fce52.jpg,,left,lynx,LynxID2025,False
+img_dcd3a4afa9d781eb2616,LynxID2025_lynx_31,images/img_dcd3a4afa9d781eb2616.jpg,,left,lynx,LynxID2025,True
+img_e02cd20111b14311ae5a,SeaTurtleID2022_t294,images/img_e02cd20111b14311ae5a.jpg,2019-06-20,top,loggerhead turtle,SeaTurtleID2022,False
+img_e0de9a95d73af40c4d0d,LynxID2025_lynx_42,images/img_e0de9a95d73af40c4d0d.jpg,,back,lynx,LynxID2025,False
+img_e5a8078762fd6cc7c35c,LynxID2025_lynx_02,images/img_e5a8078762fd6cc7c35c.jpg,,back,lynx,LynxID2025,True
+img_e74b5639827ff87622a5,SeaTurtleID2022_t157,images/img_e74b5639827ff87622a5.jpg,2021-06-24,topleft,loggerhead turtle,SeaTurtleID2022,False
+img_e8ea412ca156164416e7,SalamanderID2025_636,images/img_e8ea412ca156164416e7.jpg,2024-09-27,right,,SalamanderID2025,True
+img_ec7cf8e26c62ed565f23,SeaTurtleID2022_t350,images/img_ec7cf8e26c62ed565f23.jpg,2022-06-16,left,loggerhead turtle,SeaTurtleID2022,False
+img_ed7427a9f43312f0fe4d,SeaTurtleID2022_t008,images/img_ed7427a9f43312f0fe4d.jpg,2020-07-12,right,loggerhead turtle,SeaTurtleID2022,False
+img_ed7c4e9f133af5179ce0,SeaTurtleID2022_t165,images/img_ed7c4e9f133af5179ce0.jpg,2015-07-01,right,loggerhead turtle,SeaTurtleID2022,False
+img_eeaaac7d44736bfaaca1,SalamanderID2025_496,images/img_eeaaac7d44736bfaaca1.jpg,2024-02-22,right,,SalamanderID2025,False
+img_f140e4693954416b29e4,SeaTurtleID2022_t157,images/img_f140e4693954416b29e4.jpg,2021-06-24,top,loggerhead turtle,SeaTurtleID2022,False
+img_f22e17bdcca7b08baddc,LynxID2025_lynx_33,images/img_f22e17bdcca7b08baddc.jpg,,left,lynx,LynxID2025,True
+img_f282527d4a6489acf2a0,SalamanderID2025_414,images/img_f282527d4a6489acf2a0.jpg,2023-10-03,right,,SalamanderID2025,False
+img_f575274fcc5cfa0cbfc1,SalamanderID2025_36,images/img_f575274fcc5cfa0cbfc1.jpg,2024-10-02,right,,SalamanderID2025,False
+img_f5b7cd643fc528b68673,SeaTurtleID2022_t121,images/img_f5b7cd643fc528b68673.jpg,2019-06-17,left,loggerhead turtle,SeaTurtleID2022,False
+img_f6d426def6caea004da1,LynxID2025_lynx_04,images/img_f6d426def6caea004da1.jpg,,unknown,lynx,LynxID2025,True
+img_f6e08f18865a102cf1fe,SeaTurtleID2022_t329,images/img_f6e08f18865a102cf1fe.jpg,2017-07-17,top,loggerhead turtle,SeaTurtleID2022,False
+img_fad5d08948fbeac85e05,LynxID2025_lynx_37,images/img_fad5d08948fbeac85e05.jpg,,right,lynx,LynxID2025,True
+img_fbe5a7ccefd1b7cffd9f,SalamanderID2025_397,images/img_fbe5a7ccefd1b7cffd9f.jpg,2023-05-14,right,,SalamanderID2025,False
+img_fd171922bb7d6e647740,SeaTurtleID2022_t142,images/img_fd171922bb7d6e647740.jpg,2020-06-26,right,loggerhead turtle,SeaTurtleID2022,False
+img_fda5a3711d047752faf3,SeaTurtleID2022_t184,images/img_fda5a3711d047752faf3.jpg,2019-06-15,topright,loggerhead turtle,SeaTurtleID2022,False

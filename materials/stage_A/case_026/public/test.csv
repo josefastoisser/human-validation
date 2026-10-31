@@ -1,0 +1,10 @@
+object_id,food_name,scene_ids,image_paths,rgb_paths
+3,breaded_fish,2,photographs/scene-2.jpg,rgb/scene-2.npy
+4,lemon,2,photographs/scene-2.jpg,rgb/scene-2.npy
+5,broccoli,2;6,photographs/scene-2.jpg;photographs/scene-6.jpg,rgb/scene-2.npy;rgb/scene-6.npy
+14,grilled_salmon,6,photographs/scene-6.jpg,rgb/scene-6.npy
+30,steak,13,photographs/scene-13.jpg,rgb/scene-13.npy
+31,mashed_potatoes,13,photographs/scene-13.jpg,rgb/scene-13.npy
+32,toast,14,photographs/scene-14.jpg,rgb/scene-14.npy
+33,sausage,14,photographs/scene-14.jpg,rgb/scene-14.npy
+34,fried_egg,14,photographs/scene-14.jpg,rgb/scene-14.npy

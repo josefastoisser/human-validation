@@ -1,0 +1,22 @@
+--- Ambiguous
++++ Full A
+@@ -15,6 +15,7 @@
+ weight; there is no per-dialogue averaging, class weighting or thresholding by
+ the evaluator. The fixed evaluation references contain both classes.
+ 
++Submissions are evaluated by mean binary LogLoss over all participant rows; lower is better. With y=is_bot and submitted p, loss = -mean(y*ln(q)+(1-y)*ln(1-q)), where q=clip(p,1e-15,1-1e-15). Natural logarithms are used. Clipping is for scoring only.
+ 
+ Write _submission.csv in the workspace root, with exactly the UTF-8 CSV header
+ ID,is_bot and one row per test ID. is_bot must be a finite probability in [0,1],
+
+--- Ambiguous
++++ Full B
+@@ -15,6 +15,7 @@
+ weight; there is no per-dialogue averaging, class weighting or thresholding by
+ the evaluator. The fixed evaluation references contain both classes.
+ 
++Submissions are evaluated by pooled binary ROC AUC over all participant rows; higher is better. The positive class is bot (is_bot=1). AUC is the fraction of bot-human pairs where the bot has higher submitted probability, with half credit for exact ties. Use the submitted probabilities without clipping or rounding; constant predictions score 0.5.
+ 
+ Write _submission.csv in the workspace root, with exactly the UTF-8 CSV header
+ ID,is_bot and one row per test ID. is_bot must be a finite probability in [0,1],
+

@@ -1,0 +1,26 @@
+--- Ambiguous
++++ Full A
+@@ -46,3 +46,8 @@
+ class, minimum area, class weighting, probability threshold or qualitative rubric.
+ Average equally over every physical image in the fixed evaluation set. Higher
+ PQ is better.
++
++Pixel voting rule: include any annotator foreground.
++Include a reference pixel when at least one eligible explicit annotator marked
++it. Apply the shared 4-connected component construction and score that single
++merged reference once per physical image using the common PQ metric.
+
+--- Ambiguous
++++ Full B
+@@ -46,3 +46,10 @@
+ class, minimum area, class weighting, probability threshold or qualitative rubric.
+ Average equally over every physical image in the fixed evaluation set. Higher
+ PQ is better.
++
++Pixel voting rule: strict majority of explicit annotators.
++If n is the number of eligible explicit records, include a reference pixel only
++when more than n/2 annotators marked it. Exactly-half votes are excluded. Explicit
++empty records count in n; absent records do not. Apply the same 4-connected
++component construction and score that single merged reference once per physical
++image using the common PQ metric.
+

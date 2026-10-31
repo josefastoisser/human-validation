@@ -1,0 +1,18 @@
+--- Ambiguous
++++ Full A
+@@ -42,3 +42,5 @@
+ across the entire test set. An observation with no matched pairs scores 0,
+ including both-empty, one-sided-empty and all-disjoint cases. These matching,
+ averaging and empty-case conventions are fixed for this local reconstruction.
++
++Use micro class averaging for each matched instance pair. Sum the numerators of both included classes and sum their denominators, then divide those sums. For complementary binary classes, D = (TP+TN)/N, where N = 2048*2048.
+
+--- Ambiguous
++++ Full B
+@@ -42,3 +42,5 @@
+ across the entire test set. An observation with no matched pairs scores 0,
+ including both-empty, one-sided-empty and all-disjoint cases. These matching,
+ averaging and empty-case conventions are fixed for this local reconstruction.
++
++Use macro class averaging for each matched instance pair. Compute the Dice ratio of each included class and take their equal arithmetic mean over defined ratios. When both class denominators are nonzero, D = (2*TP/(2*TP+FP+FN) + 2*TN/(2*TN+FP+FN))/2.
+

@@ -1,0 +1,18 @@
+--- Ambiguous
++++ Full A
+@@ -38,3 +38,5 @@
+ across the entire test set. An observation with no matched pairs scores 0,
+ including both-empty, one-sided-empty and all-disjoint cases. These matching,
+ averaging and empty-case conventions are fixed for this local reconstruction.
++
++Exclude background from Dice. For each matched pair, only the foreground class is included: D = 2*TP/(2*TP+FP+FN).
+
+--- Ambiguous
++++ Full B
+@@ -38,3 +38,5 @@
+ across the entire test set. An observation with no matched pairs scores 0,
+ including both-empty, one-sided-empty and all-disjoint cases. These matching,
+ averaging and empty-case conventions are fixed for this local reconstruction.
++
++Include background in Dice. For each matched pair, use complementary foreground/background one-hot classes with the fixed micro reduction: D = (TP+TN)/N, where N = 2048*2048.
+

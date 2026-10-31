@@ -1,0 +1,25 @@
+--- Ambiguous
++++ Full A
+@@ -42,3 +42,9 @@
+ The reference labels are fixed. The local score excludes verification bonuses,
+ code-review eligibility and final prize selection. Keep implementation code in
+ the workspace.
++
++String rule: lowercase values. Before comparing, apply Unicode lowercase
++to both predicted and reference item names, non-null sizes and each modifier
++string. Do not change JSON keys, quantities, total prices or any other rule.
++This means lowercase, not casefold; the local implementation is CPython 3.12
++with Unicode data 15.0.0. Stored reference annotations are unchanged.
+
+--- Ambiguous
++++ Full B
+@@ -42,3 +42,8 @@
+ The reference labels are fixed. The local score excludes verification bonuses,
+ code-review eligibility and final prize selection. Keep implementation code in
+ the workspace.
++
++String rule: literal values. Compare predicted and reference item names,
++non-null sizes and modifier strings literally, without lowercase conversion.
++Keep JSON validity, quantities, total prices, keys, ordering and all other
++rules exactly as specified. Stored reference annotations are unchanged.
+

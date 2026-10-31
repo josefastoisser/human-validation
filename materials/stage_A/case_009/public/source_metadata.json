@@ -1,0 +1,42 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "Left",
+      "supercategory": "filament"
+    },
+    {
+      "id": 2,
+      "name": "Right",
+      "supercategory": "filament"
+    },
+    {
+      "id": 3,
+      "name": "Unidentifiable",
+      "supercategory": "filament"
+    },
+    {
+      "id": 4,
+      "name": "Ambiguous",
+      "supercategory": "filament"
+    }
+  ],
+  "info": {
+    "collaborators": [
+      "National Solar Observatory, Georgia State University"
+    ],
+    "contributor": "MLEcoFi Team",
+    "date_created": "2024-07-15",
+    "date_updated": "2026-06-01",
+    "description": "MLEcoFi 2024 Dataset - V1.0",
+    "team": "Earth-Space AI Research Lab (www.esairlab.com)",
+    "url": "https://www.mlecofi.net/",
+    "version": "1.0",
+    "year": 2024
+  },
+  "licenses": {
+    "id": 1,
+    "name": "NSO/GONG",
+    "url": "https://gong.nso.edu/"
+  }
+}

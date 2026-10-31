@@ -1,0 +1,18 @@
+--- Ambiguous
++++ Full A
+@@ -7,3 +7,5 @@
+ For each reference sale price y and bounds l,u, Winkler loss is (u-l)+20*max(l-y,0)+20*max(y-u,0). The evaluation loss is the unweighted arithmetic mean over all supplied held-out rows. This uses alpha=.1, corresponding to nominal 90% coverage. Smaller loss is better. Empirical coverage is the unweighted fraction of rows with l<=y<=u; endpoints are inclusive. Coverage is not rounded.
+ 
+ Fit preprocessing and models on training data, calibrate with the supplied calibration data, and use public validation for interval/model choices. Hidden test labels are unavailable. Use only local data and installed Python numpy, pandas, scipy and scikit-learn; do not acquire external data, labels or dependencies. You have 30 minutes, 2 CPUs and 4 GiB RAM.
++
++No separate empirical-coverage requirement applies. Every format-valid submission is ranked solely by mean Winkler loss, including coverage below 90%.
+
+--- Ambiguous
++++ Full B
+@@ -7,3 +7,5 @@
+ For each reference sale price y and bounds l,u, Winkler loss is (u-l)+20*max(l-y,0)+20*max(y-u,0). The evaluation loss is the unweighted arithmetic mean over all supplied held-out rows. This uses alpha=.1, corresponding to nominal 90% coverage. Smaller loss is better. Empirical coverage is the unweighted fraction of rows with l<=y<=u; endpoints are inclusive. Coverage is not rounded.
+ 
+ Fit preprocessing and models on training data, calibrate with the supplied calibration data, and use public validation for interval/model choices. Hidden test labels are unavailable. Use only local data and installed Python numpy, pandas, scipy and scikit-learn; do not acquire external data, labels or dependencies. You have 30 minutes, 2 CPUs and 4 GiB RAM.
++
++Empirical coverage must be at least 90%: covered_count*10 must be >=9*n, without rounding. Every format-valid output below this floor is ineligible and tied below every qualifying output, regardless of its Winkler loss; all ineligible outputs tie. Qualifying outputs are ranked by the same mean Winkler loss. Failing coverage is not malformed input. The private numeric ranking score is 0 for coverage failure and 1/(1+mean_Winkler_loss) for qualifying outputs; this merely represents that ordering.
+

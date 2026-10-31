@@ -1,0 +1,18 @@
+--- Ambiguous
++++ Full A
+@@ -5,3 +5,5 @@
+ Evaluation computes BAKS separately within each dataset/species: the mean, over true known individuals, of the fraction of their queries predicted with their exact identity. BAUS is the mean, over true unknown individuals, of the fraction of their queries predicted new_individual. Unknown ground-truth identities remain distinct for balancing. An absent known or unknown component is set to zero. Compute a combined component score within each species, then average the three species scores equally. Higher scores are better.
+ 
+ You have 30 minutes, 2 CPUs and 4 GiB RAM. Use the local assets; no network access or pretrained weights are supplied.
++
++Within each species, combine the components using sqrt(BAKS * BAUS).
+
+--- Ambiguous
++++ Full B
+@@ -5,3 +5,5 @@
+ Evaluation computes BAKS separately within each dataset/species: the mean, over true known individuals, of the fraction of their queries predicted with their exact identity. BAUS is the mean, over true unknown individuals, of the fraction of their queries predicted new_individual. Unknown ground-truth identities remain distinct for balancing. An absent known or unknown component is set to zero. Compute a combined component score within each species, then average the three species scores equally. Higher scores are better.
+ 
+ You have 30 minutes, 2 CPUs and 4 GiB RAM. Use the local assets; no network access or pretrained weights are supplied.
++
++Within each species, combine the components using (BAKS + BAUS) / 2.
+

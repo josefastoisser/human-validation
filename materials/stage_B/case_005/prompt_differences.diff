@@ -1,0 +1,24 @@
+--- Ambiguous
++++ Full A
+@@ -48,3 +48,7 @@
+ nonempty set have F1=0. The score to maximize is the equal-weight mean F1 over
+ the same fixed reference-defined pairs. This local score excludes adaptive
+ final thresholds and expert review.
++
++Name rule: NT sufficient. A matching harmonized name is enough. Ignore AC
++in both reference and prediction values, including absent or incorrect AC.
++Deduplicate entities by harmonized name component and compare those sets.
+
+--- Ambiguous
++++ Full B
+@@ -48,3 +48,9 @@
+ nonempty set have F1=0. The score to maximize is the equal-weight mean F1 over
+ the same fixed reference-defined pairs. This local score excludes adaptive
+ final thresholds and expert review.
++
++Name rule: accession required. For an ontology-encoded reference with AC,
++a match requires both its harmonized name component and its exact accession.
++Missing or unequal predicted AC prevents a match. Plain-text references still
++need only the name. Deduplicate entities by (name component,AC), with null for
++missing AC, and use maximum-cardinality one-to-one matching.
+

@@ -1,0 +1,22 @@
+--- Ambiguous
++++ Full A
+@@ -8,6 +8,6 @@
+ 
+ Compute each head's macro-F1 as the mean over all five fixed classes of 2TP/(2TP+FP+FN), assigning zero for a zero denominator. Both heads use identical rows and references. Round each exact component to six decimal places using half-even rounding, convert to integer millionths, and compare the ordered integer pair lexicographically. A complete pair tie stays tied. Do not substitute a floating epsilon for this order. The runner's scalar representation is (p*1000001+s)/(1000000*1000002), where p,s are the primary and secondary integer components. Keep the two components when comparing results. Invalid bundles/IDs/classes are format failures, not numerical zero scores.
+ 
+-
++Rank pairs by descending T2 macro-F1 first, using T1 macro-F1 only to break a rounded T2 tie.
+ 
+ Runtime is 30 minutes, 2 CPUs and 4 GiB. NumPy crop arrays allow offline Python/numpy/scikit-learn models without an image decoder or pretrained weights. Return the completed prediction artifact and implementation.
+
+--- Ambiguous
++++ Full B
+@@ -8,6 +8,6 @@
+ 
+ Compute each head's macro-F1 as the mean over all five fixed classes of 2TP/(2TP+FP+FN), assigning zero for a zero denominator. Both heads use identical rows and references. Round each exact component to six decimal places using half-even rounding, convert to integer millionths, and compare the ordered integer pair lexicographically. A complete pair tie stays tied. Do not substitute a floating epsilon for this order. The runner's scalar representation is (p*1000001+s)/(1000000*1000002), where p,s are the primary and secondary integer components. Keep the two components when comparing results. Invalid bundles/IDs/classes are format failures, not numerical zero scores.
+ 
+-
++Rank pairs by descending T1 macro-F1 first, using T2 macro-F1 only to break a rounded T1 tie.
+ 
+ Runtime is 30 minutes, 2 CPUs and 4 GiB. NumPy crop arrays allow offline Python/numpy/scikit-learn models without an image decoder or pretrained weights. Return the completed prediction artifact and implementation.
+
